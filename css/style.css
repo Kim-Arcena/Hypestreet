@@ -43,12 +43,12 @@ header .header-logo a{
 
 header .nav-items{
     float: right;
-    margin-right: 25px;
+    margin-right: 8%;
 }
 header .header-menu  ul li{
     display: inline-block;  
     line-height: 80px;
-    margin: 0 15px;
+    margin: 0 25px;
 }
 
 header .header-menu  ul li a{
