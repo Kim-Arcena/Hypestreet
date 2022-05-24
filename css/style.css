@@ -117,7 +117,19 @@ section{
 .home .slider-container .slide .content{
     flex: 1 1 40rem;
     margin: 25px 0px 75px 100px; 
+    animation: slideContent 0.5s linear .5s backwards;
 }
+@keyframes slideContent{
+    0%{
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .home .slider-container .slide .image{
     flex: 1 1 50rem;
     padding-bottom: 15rem;
@@ -128,6 +140,13 @@ section{
     padding-top: 5rem;
     width: 90%;
     transform: rotate(-21.07deg);
+    animation: shoe 0.3s linear ;
+}
+
+@keyframes shoe{
+   0%{
+       transform: rotate(0deg) scale(0.5);
+   } 
 }
 .home .slider-container .slide .image .eclipse{
     position: absolute;
@@ -136,8 +155,15 @@ section{
     top: 0; left: 0;
     z-index: -1;
     opacity: 0.8;
+    animation: eclipse 0.5s linear;
 }
 
+@keyframes eclipse {
+    0%{
+        opacity: 0;
+        top: -3rem;
+    }
+}
 .home .slider-container .slide span{
     font-size: 5rem;
     color: #fff;
