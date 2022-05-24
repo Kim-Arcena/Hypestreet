@@ -283,4 +283,5 @@ section{
     #check:checked ~label #cancel{
         display: block;
     }
+    
 }
