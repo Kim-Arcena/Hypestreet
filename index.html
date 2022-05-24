@@ -38,8 +38,10 @@
             </div>
         </header>    
         <!-- End of header -->
+
+        <!-- Start of banner -->
         <section class="home" id="home">
-            <div class="slider-container">
+            <div class="slider-container active">
                 <div class="slide">
                     <div class="content">
                         <span>Air Jordans</span>
@@ -57,6 +59,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="slider-container">
                 <div class="slide">
                     <div class="content">
@@ -75,6 +78,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="slider-container">
                 <div class="slide">
                     <div class="content">
@@ -93,8 +97,12 @@
                     </div>
                 </div>
             </div>
+            <div id="prev" onclick="prev()" class="fas fa-arrow-left"></div>    
+            <div id="next" onclick="next()" class="fas fa-arrow-right"></div>  
         </section>
+        
+        
+        <script src="js/home.js"></script>
+        <script src="js/jquery-3.1.1.min.js"></script>
     </body>
 </html>
-<script src="js/home.js"></script>
-<script src="js/jquery-3.1.1.min.js"></script>
