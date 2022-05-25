@@ -8,6 +8,7 @@
     --orange:#ff9f1a;
     --main-yellow: #E1AF2D;
     --dark-gray:#202124;
+    --darker-gray: #17181C;
 }
 
 *{
@@ -29,6 +30,7 @@ html{
 
 section{
     padding:2rem 9%;
+    background-color: var(--darker-gray);
 }
 
 .heading{
@@ -256,6 +258,39 @@ section{
 .home #next{
     right: 10rem;
 }
+
+.service .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    background: var(--dark-gray);
+    border-radius: 1.5rem;
+    padding: 5rem;
+    margin: 25px 70px 50px;
+}
+.service .box-container .box{
+    text-align: center;
+    flex: 1 1 30rem;
+}
+
+.service .box-container .box i{
+    font-size: 4rem;
+    color: var(--main-yellow);
+    
+}
+
+.service .box-container .box p{
+    font-size: 1.5rem;
+    color: var(--main-yellow);
+    padding: 1rem 0;
+}
+
+.service .box-container .box h3{
+    font-size: 2rem;
+    color: var(--white);
+}
+
+
 
 
 /* Responsive */
