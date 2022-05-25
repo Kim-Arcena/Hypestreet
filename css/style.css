@@ -309,14 +309,15 @@ footer .footer-container{
     flex-wrap: wrap;
     justify-content: space-between;
     flex-direction: row;
+    align-items: center;
 }
 
 footer .footer-container .sec{
-    margin-right: 2rem;
+    margin-right: 3rem;
 }
 
 footer .footer-container .sec.about-us{
-    width: 35%;
+    width: 30%;
 }
 
 footer .footer-container h2{
@@ -342,6 +343,7 @@ footer p{
     font-size: 1.5rem;
     line-height: 1.5;
 }
+
 .sci{
     margin-top: 20px;
     display: flex;
@@ -376,6 +378,7 @@ footer p{
 .quick-links{
     position: relative;
     width: 25%;
+    padding-left: 14rem;
 }
 
 .quick-links ul li{
@@ -391,6 +394,51 @@ footer p{
 .quick-links ul li a:hover{
     color: var(--main-yellow);
 }
+
+.contact{
+    margin-left: 2rem;
+    width: calc(30% - 4rem);
+    margin-right: 0 !important;
+    padding-left: 8rem;
+}
+
+.contact .info{
+    position: relative;
+}
+
+.contact .info li{
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.contact .info li span:nth-child(1){
+    color:var(--white);
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.contact .info li i{
+    color: var(--main-yellow);
+}
+
+.contact .info li span{
+    color: var(--white);
+}
+
+.contact .info li span:hover{
+    color: var(--main-yellow);
+}
+
+
+.contact .info li a{
+    color: var(--white);
+    text-transform: lowercase;
+}
+
+.contact .info li a:hover{
+    color: var(--main-yellow);
+}
+
 
 /* Responsive */
 @media (max-width:926px){
