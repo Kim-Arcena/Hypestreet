@@ -1,6 +1,9 @@
 // responsive nav bar
 let menu = document.querySelector('#menu-bar');
 let navbar = document.querySelector('.navbar');
+let slides = document.querySelectorAll('.slider-container');
+let index = 0;
+let header = document.querySelector('header');
 
 menu.onclick = () =>{
   menu.classList.toggle('fa-times');
@@ -12,9 +15,20 @@ window.onscroll = () =>{
   navbar.classList.remove('active');
 }
 
+//sticky navbar
+window.addEventListener('scroll', () => {
+    if(window.scrollY > 270){
+        header.classList.add('bg');
+    }else{
+        header.classList.remove('bg');
+    }
+})
+
+
+
+
 //slider animation js
-let slides = document.querySelectorAll('.slider-container');
-let index = 0;
+
 
 function next(){
     slides[index].classList.remove('active');

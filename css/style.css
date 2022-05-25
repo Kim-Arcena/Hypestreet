@@ -72,6 +72,11 @@ header{
     padding:2rem 9%;
     display: flex;
     align-items: center;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+.bg{
+    background-color: var(--dark-gray);
 }
 
 header .logo{
@@ -87,6 +92,7 @@ header .logo{
 header .navbar{
     margin-left: auto; 
 }
+
 header .navbar a{
     position: relative;
     text-transform: uppercase;
