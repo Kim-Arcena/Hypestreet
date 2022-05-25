@@ -202,7 +202,7 @@ section{
 }
 
 .home .slider-container .slide .content p{
-    font-size: 1.5rem;
+    font-size: 18px;
     color: #fff;
     line-height: 1.5;
 }
@@ -439,6 +439,21 @@ footer p{
     color: var(--main-yellow);
 }
 
+.copyright-text{
+    width: 100%;
+    background-color: var(--darker-gray);
+    padding: 8px 100px;
+    text-align: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 15px;
+}
+
+.copyright-text span{
+    color: var(--main-yellow);
+}
+
+
 
 /* Responsive */
 @media (max-width:926px){
@@ -499,5 +514,4 @@ footer p{
     .heading{
       font-size: 3rem;
     }
-  
   }
