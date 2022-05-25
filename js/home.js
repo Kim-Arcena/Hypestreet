@@ -1,3 +1,4 @@
+// responsive nav bar
 let menu = document.querySelector('#menu-bar');
 let navbar = document.querySelector('.navbar');
 
@@ -11,7 +12,7 @@ window.onscroll = () =>{
   navbar.classList.remove('active');
 }
 
-
+//slider animation js
 let slides = document.querySelectorAll('.slider-container');
 let index = 0;
 

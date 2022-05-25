@@ -260,6 +260,7 @@ section{
     right: 10rem;
 }
 
+/* Service Section */
 .service .box-container{
     display: flex;
     flex-wrap: wrap;
@@ -290,6 +291,31 @@ section{
     font-size: 2rem;
     color: var(--white);
 }
+
+/* Best Selling Section */
+.best-selling{
+    position: relative;
+    padding: 60px 5vw;
+    background: var(--darker-gray);
+}
+
+.section-title{
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
