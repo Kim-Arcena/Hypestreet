@@ -359,6 +359,13 @@ section{
                 -13px -13px 20px var(--shadow-gray);
   } 
 
+  
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+    overflow: hidden;
+}
+
 
 /* Review Section */
 .review-section{
