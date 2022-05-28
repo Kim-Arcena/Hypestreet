@@ -443,24 +443,6 @@ section{
     font-weight: bold;
 }
 
-.detail-des, .review-section{
-    width: 100%;
-    padding: 100px 5vw 0;
-}
-
-.des{
-    line-height: 2rem;
-    font-size: 2rem;
-    color: var(--white);
-    opacity: 0.6;
-    text-indent: 5%;
-    text-align: justify;
-
-}
-.detail-des .section-title{
-    margin-left: 46.5%;
-}
-
 
 /* Footer Section */
 footer{
@@ -670,6 +652,20 @@ footer p{
         top:85%;
     }
 
+    .review-card{
+        width: 200px;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        padding: 0;
+    }
+
+    .user-dp{
+        width: 150px;
+        height: auto;
+        position: relative;
+    }
     footer{
         padding: 40px;
     }
@@ -686,6 +682,8 @@ footer p{
         margin-left: 0;
         padding-left: 0;
     }
+
+    
   
 }
 
