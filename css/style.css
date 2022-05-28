@@ -79,6 +79,10 @@ header{
     background-color: var(--dark-gray);
 }
 
+.bg-nav{
+    background-color: var(--dark-gray);
+}
+
 header .logo{
     position: absolute;
     display: block;
@@ -439,12 +443,23 @@ section{
     font-weight: bold;
 }
 
+.detail-des, .review-section{
+    width: 100%;
+    padding: 100px 5vw 0;
+}
 
+.des{
+    line-height: 2rem;
+    font-size: 2rem;
+    color: var(--white);
+    opacity: 0.6;
+    text-indent: 5%;
+    text-align: justify;
 
-
-
-
-
+}
+.detail-des .section-title{
+    margin-left: 46.5%;
+}
 
 
 /* Footer Section */
@@ -535,7 +550,7 @@ footer p{
 .quick-links{
     position: relative;
     width: 25%;
-    padding-left: 14rem;
+    padding-left: 10rem;
 }
 
 .quick-links ul li{
@@ -571,7 +586,6 @@ footer p{
 .contact .info li span:nth-child(1){
     color:var(--white);
     font-size: 1.5rem;
-    margin-right: 10px;
 }
 
 .contact .info li i{
