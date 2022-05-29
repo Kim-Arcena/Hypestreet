@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;500&family=Mulish:wght@700&family=Raleway:wght@900&display=swap');
 
 :root{
     --white: #ffffff;
@@ -10,6 +11,7 @@
     --dark-gray:#202124;
     --darker-gray: #17181C;
     --shadow-gray: #131417;
+    --light-gray: #2F3031;
 }
 
 *{
@@ -325,20 +327,20 @@ section{
     margin-right: 10rem;
 }
 
-.product-image{
-    padding-top: 10rem;
+/* .product-image{
     width: 100%;
-    transform: rotate(-40.00deg); 
+    transform: rotate(-45.00deg); 
     object-fit: cover;
     align-items: center;
     justify-content: center;
-}
+} */
 
 
 .product-card{
     width: 300px;
     height: 350px;
     margin-bottom: 2rem;
+    z-index: 0;
 }
 
 .product-name{
