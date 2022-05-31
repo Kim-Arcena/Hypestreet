@@ -12,6 +12,8 @@
     --darker-gray: #17181C;
     --shadow-gray: #131417;
     --light-gray: #2F3031;
+    --error-red: #f72a2a;
+    --hyper-blue: #2cacf7;
 }
 
 *{
@@ -22,6 +24,7 @@
     text-decoration: none;
     text-transform: capitalize;
     transition: all .2s linear;
+    font-size: 15px;
 }
 
 html{
