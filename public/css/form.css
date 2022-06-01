@@ -69,6 +69,7 @@ input{
     border-radius: 1.5rem;
     color: var(--white);
     padding-left: 5rem;
+    text-transform: lowercase;
 }
 
 ::placeholder{

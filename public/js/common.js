@@ -15,6 +15,12 @@ const processData = (data) => {
     if(data.alert){
         showFormError(data.alert);
     }
+    else if(data.name){
+        //store locally
+        sessionStorage.user = JSON.stringify(data);             
+        location.replace('/');
+
+    }
 }
 
 //show error
