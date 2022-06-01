@@ -11,6 +11,10 @@ const sendData = (path, data) => {
 
 const processData = (data) => {
     console.log(data);
+    loader.style.display = null;
+    if(data.alert){
+        showFormError(data.alert);
+    }
 }
 
 //show error
