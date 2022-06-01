@@ -94,7 +94,6 @@ input:focus::placeholder{
     display: block;
     font-size: 1.5rem;
     color: var(--error-red);
-    text-transform: uppercase;
     margin: 1rem 0;
     user-select: none;
     opacity: 0;
@@ -141,17 +140,28 @@ input:focus::placeholder{
     display: block;
     margin: 1rem 0;
     width: 100px;
-    padding: 1.5rem 2rem;
+    padding: 1.2rem 2rem;
     border-radius: 3rem;
     background: var(--dark-gray);
     color: var(--white);
     border: 1px solid var(--main-yellow);
     box-shadow: 13px 13px 20px var(--shadow-gray);
     cursor: pointer;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 
 .other-form-link{
     color: var(--white);
     font-size: 1.5rem;
+}
+
+.loader{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    z-index: 3;
+    width: 10%;
+    display: none;
 }
