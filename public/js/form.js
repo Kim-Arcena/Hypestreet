@@ -25,7 +25,16 @@ formBtn.addEventListener('click', () => {
     else if(!tac.checked){
         showFormError('You must agree to the terms and conditions');
     }
-    
+    else{
+        loader.style.display = 'block';
+        sendData('/signup', {
+            name: fullname.value,
+            email: email.value,
+            password: password.value,
+            number: number.value,
+            tac: tac.checked
+        });
+    }
 
 
 })

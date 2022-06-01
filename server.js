@@ -16,6 +16,14 @@ app.get('/', (req, res) => {
     res.sendFile("index.html", { root: "public" })
 })
 
+
+app.post('/signup', (req, res) => {
+    const { name, email, password, number, tac } = req.body;
+
+    //validation
+
+})
+
 //signup route
 app.get('/signup', (req, res) => {
     res.sendFile("signup.html", { root: "public" })
