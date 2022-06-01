@@ -13,4 +13,19 @@ formBtn.addEventListener('click', () => {
     if(fullname.value.length < 3){
         showFormError('Fullname must be at least 3 characters');
     }
+    else if(!email.value.length){
+        showFormError('Email is required');
+    }
+    else if(password.value.length < 8){
+        showFormError('Password must be at least 8 characters');
+    }
+    else if(Number(number) || number.value.length < 10){
+        showFormError('Invalid Number');
+    }
+    else if(!tac.checked){
+        showFormError('You must agree to the terms and conditions');
+    }
+    
+
+
 })
