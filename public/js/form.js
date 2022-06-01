@@ -1,3 +1,13 @@
+window.onload = () => {
+    if(sessionStorage.user){
+        user = JSON.parse(sessionStorage.user);
+        if(user.email){
+            location.replace('/');
+        }
+    }
+}
+
+
 let formBtn = document.querySelector('.submit-btn');
 let loader = document.querySelector('.loader');
 
