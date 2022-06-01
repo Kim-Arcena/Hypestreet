@@ -2,8 +2,7 @@ import express from "express";
 import bcrypt from "bcrypt";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, doc, collection, setDoc, getDoc, updateDoc } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -21,7 +20,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const firebase = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 const db = getFirestore();
 
 
@@ -43,6 +41,12 @@ app.get('/', (req, res) => {
 })
 
 
+//signup route
+app.get('/signup', (req, res) => {
+    res.sendFile("signup.html", { root: "public" })
+})
+
+
 app.post('/signup', (req, res) => {
     const { name, email, password, number, tac } = req.body;
 
@@ -56,21 +60,44 @@ app.post('/signup', (req, res) => {
     else if(password.length < 8){
         res.json({ 'alert' : 'Password must be at least 8 characters'});
     }
-    else if(Number(number) || number.length < 10){
+    else if(!Number(number) || number.length < 10){
         res.json({ 'alert' : 'Invalid Number'});
     }
-    else if(!tac.checked){
+    else if(!tac){
         res.json({ 'alert' : 'You must agree to the terms and conditions'});
     }
     else{
         //store data in firebase
-    }
+        const users = collection(db, "users");
+
+        getDoc(doc(users, email)).then(user => {
+            //check if it exists in the db
+            if(user.exists()){
+                return res.json({'alert': 'Email already exists'});
+            }
+            else{
+                //else encrypt password
+                bcrypt.genSalt(10, (err, salt) => {
+                    bcrypt.hash(password, salt, (err, hash) => {
+                        //store data
+                        req.body.password = hash;
+                        req.body.seller = false;
+                        
+                        
+                        setDoc(doc(users, email), req.body).then(data => {
+                            res.json({
+                                name: req.body.name,
+                                email: req.body.email,
+                                seller: req.body.seller,
+                            })   
+                        })
+                    })
+                })
+            }
+        })
+    }   
 })
 
-//signup route
-app.get('/signup', (req, res) => {
-    res.sendFile("signup.html", { root: "public" })
-})
 
 //localhost:3000/register
 app.listen(3000, () => {
