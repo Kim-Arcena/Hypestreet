@@ -89,7 +89,7 @@ header{
 }
 
 header .logo{
-    position: absolute;
+    position: re;
     display: block;
     text-transform: uppercase;
     font-family: 'Jura', sans-serif;
@@ -100,6 +100,7 @@ header .logo{
 }
 header .navbar{
     margin-left: auto; 
+    margin-right: 5%;
 }
 
 header .navbar a{
@@ -128,6 +129,27 @@ header .navbar a:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
+
+.user-interactions{
+    display: flex;
+    position: absolute; 
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);   
+}
+
+.cart-item-count{
+    color: var(--white);
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0px;
+    left: 40px;
+    font-weight: 700;
+    padding: 0%;
+}
+
 
 #menu-bar{
     font-size: 2.5rem;
