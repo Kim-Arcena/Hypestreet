@@ -47,8 +47,16 @@ let user = JSON.parse(sessopnStorage.user || null);
 if(user != null){
     text.innerHTML = `Welcome ${user.name}`;
     actionBtn.innerHTML = 'Logout';
+    actionBtn.addEventListener('click', () => logout());
 }
-else{
+else{ 
     actionBtn.innerHTML = 'Login';
     actionBtn.href = 'Login to your account';
+    actionBtn.addEventListener('click', () => location.href = '/login');
+    
+}
+
+const logout = () => {
+    sessionStorage.clear();
+    location.reload();
 }
