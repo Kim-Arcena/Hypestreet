@@ -150,6 +150,35 @@ header .navbar a:hover:after {
     padding: 0%;
 }
 
+.user-icon-popup{
+    position: absolute;
+    top: 100%;
+    padding: 20px;
+    background: var(--white);
+    width: 150px;
+    right: -15%;
+    border-radius: 1rem;
+    text-align: center;
+    display: none;
+}
+
+.user-icon-popup p{
+    text-transform: capitalize;
+    font-size: 1.8rem; 
+    line-height: 2.5rem;
+}
+
+.user-icon-popup.active{
+    display: block;
+}
+
+.user-icon-popup a{
+    display: inline-block !important;
+    margin: 0 !important;
+    color: var(--main-yellow) !important;
+    border-radius: 1rem !important;
+    margin-top: 20px !important;
+}
 
 #menu-bar{
     font-size: 2.5rem;
