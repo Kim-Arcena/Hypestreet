@@ -42,7 +42,7 @@ userIcon.addEventListener('click', ()=> userPopupIcon.classList.toggle('active')
 
 let text = userPopupIcon.querySelector('p');
 let actionBtn = userPopupIcon.querySelector('a');
-let user = JSON.parse(sessopnStorage.user || null);
+let user = JSON.parse(sessionStorage.user || null);
 
 if(user != null){
     text.innerHTML = `Welcome ${user.name}`;
@@ -50,8 +50,8 @@ if(user != null){
     actionBtn.addEventListener('click', () => logout());
 }
 else{ 
-    actionBtn.innerHTML = 'Login';
-    actionBtn.href = 'Login to your account';
+    actionBtn.innerHTML = 'Login to your account';
+    actionBtn.innerHTML = 'login';
     actionBtn.addEventListener('click', () => location.href = '/login');
     
 }
