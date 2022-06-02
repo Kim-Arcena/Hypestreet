@@ -21,10 +21,10 @@ const createNavbar = () => {
             <span class="cart-item-count">00</span>
         </div>
         <div class="user">
-            <a href="signup.html" class="fas fa-user"></a>
-            <div class="user-icon-popup">
+            <a class="fas fa-user"></a>
+            <div class="user-icon-popup active">
                 <p>Login to your account</p>
-                <a href="">Login</a>
+                <a>Login</a>
             </div>
         </div>
     </div>
@@ -33,3 +33,22 @@ const createNavbar = () => {
 }
 
 createNavbar();
+
+//user icon pop uo
+let userIcon = document.querySelector('.user');
+let userPopupIcon = document.querySelector('.user-icon-popup');
+
+userIcon.addEventListener('click', ()=> userPopupIcon.classList.toggle('active'));
+
+let text = userPopupIcon.querySelector('p');
+let actionBtn = userPopupIcon.querySelector('a');
+let user = JSON.parse(sessopnStorage.user || null);
+
+if(user != null){
+    text.innerHTML = `Welcome ${user.name}`;
+    actionBtn.innerHTML = 'Logout';
+}
+else{
+    actionBtn.innerHTML = 'Login';
+    actionBtn.href = 'Login to your account';
+}

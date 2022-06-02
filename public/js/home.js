@@ -16,6 +16,8 @@ window.onscroll = () =>{
 }
 
 
+
+
 //slider animation js
 
 
