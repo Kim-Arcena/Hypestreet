@@ -15,17 +15,6 @@ window.onscroll = () =>{
   navbar.classList.remove('active');
 }
 
-//sticky navbar
-window.addEventListener('scroll', () => {
-    if(window.scrollY > 270){
-        header.classList.add('bg');
-    }else{
-        header.classList.remove('bg');
-    }
-});
-
-
-
 
 //slider animation js
 
