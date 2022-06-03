@@ -1,3 +1,6 @@
+
+
+
 let loader = document.querySelector('.loader');
 let applyBtn = document.querySelector('.apply-btn');
 let sellerForm = document.querySelector('.seller-form');
@@ -14,8 +17,14 @@ applyBtn.addEventListener('click', () => {
     else{
         //submit form
         loader.style.display = 'block';
-        sellerForm.classList.add('blur');
-         
-    }
+        // sellerForm.classList.add('blur');
 
+        sendData('/seller', {
+            name: businessName,
+            address: address,
+            about: about,
+            number: number,
+            email: JSON.parse(sessionStorage.user).email
+        })
+    }
 })

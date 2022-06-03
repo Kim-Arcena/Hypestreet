@@ -46,12 +46,6 @@ app.get('/signup', (req, res) => {
     res.sendFile("signup.html", { root: "public" })
 })
 
-//seller route
-app.get("/seller", (req, res) => {
-    res.sendFile('seller.html', {root: "public"});
-})
-
-
 app.post('/signup', (req, res) => {
     const { name, email, password, number, tac } = req.body;
 
@@ -134,6 +128,32 @@ app.post('/login', (req, res) => {
             })
         }
     })
+})
+
+// seller route
+app.get('/seller', (req, res) => {
+    res.sendFile('seller.html', { root : "public" })
+})
+
+app.post('/seller', (req, res) => {
+    let { name, address, about, number, email } = req.body;
+
+    if(!name.length || !address.length || !about.length || number.length < 10 || !Number(number)){
+        return res.json({ 'alert' : 'some information(s) is/are incorrect' });
+    } else{
+        // update the seller status
+        const sellers = collection(db, "sellers");
+        setDoc(doc(sellers, email), req.body)
+        .then(data => {
+            const users = collection(db, "users");
+            updateDoc(doc(users, email), {
+                seller: true
+            })
+            .then(data => {
+                res.json({ 'seller' : true })
+            })
+        })
+    }
 })
 
 //localhost:3000/register

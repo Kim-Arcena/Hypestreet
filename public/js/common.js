@@ -1,5 +1,4 @@
 const sendData = (path, data) => {
-    console.log(data);
     fetch(path, {
         method: 'post',
         headers: new Headers({'Content-Type': 'application/json'}),
@@ -19,7 +18,12 @@ const processData = (data) => {
         //store locally
         sessionStorage.user = JSON.stringify(data);             
         location.replace('/');
-
+    }
+    else if(data.seller){
+        let user = JSON.parse(sessionStorage.user);
+        user.seller = true;
+        sessionStorage.user = JSON.stringify(user);
+        location.replace('/index');
     }
 }
 
