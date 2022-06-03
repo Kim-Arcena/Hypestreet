@@ -1,5 +1,5 @@
 /* product detail */
-.product-section{
+.spec-product-section{
     width: 100%;
     padding: 5% 5vw;
     display: flex;
@@ -16,7 +16,7 @@
     box-shadow: 7px 7px 15px var(--shadow-gray);
 }
 
-.product-image{
+.spec-product-image{
     width: 100%;
     height: 500px;
     object-fit: cover;
