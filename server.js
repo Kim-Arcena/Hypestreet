@@ -161,6 +161,11 @@ app.get('/dashboard', (req, res) => {
     res.sendFile("dashboard.html", { root: "public" })
 })
 
+//add product
+app.get('/add-product', (req, res) => {
+    res.sendFile("add-product.html", { root: "public" });
+})
+
 
 
 //localhost:3000/register
