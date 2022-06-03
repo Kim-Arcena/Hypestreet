@@ -31,32 +31,31 @@
         <img src="img/login/shoes.gif" class="loader" alt="">
 
         <!-- Start of form section -->
-        <div class="form">
-            <h1 class="form-title">Apply for a seller account</h1>
-            <div class="input-container">
-                <i class="fa fa-user icon"></i>
-                <input type="text" autocomplete="off" id="name" placeholder="business name">
+        <div class="seller-form">
+            <div class="form">
+                <h1 class="form-title">Apply for a seller account</h1>
+                <div class="input-container">
+                    <i class="fa fa-user icon"></i>
+                    <input type="text" id="name" autocomplete="off" placeholder="business name">
+                </div>
+                <div class="input-container">
+                    <i class="fa fa-envelope"></i>
+                    <textarea name="address" id="address" autocomplete="off" placeholder="business address"></textarea>
+                </div>
+                <div class="input-container">
+                    <i class="fa fa-map-marker"></i>
+                    <textarea name="about" id="about" autocomplete="off" placeholder="about your business"></textarea>
+                </div>
+                <div class="input-container">
+                    <i class="fa fa-phone"></i>
+                    <input type="number" id="number" autocomplete="off"placeholder="contact number">
+                </div>  
+                <span class="error">Error!</span>
+                <button class="apply-btn">Apply</button>
             </div>
-            <div class="input-container">
-                <i class="fa fa-envelope"></i>
-                <textarea name="address" id="address" autocomplete="off" placeholder="business address"></textarea>
-            </div>
-            <div class="input-container">
-                <i class="fa fa-map-marker"></i>
-                <textarea name="about" id="about" autocomplete="off" placeholder="about your business"></textarea>
-            </div>
-            <div class="input-container">
-                <i class="fa fa-phone"></i>
-                <input type="number" autocomplete="off" id="number" placeholder="contact number">
-            </div>  
-            <span class="error">Error!</span>
-            <button class="apply-btn">Apply</button>
+            <img src="img/login/seller.jpg" class="seller-image" alt="">
         </div>
-        <img src="img/login/seller.jpg" class="seller-image" alt="">
-
         <script src="js/common.js"></script>
-        <script src="js/form.js"></script>
         <script src="js/seller.js"></script>
-
     </body>
 </html>

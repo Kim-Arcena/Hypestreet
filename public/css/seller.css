@@ -1,9 +1,15 @@
-body{
+.seller-form{
     width: 100%;
     height: 100vh;
     display: flex;
     background: var(--dark-gray);
+    
 }
+
+.blur{
+    filter: blur(5px);
+}
+
 
 .seller-image{
     width: 50%;
