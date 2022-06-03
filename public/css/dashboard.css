@@ -1,0 +1,35 @@
+body{
+    width:100%;
+    background: var(--dark-gray);
+    padding: 20px 5vw;
+}
+
+.add-product{
+    margin-top: 5%;
+    position: relative;
+    width: 100%;
+    height: 10rem;
+    background: var(--light-gray);
+    display: flex;
+    border-radius: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem;
+}
+
+.text{
+    font-size: 2.5rem;
+    color: var(--main-yellow);
+}
+
+.add-product-btn{
+    display: inline-block;
+    border-radius: 1.5rem;
+    border: 2px solid #E1AF2D;
+    font-weight: bolder;
+    font-size: 1.8rem;
+    color: var(--main-yellow);
+    cursor: pointer;
+    padding: 1rem 3rem;
+    background-color: var(--dark-gray);
+}
