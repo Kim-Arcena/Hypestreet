@@ -57,7 +57,7 @@
     font-size: 2rem;
 }
 
-input{
+input, textarea{
     overflow: hidden;
     font-size: 18px;
     width: 100%;
@@ -83,11 +83,11 @@ input::-webkit-inner-spin-button{
     margin: 0;
 }
 
-input:focus{
+input:focus, textarea:focus{
     border: 2px solid var(--main-yellow);
 }
 
-input:focus::placeholder{
+input:focus::placeholder, textarea:focus::placeholder{
     color: var(--main-yellow);
 }
 
@@ -137,7 +137,7 @@ input:focus::placeholder{
     color: var(--hyper-blue);
 }
 
-.submit-btn{
+.submit-btn, .apply-btn{
     display: block;
     margin: 1rem 0;
     width: 100px;
