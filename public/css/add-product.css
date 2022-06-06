@@ -126,3 +126,13 @@
     height: 150px;
     margin: 20px 0;
 }
+
+
+.btn-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.product-btn{
+    margin: 2rem;
+}
