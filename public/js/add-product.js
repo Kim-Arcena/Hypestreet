@@ -24,7 +24,7 @@ editables.map((element) => {
 })
 
 let uploadInput = document.querySelector('#upload-image');
-let imagePath = 'img/noImage.png'; // default image
+let imagePath = 'img/seller/noImage.png'; // default image
 
 uploadInput.addEventListener('change', () => {
     const file = uploadInput.files[0];
@@ -36,7 +36,7 @@ uploadInput.addEventListener('change', () => {
         .then(url => {
             fetch(url, {
                 method: 'PUT',
-                headers: new Headers({'Content-Type': 'image/jpeg'}),
+                headers: new Headers({'Content-Type': 'image/png'}),
                 body: file
             }). then(res => {
                 imagePath = url.split("?")[0];

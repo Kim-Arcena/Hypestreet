@@ -52,13 +52,13 @@ async function generateURL(){
     try {
         let date = new Date();
 
-        const imageName = `${date.getTime()}.jpeg`;
+        const imageName = `${date.getTime()}.png`;
     
         const params = {
             Bucket: bucketName,
             Key: imageName,
-            Expires: 3000, // 300 ms
-            ContentType: "image/jpeg"
+            Expires: 300, // 300 ms
+            ContentType: "image/png"
         }
     
         const uploadURL = await s3.getSignedUrlPromise("putObject", params);
