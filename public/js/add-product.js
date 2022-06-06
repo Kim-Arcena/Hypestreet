@@ -15,5 +15,10 @@ editables.map((element) => {
         if(element.innerHTML === placeholder){
             element.innerHTML = '';
         }
-    });
+    })
+    element.addEventListener('focusout', () => {
+        if(!element.innerHTML.length){
+            element.innerHTML = placeholder;
+        }
+    })
 })
