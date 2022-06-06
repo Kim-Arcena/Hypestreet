@@ -23,4 +23,28 @@ editables.map((element) => {
     })
 })
 
+let uploadInput = document.querySelector('#upload-image');
+let imagePath = 'img/noImage.png'; // default image
+
+uploadInput.addEventListener('change', () => {
+    const file = uploadInput.files[0];
+    let imageUrl;
+
+    if(file.type.includes('image')){
+        // means its an image
+        fetch('/s3url').then(res => res.json())
+        .then(url => {
+            fetch(url, {
+                method: 'PUT',
+                headers: new Headers({'Content-Type': 'image/jpeg'}),
+                body: file
+            }). then(res => {
+                imagePath = url.split("?")[0];
+
+                let productImage = document.querySelector('.product-img');
+                productImage.src = imagePath;
+            })
+        })
+    }
+})
 

@@ -23,9 +23,58 @@ const firebase = initializeApp(firebaseConfig);
 const db = getFirestore();
 
 
-
 //init server
 const app = express();
+
+// aws
+// aws
+import aws from "aws-sdk";
+import "dotenv/config";
+
+// aws setup
+const region = "ap-southeast-1";
+const bucketName = "hypestreet";
+const accessKeyId = process.env.AWSAccessKeyId;
+const secretAccessKey = process.env.AWSSecretKey;
+
+aws.config.update({
+    region,
+    accessKeyId,
+    secretAccessKey
+})
+
+// init s3
+const s3 = new aws.S3();
+
+// generate image url
+async function generateURL(){
+
+    try {
+        let date = new Date();
+
+        const imageName = `${date.getTime()}.jpeg`;
+    
+        const params = {
+            Bucket: bucketName,
+            Key: imageName,
+            Expires: 3000, // 300 ms
+            ContentType: "image/jpeg"
+        }
+    
+        const uploadURL = await s3.getSignedUrlPromise("putObject", params);
+        return uploadURL;
+    } catch (err) {
+        console.error("Something went wrong")
+        console.error(err)
+    }
+
+
+}
+
+app.get('/s3url', (req, res) => {
+    generateURL().then(url => res.json(url));
+})
+
 
 
 //middlewares
@@ -33,10 +82,6 @@ app.use(express.static("public"));
 
 //enable form sharing
 app.use(express.json());
-
-//aws
-import aws from "aws-sdk";
-import "dotenv/config";
 
 //route
 //home route
