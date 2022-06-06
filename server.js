@@ -34,6 +34,10 @@ app.use(express.static("public"));
 //enable form sharing
 app.use(express.json());
 
+//aws
+import aws from "aws-sdk";
+import "dotenv/config";
+
 //route
 //home route
 app.get('/', (req, res) => {
