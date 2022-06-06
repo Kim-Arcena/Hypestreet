@@ -85,9 +85,9 @@
     opacity: 1;
 }
 
-.product-details{
-    width: 40%;
-    max-width: 40%;
+.product-detail{
+    width: 60%;
+    max-width: 60%;
 }
 
 .disable{

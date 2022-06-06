@@ -103,6 +103,10 @@
 
 }
 
+.price{
+    color: var(--white);
+}
+
 .review-headline, .review-field{
     overflow: hidden;
     font-size: 18px;
