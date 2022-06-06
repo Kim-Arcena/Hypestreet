@@ -75,7 +75,7 @@ app.get('/s3url', (req, res) => {
     generateURL().then(url => res.json(url));
 })
 
-
+app/
 
 //middlewares
 app.use(express.static("public"));
@@ -215,7 +215,36 @@ app.get('/add-product', (req, res) => {
     res.sendFile("add-product.html", { root: "public" });
 })
 
+app.post('/add-product', (req, res) => {
+    let { name, shortDes, detail, price, image, tags, email, draft, id } = req.body;
 
+    if(!draft){
+        if(!name.length){
+            res.json({'alert' : 'should enter product name'});
+        } else if(!shortDes.length){
+            res.json({'alert' : 'short des must be 80 letters long'});
+        } else if(!price.length || !Number(price)){
+            res.json({'alert' : 'enter valid price'});
+        } else if(!detail.length){
+            res.json({'alert' : 'must enter the detail'});
+        } else if(!tags.length){
+            res.json({'alert' : 'enter tags'});
+        }
+    }
+
+    // add-product
+
+    let docName = `${name.toLowerCase()}-${Math.floor(Math.random() * 50000)}`;
+
+    let products = collection(db, "products");
+    setDoc(doc(products, docName), req.body)
+    .then(data => {
+        res.json({'product': name})
+    })
+    .catch(err => {
+        res.json({'alert': 'some error occured.'})
+    })
+})
 
 //localhost:3000/register
 app.listen(3000, () => {

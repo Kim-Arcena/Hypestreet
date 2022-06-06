@@ -9,7 +9,6 @@ const sendData = (path, data) => {
 }
 
 const processData = (data) => {
-    console.log(data);
     loader.style.display = null;
     if(data.alert){
         showFormError(data.alert);
@@ -24,6 +23,8 @@ const processData = (data) => {
         user.seller = true;
         sessionStorage.user = JSON.stringify(user);
         location.replace('/dashboard.html');
+    }else if(data.product){
+        location.replace('/dashboard');
     }
 }
 
@@ -32,4 +33,9 @@ const showFormError = (err) => {
     let errorEle = document.querySelector('.error');
     errorEle.innerHTML = err;
     errorEle.classList.add('show');
+
+
+    setTimeout(() => {
+        errorEle.classList.remove('show');
+    }, 2000);
 }
