@@ -78,8 +78,30 @@
     font-size: 2.5rem;
     opacity: 0;
     transition: 0.5s;
+    border: 1px solid var(--main-yellow);
 }
 
 .upload-overlay:hover{
     opacity: 1;
 }
+
+.product-details{
+    width: 40%;
+    max-width: 40%;
+}
+
+.disable{
+    pointer-events: none;
+    filter: grayscale(1);
+}
+
+*[contenteditable="true"]{
+    outline: none;
+    border: 1px solid var(--white);
+    padding: 1rem;
+}
+
+*[contenteditable="true"]:hover{
+    border: 1px solid var(--main-yellow);
+}
+
