@@ -252,24 +252,32 @@ app.post('/add-product', (req, res) => {
 })
 
 app.post('/get-products', (req, res) => {
-    let { email } = req.body
+    let { email, id } = req.body
     
     let products = collection(db, "products");
     let docRef;
 
-    docRef = getDocs(query(products, where("email", "==", email)))
-    
+    if(id){
+        docRef = getDoc(doc(products, id));
+    } else{
+        docRef = getDocs(query(products, where("email", "==", email)))
+    }
+
     docRef.then(products => {
         if(products.empty){
             return res.json('no products');
         }
         let productArr = [];
-
-        products.forEach(item => {
-            let data = item.data();
-            data.id = item.id;
-            productArr.push(data);
-        })    
+        
+        if(id){
+            return res.json(products.data());
+        } else{
+            products.forEach(item => {
+                let data = item.data();
+                data.id = item.id;
+                productArr.push(data);
+            })    
+        }
 
         res.json(productArr);
     })
