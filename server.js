@@ -215,6 +215,11 @@ app.get('/add-product', (req, res) => {
     res.sendFile("add-product.html", { root: "public" });
 })
 
+app.get('/add-product/:id', (req, res) => {
+    res.sendFile("add-product.html", { root: "public" });
+})
+
+
 app.post('/add-product', (req, res) => {
     let { name, shortDes, detail, price, image, tags, email, draft, id } = req.body;
 
