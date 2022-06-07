@@ -77,9 +77,7 @@ addProductBtn.addEventListener('click', () => {
         // submit form
         loader.style.dispaly = 'block';
         let data = productData();
-        if(productId){
-            data.id = productId;
-        }
+
         sendData('/add-product', data)
     }
 })
@@ -132,16 +130,6 @@ const fetchProductData = () => {
     .catch(err => console.log(err))
 }
 
-const setFormData = (data) => {
-    productName.innerHTML = data.name;
-    shortDes.innerHTML = data.shortDes;
-    price.innerHTML = data.price;
-    detail.innerHTML = data.detail;
-    tags.innerHTML = data.tags;
-
-    let productImg = document.querySelector('.product-img')
-    productImg.src = imagePath = data.image;
-}
 
 let productId = null;
 if(location.pathname != '/add-product'){
