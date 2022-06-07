@@ -2,7 +2,7 @@ import express from "express";
 import bcrypt from "bcrypt";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore, doc, collection, setDoc, getDoc, updateDoc, getDocs, query, where} from "firebase/firestore";
+import { getFirestore, doc, collection, setDoc, getDoc, updateDoc, getDocs, query, where, deleteDoc } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -269,6 +269,18 @@ app.post('/get-products', (req, res) => {
         res.json(productArr);
     })
 })
+
+app.post('/delete-product', (req, res) => {
+    let { id } = req.body;
+
+    deleteDoc(doc(collection(db, "products"), id))
+    .then(data => {
+        res.json('success');
+    }).catch(err => {
+        res.json('err');
+    })
+})
+
 
 //localhost:3000/register
 app.listen(3000, () => {
