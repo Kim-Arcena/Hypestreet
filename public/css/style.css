@@ -169,6 +169,7 @@ header .navbar a:hover:after {
     text-transform: capitalize;
     font-size: 1.8rem; 
     line-height: 2.5rem;
+    color: var(--black);
 }
 
 .user-icon-popup.active{
@@ -388,30 +389,29 @@ section{
 
 .product-container{
     display: flex;
-    flex-wrap: wrap;
     gap: 1rem;
+    flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
-    
 }
 
 .product-container .product-card{
+    margin: 2rem;
     border-radius: 2rem;
     text-align: center;
     position: relative;
     overflow: hidden;
     background: var(--dark-gray);
-    height: 50rem;
-    width: 38rem;
+    height: 45rem;
+    width: 21%;
     box-shadow: 13px 13px 20px var(--shadow-gray);
-    margin: 2rem;
 }
 
 .product-container .product-card img{
-    height: 20rem;
+    height: 36%;
     transform: rotate(-35deg);
     filter: drop-shadow(0px 0px 5px var(--light-gray));
-    margin: 7rem 10rem 0 0;
+    margin: 20% 10% 5% 0;
 }
 
 .product-container .product-name{
@@ -421,8 +421,8 @@ section{
     font-size: 2.5rem;
     color: var(--white);
     font-weight: bold;
-    margin: 0 auto;
-    padding: 3rem;
+    margin: 0;
+    padding: 2.5rem;
 }
   
 .parallax-window {
