@@ -50,7 +50,12 @@ seller-products{
 }
 
 .no-product{
-    display:none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    display: none;
 }
 
 .btn{
@@ -82,4 +87,14 @@ seller-products{
 }
 .delete-btn{
     top: 110px;
+}
+
+.loader{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    z-index: 5;
+    display: none;
 }

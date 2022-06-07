@@ -9,3 +9,25 @@ else if(!user.seller){
 
 let greeting = document.querySelector('#seller-greeting');
 greeting.innerHTML += user.name;
+
+//loader
+let loader = document.querySelector('.loader');
+let noProductImg = document.querySelector('.no-product');
+
+loader.style.display = 'block';
+
+//get products
+const setupProducts = () => {
+    fetch('/get-products', {
+        method: 'post',
+        headers: new Headers({'Content-Type': 'application/json'}),
+        body: JSON.stringify({email : user.email})
+    })
+    .then(res => res.json())
+    .then(data => {
+        loader.style.display = 'none';
+        console.log(data);
+    })
+}
+
+setupProducts();

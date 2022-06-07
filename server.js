@@ -2,7 +2,7 @@ import express from "express";
 import bcrypt from "bcrypt";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore, doc, collection, setDoc, getDoc, updateDoc } from "firebase/firestore";
+import { getFirestore, doc, collection, setDoc, getDoc, updateDoc, getDocs, query, where} from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -243,6 +243,30 @@ app.post('/add-product', (req, res) => {
     })
     .catch(err => {
         res.json({'alert': 'some error occured.'})
+    })
+})
+
+app.post('/get-products', (req, res) => {
+    let { email } = req.body
+    
+    let products = collection(db, "products");
+    let docRef;
+
+    docRef = getDocs(query(products, where("email", "==", email)))
+    
+    docRef.then(products => {
+        if(products.empty){
+            return res.json('no products');
+        }
+        let productArr = [];
+
+        products.forEach(item => {
+            let data = item.data();
+            data.id = item.id;
+            productArr.push(data);
+        })    
+
+        res.json(productArr);
     })
 })
 
