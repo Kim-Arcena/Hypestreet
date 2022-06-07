@@ -103,13 +103,6 @@
     margin-left: 46.5%;
 }
 
-.product-container{
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    position: relative;
-}
-
 /* Add Review Section */
 .add-review-section{
     padding: 10rem 15rem 0;
