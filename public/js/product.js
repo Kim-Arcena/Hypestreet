@@ -1,27 +1,13 @@
-let ratingStarInput = [...document.querySelectorAll('.rating-star')];
+// product page setting
 
-ratingStarInput.map((star, index) => {
-    star.addEventListener('click', () => {
-        for (let i = 0; i < 5; i++){
-            if(i <= index){
-                ratingStarInput[i].src = 'img/product-des/fill-star.png';
-            }
-            else{
-                ratingStarInput[i].src = 'img/product-des/no-fill-star.png';
-            }
-            console.log("starrr");
-        }
-    })
-})   
 let productName = document.querySelector('.product-title');
 let shortDes = document.querySelector('.product-des');
 let price = document.querySelector('.price');
 let detail = document.querySelector('.des');
-let productImage = document.querySelector('.spec-product-image');
+let productImage = document.querySelector('.product-image');
 let title = document.querySelector('title');
 
 let cartBtn = document.querySelector('.cart-btn');
-
 
 const setData = (data) => {
     productName.innerHTML = title.innerHTML = data.name;
@@ -35,8 +21,6 @@ const setData = (data) => {
     })
 }
 
-
-
 const fetchProductData = () => {
     fetch('/get-products', {
         method: 'post',
@@ -45,15 +29,15 @@ const fetchProductData = () => {
     }).then(res => res.json())
     .then(data => {
         setData(data)
+        getProducts(data.tags[0]).then(res => createProductCards(res, 'similar products', '.best-selling-product-section'))
     })
     .catch(err => {
         console.log(err)
-        alert('No product error');
+        alert('no product found');
+        location.replace('/404');
     })
 }
 
-
-//product page setting
 let productId = null;
 if(location.pathname != '/add-product'){
     productId = decodeURI(location.pathname.split('/').pop());

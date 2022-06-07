@@ -1,8 +1,8 @@
 let user = JSON.parse(sessionStorage.user || null);
 
-window.onload =  () => {
+window.onload = () => {
     if(user == null){
-        location.replace('/login');
+        location.replace('/login')
     }
 }
 
@@ -23,6 +23,7 @@ editables.map((element) => {
     })
 })
 
+// image upload
 let uploadInput = document.querySelector('#upload-image');
 let imagePath = 'img/seller/noImage.png'; // default image
 
@@ -64,7 +65,7 @@ addProductBtn.addEventListener('click', () => {
     // verification
     if(productName.innerHTML == productName.getAttribute('data-placeholder')){
         showFormError('should enter product name');
-    }else if(shortDes.innerHTML == shortDes.getAttribute('data-placeholder')){
+    } else if(shortDes.innerHTML == shortDes.getAttribute('data-placeholder')){
         showFormError('short des must be 80 letters long');
     } else if(price.innerHTML == price.getAttribute('data-placeholder') || !Number(price.innerHTML)){
         showFormError('enter valid price');
@@ -72,7 +73,7 @@ addProductBtn.addEventListener('click', () => {
         showFormError('must enter the detail');
     } else if(tags.innerHTML == tags.getAttribute('data-placeholder')){
         showFormError('enter tags');
-    }else{
+    } else{
         // submit form
         loader.style.dispaly = 'block';
         let data = productData();
@@ -81,7 +82,6 @@ addProductBtn.addEventListener('click', () => {
         }
         sendData('/add-product', data)
     }
-
 })
 
 const productData = () => {
@@ -117,6 +117,7 @@ draftBtn.addEventListener('click', () => {
     }
 })
 
+// edit page
 
 const fetchProductData = () => {
     addProductBtn.innerHTML = 'save product';
