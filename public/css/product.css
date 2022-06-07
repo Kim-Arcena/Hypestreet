@@ -17,9 +17,13 @@
 }
 
 .spec-product-image{
-    width: 100%;
-    height: 500px;
+    width: 50%;
+    height: 100%;
     object-fit: cover;
+}
+
+.product-detail{
+    margin: 0 5rem;
 }
 
 .product-title{
@@ -29,6 +33,7 @@
 }
 
 .product-des{
+    text-transform: capitalize;
     margin: 30px 0;
     opacity: 0.8;
     font-size: 1.8rem;
@@ -85,13 +90,14 @@
 }
 
 .des{
+    white-space: pre-wrap;
     line-height: 2rem;
     font-size: 2rem;
     color: var(--white);
     opacity: 0.6;
     text-indent: 5%;
     text-align: justify;
-    padding: 5rem 10rem;
+    padding: 5rem 0rem 3rem;
 }
 .detail-des .section-title{
     margin-left: 46.5%;
@@ -99,7 +105,7 @@
 
 /* Add Review Section */
 .add-review-section{
-    padding: 10rem 15rem;
+    padding: 10rem 15rem 0;
 
 }
 

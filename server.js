@@ -301,3 +301,6 @@ app.listen(3000, () => {
 })
 
 
+app.get('/products/:id', (req, res) => {
+    res.sendFile("product-des.html", { root : "public" })
+})
