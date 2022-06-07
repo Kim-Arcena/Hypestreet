@@ -101,21 +101,21 @@ const productData = () => {
 }
 
 // draft btn
-let draftBtn = document.querySelector('.draft-btn');
+// let draftBtn = document.querySelector('.draft-btn');
 
-draftBtn.addEventListener('click', () => {
-    if(!productName.innerHTML.length || productName.innerHTML == productName.getAttribute('data-placeholder')){
-        showFormError('enter product name atleast');
-    } else { // don't validate the form
-        let data = productData();
-        loader.style.dispaly = 'block';
-        data.draft = true;
-        if(productId){
-            data.id = productId;
-        }
-        sendData('/add-product', data)
-    }
-})
+// draftBtn.addEventListener('click', () => {
+//     if(!productName.innerHTML.length || productName.innerHTML == productName.getAttribute('data-placeholder')){
+//         showFormError('enter product name atleast');
+//     } else { // don't validate the form
+//         let data = productData();
+//         loader.style.dispaly = 'block';
+//         data.draft = true;
+//         if(productId){
+//             data.id = productId;
+//         }
+//         sendData('/add-product', data)
+//     }
+// })
 
 // edit page
 
