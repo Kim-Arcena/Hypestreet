@@ -1,8 +1,8 @@
 let user = JSON.parse(sessionStorage.user || null);
 
-window.onload = () => {
+window.onload =  () => {
     if(user == null){
-        location.replace('/login')
+        location.replace('/login');
     }
 }
 
@@ -23,7 +23,6 @@ editables.map((element) => {
     })
 })
 
-// image upload
 let uploadInput = document.querySelector('#upload-image');
 let imagePath = 'img/seller/noImage.png'; // default image
 
@@ -65,7 +64,7 @@ addProductBtn.addEventListener('click', () => {
     // verification
     if(productName.innerHTML == productName.getAttribute('data-placeholder')){
         showFormError('should enter product name');
-    } else if(shortDes.innerHTML == shortDes.getAttribute('data-placeholder')){
+    }else if(shortDes.innerHTML == shortDes.getAttribute('data-placeholder')){
         showFormError('short des must be 80 letters long');
     } else if(price.innerHTML == price.getAttribute('data-placeholder') || !Number(price.innerHTML)){
         showFormError('enter valid price');
@@ -73,13 +72,16 @@ addProductBtn.addEventListener('click', () => {
         showFormError('must enter the detail');
     } else if(tags.innerHTML == tags.getAttribute('data-placeholder')){
         showFormError('enter tags');
-    } else{
+    }else{
         // submit form
         loader.style.dispaly = 'block';
         let data = productData();
-
+        if(productId){
+            data.id = productId;
+        }
         sendData('/add-product', data)
     }
+
 })
 
 const productData = () => {
@@ -99,23 +101,22 @@ const productData = () => {
 }
 
 // draft btn
-// let draftBtn = document.querySelector('.draft-btn');
+let draftBtn = document.querySelector('.draft-btn');
 
-// draftBtn.addEventListener('click', () => {
-//     if(!productName.innerHTML.length || productName.innerHTML == productName.getAttribute('data-placeholder')){
-//         showFormError('enter product name atleast');
-//     } else { // don't validate the form
-//         let data = productData();
-//         loader.style.dispaly = 'block';
-//         data.draft = true;
-//         if(productId){
-//             data.id = productId;
-//         }
-//         sendData('/add-product', data)
-//     }
-// })
+draftBtn.addEventListener('click', () => {
+    if(!productName.innerHTML.length || productName.innerHTML == productName.getAttribute('data-placeholder')){
+        showFormError('enter product name atleast');
+    } else { // don't validate the form
+        let data = productData();
+        loader.style.dispaly = 'block';
+        data.draft = true;
+        if(productId){
+            data.id = productId;
+        }
+        sendData('/add-product', data)
+    }
+})
 
-// edit page
 
 const fetchProductData = () => {
     addProductBtn.innerHTML = 'save product';
@@ -130,6 +131,16 @@ const fetchProductData = () => {
     .catch(err => console.log(err))
 }
 
+const setFormData = (data) => {
+    productName.innerHTML = data.name;
+    shortDes.innerHTML = data.shortDes;
+    price.innerHTML = data.price;
+    detail.innerHTML = data.detail;
+    tags.innerHTML = data.tags;
+
+    let productImg = document.querySelector('.product-img')
+    productImg.src = imagePath = data.image;
+}
 
 let productId = null;
 if(location.pathname != '/add-product'){

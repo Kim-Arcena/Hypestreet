@@ -239,7 +239,7 @@ app.post('/add-product', (req, res) => {
 
     // add-product
 
-    let docName = `${name.toLowerCase()}-${Math.floor(Math.random() * 50000)}`;
+    let docName = id == undefined ? `${name.toLowerCase()}-${Math.floor(Math.random() * 50000)}` : id;
 
     let products = collection(db, "products");
     setDoc(doc(products, docName), req.body)
@@ -301,6 +301,3 @@ app.listen(3000, () => {
 })
 
 
-app.get('/products/:id', (req, res) => {
-    res.sendFile("product-des.html", { root : "public" })
-})
