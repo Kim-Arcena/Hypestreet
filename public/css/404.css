@@ -1,0 +1,13 @@
+body{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align: center;
+    background-image: url('../img/home/repeated-square-dark.png');
+    background-position:center;
+}
+h1 {
+    font-size:25px;
+}
