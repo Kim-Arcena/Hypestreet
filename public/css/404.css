@@ -88,6 +88,7 @@ input {
 }
 
 
+
 .top-header:before {
     background-image: url(header-footer-gradient-bg.png);
 }
@@ -412,7 +413,7 @@ button {
 .cover {
     width: 200px;
     height: 80px;
-    background: #0bd5e8;
+    background:#d89e0a;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     position: relative;
@@ -424,7 +425,7 @@ button {
     max-width: 200px;
     height: 20px;
     border-radius: 100%;
-    background: #08ffff;
+    background: #edc665;
     position: absolute;
     left: 0px;
     right: 0px;
@@ -436,20 +437,20 @@ button {
 .in-cover .bulb {
     width: 50px;
     height: 50px;
-    background-color: #08fffa;
+    background-color: var(--main-yellow);
     border-radius: 50%;
     position: absolute;
     left: 0px;
     right: 0px;
     bottom: -20px;
     margin: 0px auto;
-    box-shadow: 0 0 25px 7px rgb(127 255 255 / 80%), 0 0 64px 47px rgba(0, 255, 255, 0.5), 0px 0 30px 15px rgba(0, 255, 255, 0.2);
+    box-shadow: 0 0 25px 7px rgba(255, 175, 45, 0.8), 0 0 64px 47px rgba(255, 175, 45, 0.5), 0px 0 30px 15px rgba(255, 175, 45, 0.2);
 }
 
 .light {
     width: 200px;
     height: 0px;
-    border-bottom: 900px solid rgb(44 255 255 / 24%);
+    border-bottom: 900px solid var(--main-yellow);
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
     position: absolute;
@@ -459,6 +460,7 @@ button {
     margin: 0px auto;
     z-index: 1;
     border-radius: 90px 90px 0px 0px;
+    box-sizing: content-box;
 }
 
 .error {
