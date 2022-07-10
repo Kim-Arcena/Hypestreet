@@ -294,6 +294,9 @@ app.post('/delete-product', (req, res) => {
     })
 })
 
+app.get('/404', (req, res) => {
+    res.sendFile("404.html", { root: "public" })
+})
 
 //localhost:3000/register
 app.listen(3000, () => {
