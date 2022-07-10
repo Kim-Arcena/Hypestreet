@@ -298,6 +298,11 @@ app.get('/404', (req, res) => {
     res.sendFile("404.html", { root: "public" })
 })
 
+app.use((req, res) => {
+    res.redirect('index.html')
+})
+
+
 //localhost:3000/register
 app.listen(3000, () => {
     console.log("Server is running on port 3000");
