@@ -38,10 +38,10 @@
 
 .product-images{
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
+    width: 60%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     height: 100px;
