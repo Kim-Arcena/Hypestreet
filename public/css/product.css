@@ -1,5 +1,5 @@
 /* product detail */
-.spec-product-section{
+/* .spec-product-section{
     width: 100%;
     padding: 5% 5vw;
     display: flex;
@@ -20,7 +20,48 @@
     width: 100%;
     height: 500px;
     object-fit: cover;
+}*/
+
+.product-details{
+    width: 100%;
+    padding: 60px 10vw;
+    display: flex;
+    justify-content: space-between;
 }
+
+.image-slider{
+    width: 500px;
+    height: 500px;
+    position: relative;
+    background-image: url('../img/AJ1-High/AJ1\ HIGH\ RHOHR.png');
+    background-size: contain;
+    background-repeat:no-repeat ;
+}
+
+.product-images{
+    position: absolute;
+    bottom: 20px;
+    left:10%;
+    transform: translateY(-50px);
+    width: 90%;
+    background: var(--dark-gray);
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100px;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.product-images img{
+    width: 100%;
+    height: 80px;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+}
+
 
 .product-title{
     font-size: 3rem;

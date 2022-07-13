@@ -434,7 +434,6 @@ section{
 
 /* Review Section */
 .review-section{
-    position: relative;
     padding: 50px 5vw;
     background: var(--darker-gray);
 }
