@@ -1,20 +1,7 @@
 /* product detail */
-/* .spec-product-section{
-    width: 100%;
-    padding: 5% 5vw;
-    display: flex;
-    gap: 10rem;
-}
+/*
 
-.spec-product-container{
-    width: 100%;
-    display: flex;
-    gap: 1rem;
-    padding: 10rem;
-    border-radius: 5rem;
-    background-color: var(--container-gray);
-    box-shadow: 7px 7px 15px var(--shadow-gray);
-}
+
 
 .spec-product-image{
     width: 100%;
@@ -29,8 +16,19 @@
     justify-content: space-between;
 }
 
+.spec-product-container{
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    padding: 10rem;
+    border-radius: 5rem;
+    background-color: var(--container-gray);
+    box-shadow: 7px 7px 15px var(--shadow-gray);
+    justify-content: space-between;
+}
+
 .image-slider{
-    width: 500px;
+    width: 45%;
     height: 500px;
     position: relative;
     background-image: url('../img/AJ1-High/AJ1\ HIGH\ RHOHR.png');
@@ -40,10 +38,10 @@
 
 .product-images{
     position: absolute;
-    bottom: 50px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     height: 100px;
@@ -65,6 +63,10 @@
 
 .product-images img.active{
     opacity: 0.4;
+}
+
+.product-detail{
+    width: 50%;
 }
 
 .product-title{
