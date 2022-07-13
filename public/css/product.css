@@ -63,6 +63,9 @@
     border-radius: 15px;
 }
 
+.product-images img.active{
+    opacity: 0.4;
+}
 
 .product-title{
     font-size: 3rem;
