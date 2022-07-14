@@ -1,3 +1,4 @@
+//image slider
 const productImages = document.querySelectorAll(".product-images img");
 const productImageSlide = document.querySelector(".image-slider");
 
@@ -12,7 +13,19 @@ productImages.forEach((item, index) =>{
     })
 })
 
+//size toggle
+const sizeBtns = document.querySelectorAll(".size-radio-btn");
+let checkBtn = 0;
 
+sizeBtns.forEach((item, index) =>{
+  item.addEventListener('click',() =>{
+    sizeBtns[checkBtn].classList.remove('check')
+    item.classList.add('check');
+    checkBtn = index;
+  })  
+})
+
+//star rating
 let ratingStarInput = [...document.querySelectorAll('.rating-star')];
 
 ratingStarInput.map((star, index) => {
