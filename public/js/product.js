@@ -42,5 +42,42 @@ ratingStarInput.map((star, index) => {
     })
 })   
 
+//product page setting
+let productName = document.querySelector('.product-title');
+let shortDes = document.querySelector('.product-des');
+let price = document.querySelector('.price');
+let detail = document.querySelector('.product-detail');
+let productImage = document.querySelector('.active')
+let title = document.querySelector('title');
 
-//
+const setData = (data) =>{
+    // productName.innerHTML = title.innerHTML = data.name;
+    shortDes.innerHTML = data.shortDes;
+    detail.innerHTML = data.detail;
+    price.innerHTML = `$${data.price}`;
+}
+
+
+const fetchProductData = () =>{
+    fetch('/get-products', {
+        method: 'post',
+        headers: new Headers({'Content-Type': 'application/json'}),
+        body: JSON.stringify({id: productId})
+    }).then(res => res.json())
+    .then(data => {
+        setData(data)
+    })
+    .catch(err => {
+        console.log(err)
+        alert('No Product Found');
+        location.replace('/404');
+    })
+}
+
+let productId = null;
+if(location.pathname != '/add-product'){
+    productId = decodeURI(location.pathname.split('/').pop());
+    fetchProductData();
+}
+
+
