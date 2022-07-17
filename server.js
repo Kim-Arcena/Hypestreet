@@ -294,6 +294,11 @@ app.post('/delete-product', (req, res) => {
     })
 })
 
+app.get('/products/:id', (req, res) => {
+    res.sendFile("product-des.html", { root: "public" });
+})
+
+
 app.get('/404', (req, res) => {
     res.sendFile("404.html", { root: "public" })
 })
