@@ -46,7 +46,6 @@ let productName = document.querySelector('.product-title');
 let shortDes = document.querySelector('.product-des');
 let price = document.querySelector('.price');
 let detail = document.querySelector('.des');
-let tags = document.querySelector('.tags');
 let title = document.querySelector('title');
 
 // let cartBtn = document.querySelector('.cart-btn');
@@ -68,7 +67,6 @@ const setData = (data) => {
     shortDes.innerHTML = data.shortDes;
     price.innerHTML = data.price;
     detail.innerHTML = data.detail;
-    tags.innerHTML = data.tags;
 
     let productImg = document.querySelector('.product-img')
     productImg.src = imagePath = data.image;
