@@ -131,6 +131,18 @@
     margin: 20px 0;
 }
 
+.upload-image-sec{
+    border: 1px solid var(--white);
+    height: 150px;
+}
+.upload-catalouge{
+    width: 100%;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    border: 1px solid var(--white);
+}
 
 .btn-wrapper{
     display: flex;
