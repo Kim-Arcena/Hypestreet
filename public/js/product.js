@@ -68,6 +68,9 @@ const setData = (data) => {
     price.innerHTML = data.price;
     detail.innerHTML = data.detail;
 
+    //should be fixed
+    // let productImg = document.querySelector('.product-img')
+    // productImg.src = imagePath = data.image;
     productImages[0].src = imagePath = data.image;
 }
 
