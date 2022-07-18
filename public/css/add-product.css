@@ -132,7 +132,6 @@
 }
 
 .upload-image-sec{
-    border: 1px solid var(--white);
     height: 150px;
 }
 .upload-catalouge{
@@ -141,7 +140,16 @@
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-gap: 10px;
-    border: 1px solid var(--white);
+}
+.upload-image{
+    width: 100%;
+    height: 100px;
+    cursor: pointer;
+    background: var(--darker-gray);
+    background-size: cover;
+}
+.upload-image:hover{
+    background: var(--shadow-gray);
 }
 
 .btn-wrapper{
