@@ -42,23 +42,16 @@ ratingStarInput.map((star, index) => {
     })
 })   
 
-//product page setting
 let productName = document.querySelector('.product-title');
 let shortDes = document.querySelector('.product-des');
 let price = document.querySelector('.price');
-let detail = document.querySelector('.product-detail');
-let productImage = document.querySelector('.active')
+let detail = document.querySelector('.des');
+let tags = document.querySelector('.tags');
 let title = document.querySelector('title');
 
-const setData = (data) =>{
-    // productName.innerHTML = title.innerHTML = data.name;
-    shortDes.innerHTML = data.shortDes;
-    detail.innerHTML = data.detail;
-    price.innerHTML = `$${data.price}`;
-}
+// let cartBtn = document.querySelector('.cart-btn');
 
-
-const fetchProductData = () =>{
+const fetchProductData = () => {
     fetch('/get-products', {
         method: 'post',
         headers: new Headers({'Content-Type': 'application/json'}),
@@ -67,11 +60,18 @@ const fetchProductData = () =>{
     .then(data => {
         setData(data)
     })
-    .catch(err => {
-        console.log(err)
-        alert('No Product Found');
-        location.replace('/404');
-    })
+    .catch(err => console.log(err))
+}
+
+const setData = (data) => {
+    productName.innerHTML = title.innerHTML = data.name;
+    shortDes.innerHTML = data.shortDes;
+    price.innerHTML = data.price;
+    detail.innerHTML = data.detail;
+    tags.innerHTML = data.tags;
+
+    let productImg = document.querySelector('.product-img')
+    productImg.src = imagePath = data.image;
 }
 
 let productId = null;
@@ -79,5 +79,4 @@ if(location.pathname != '/add-product'){
     productId = decodeURI(location.pathname.split('/').pop());
     fetchProductData();
 }
-
 
