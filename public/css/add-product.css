@@ -89,6 +89,8 @@
     opacity: 1;
 }
 
+
+
 .product-detail{
     width: 60%;
     max-width: 60%;
@@ -121,7 +123,7 @@
 
 .text{
     text-transform: capitalize;
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 2rem;
     opacity: 0.5;
 }
