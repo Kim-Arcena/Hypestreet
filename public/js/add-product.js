@@ -23,7 +23,7 @@ editables.map((element) => {
     })
 })
 
-let uploadInput = document.querySelector('#upload-image');
+let uploadInput = document.querySelector('#first-file-upload-btn');
 let imagePath = 'img/seller/noImage.png'; // default image
 
 uploadInput.addEventListener('change', () => {
