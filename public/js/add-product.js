@@ -48,8 +48,8 @@ uploadInputs.forEach((fileupload, index) => {
                     console.log(imageUrl);
                     let label = document.querySelector(`label[for = ${fileupload.id} ]`);
                     label.style.backgroundImage = `url(${imageUrl})`;
-                    // let productImage = document.querySelector('.product-img');
-                    // productImage.src = imagePath;
+                    let productImage = document.querySelector('.product-img');
+                    productImage.src = imageUrl;
                 })
             })
         }
