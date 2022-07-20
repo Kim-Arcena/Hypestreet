@@ -56,14 +56,21 @@
 }
 
 .product-img{
-    background: var(--darker-gray);
     width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
 }
 
 .image-upload-container{
+    background: var(--darker-gray);
     width: 60%;
+    height: 100%;
     position: relative;
     height: 600px;
+    border: 1px solid white;
 }
 
 .upload-overlay{
@@ -82,7 +89,6 @@
     font-size: 2.5rem;
     opacity: 0;
     transition: 0.5s;
-    border: 1px solid var(--main-yellow);
 }
 
 .upload-overlay:hover{
