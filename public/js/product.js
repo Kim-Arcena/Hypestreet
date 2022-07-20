@@ -1,14 +1,14 @@
 //image slider
-const productImages = document.querySelectorAll(".product-images img");
-const productImageSlide = document.querySelector(".image-slider");
+const displayProductImages = document.querySelectorAll(".product-images img");
+const displayProductImageslide = document.querySelector(".image-slider");
 
 let activeImageSlide = 0;
 
-productImages.forEach((item, index) =>{
+displayProductImages.forEach((item, index) =>{
     item.addEventListener('click',() =>{
-        productImages[activeImageSlide].classList.remove('active');
+        displayProductImages[activeImageSlide].classList.remove('active');
         item.classList.add('active');
-        productImageSlide.style.backgroundImage = `url('${item.src}')`;
+        displayProductImageslide.style.backgroundImage = `url('${item.src}')`;
         activeImageSlide = index;
     })
 })
@@ -43,6 +43,7 @@ ratingStarInput.map((star, index) => {
 })   
 
 let displayProductName = document.querySelector('.product-title');
+let activeImage = document.querySelector('.active');
 let displayShortDes = document.querySelector('.product-des');
 let displayPrice = document.querySelector('.price');
 let displayDetail = document.querySelector('.des');
@@ -50,11 +51,11 @@ let displayTitle = document.querySelector('title');
 
 let cartBtn = document.querySelector('.cart-btn');
 
-const disfetchProductData = () => {
+const displayFetchProductData = () => {
     fetch('/get-products', {
         method: 'post',
         headers: new Headers({'Content-Type': 'application/json'}),
-        body: JSON.stringify({id: productId})
+        body: JSON.stringify({id: displayProductId})
     }).then(res => res.json())
     .then(data => {
         setData(data)
@@ -63,15 +64,16 @@ const disfetchProductData = () => {
 }
 
 const setData = (data) => {
-    displayProductName.innerHTML = title.innerHTML = data.name;
+    displayProductName.innerHTML = displayTitle.innerHTML = data.name;
     displayShortDes.innerHTML = data.shortDes;
     displayPrice.innerHTML = data.price;
     displayDetail.innerHTML = data.detail;
 
     //should be fixed
-    let displayProductImg = document.querySelector('.product-img')
-    displayProductImg.src = imagePath = data.image;
-    // productImages[0].src = imagePath = data.image;
+    // let displayProductImg = document.querySelector('.product-img')
+    // displayProductImg.src = imagePath = data.image;
+    displayProductImages[0].src = activeImage =  imagePath = data.image;
+    displayProductImages[0].classList.add('active')
 }
 
 let displayProductId = null;

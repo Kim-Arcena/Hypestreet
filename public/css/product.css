@@ -32,7 +32,7 @@
     width: 45%;
     height: 500px;
     position: relative;
-    background-image: url('../img/AJ1-High/AJ1\ HIGH\ RHOHR.png');
+    /* background-image: url('../img/AJ1-High/AJ1\ HIGH\ RHOHR.png'); */
     background-size: contain;
     background-repeat:no-repeat ;
 }
