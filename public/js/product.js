@@ -73,7 +73,7 @@ const setData = (data) => {
     // let displayProductImg = document.querySelector('.product-img')
     // displayProductImg.src = imagePath = data.image;
     displayProductImages[0].src = activeImage =  imagePath = data.image;
-    displayProductImages[0].classList.add('active')
+    displayProductImageslide.style.backgroundImage = `url('${data.image}')`;
 }
 
 let displayProductId = null;
