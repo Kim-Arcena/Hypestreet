@@ -42,15 +42,15 @@ ratingStarInput.map((star, index) => {
     })
 })   
 
-let productName = document.querySelector('.product-title');
-let shortDes = document.querySelector('.product-des');
-let price = document.querySelector('.price');
-let detail = document.querySelector('.des');
-let title = document.querySelector('title');
+let displayProductName = document.querySelector('.product-title');
+let displayShortDes = document.querySelector('.product-des');
+let displayPrice = document.querySelector('.price');
+let displayDetail = document.querySelector('.des');
+let displayTitle = document.querySelector('title');
 
-// let cartBtn = document.querySelector('.cart-btn');
+let cartBtn = document.querySelector('.cart-btn');
 
-const fetchProductData = () => {
+const disfetchProductData = () => {
     fetch('/get-products', {
         method: 'post',
         headers: new Headers({'Content-Type': 'application/json'}),
@@ -63,20 +63,20 @@ const fetchProductData = () => {
 }
 
 const setData = (data) => {
-    productName.innerHTML = title.innerHTML = data.name;
-    shortDes.innerHTML = data.shortDes;
-    price.innerHTML = data.price;
-    detail.innerHTML = data.detail;
+    displayProductName.innerHTML = title.innerHTML = data.name;
+    displayShortDes.innerHTML = data.shortDes;
+    displayPrice.innerHTML = data.price;
+    displayDetail.innerHTML = data.detail;
 
     //should be fixed
-    // let productImg = document.querySelector('.product-img')
-    // productImg.src = imagePath = data.image;
-    productImages[0].src = imagePath = data.image;
+    let displayProductImg = document.querySelector('.product-img')
+    displayProductImg.src = imagePath = data.image;
+    // productImages[0].src = imagePath = data.image;
 }
 
-let productId = null;
+let displayProductId = null;
 if(location.pathname != '/add-product'){
-    productId = decodeURI(location.pathname.split('/').pop());
-    fetchProductData();
+    displayProductId = decodeURI(location.pathname.split('/').pop());
+    displayFetchProductData();
 }
 

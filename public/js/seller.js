@@ -1,6 +1,3 @@
-
-
-
 let loader = document.querySelector('.loader');
 let applyBtn = document.querySelector('.apply-btn');
 let sellerForm = document.querySelector('.seller-form');
