@@ -23,29 +23,37 @@ editables.map((element) => {
     })
 })
 
-let uploadInput = document.querySelector('#first-file-upload-btn');
+let uploadInputs = document.querySelectorAll('.fileupload');
 let imagePath = 'img/seller/noImage.png'; // default image
+let imagePaths = [];
 
-uploadInput.addEventListener('change', () => {
-    const file = uploadInput.files[0];
-    let imageUrl;
 
-    if(file.type.includes('image')){
-        // means its an image
-        fetch('/s3url').then(res => res.json())
-        .then(url => {
-            fetch(url, {
-                method: 'PUT',
-                headers: new Headers({'Content-Type': 'image/png'}),
-                body: file
-            }). then(res => {
-                imagePath = url.split("?")[0];
-
-                let productImage = document.querySelector('.product-img');
-                productImage.src = imagePath;
+uploadInputs.forEach((fileupload, index) => {
+    fileupload.addEventListener('change', () => {
+        const file = fileupload.files[0];
+        // console.log(file);
+        let imageUrl;
+    
+        if(file.type.includes('image')){
+            // means its an image
+            fetch('/s3url').then(res => res.json())
+            .then(url => {
+                fetch(url, {
+                    method: 'PUT',
+                    headers: new Headers({'Content-Type': 'image/png'}),
+                    body: file
+                }). then(res => {
+                    imageUrl = url.split("?")[0];
+                    imagePaths[index] = imageUrl;
+                    console.log(imageUrl);
+                    let label = document.querySelector(`label[for = ${fileupload.id} ]`);
+                    label.style.backgroundImage = `url(${imageUrl})`;
+                    // let productImage = document.querySelector('.product-img');
+                    // productImage.src = imagePath;
+                })
             })
-        })
-    }
+        }
+    })    
 })
 
 // form submission
