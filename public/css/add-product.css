@@ -171,16 +171,21 @@
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-gap: 10px;
+    text-align: center;
 }
 .upload-image{
     width: 100%;
     height: 100px;
     cursor: pointer;
-    background: var(--darker-gray);
-    background-size: cover;
+    border: 1px solid white;
+    vertical-align: top;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 .upload-image:hover{
     background: var(--shadow-gray);
+    background-repeat: no-repeat;
+    background-size: contain;   
 }
 
 .btn-wrapper{
