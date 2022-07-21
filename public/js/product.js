@@ -43,11 +43,12 @@ ratingStarInput.map((star, index) => {
 })   
 
 let displayProductName = document.querySelector('.product-title');
-let activeImage = document.querySelector('.active');
 let displayShortDes = document.querySelector('.product-des');
 let displayPrice = document.querySelector('.price');
 let displayDetail = document.querySelector('.des');
 let displayTitle = document.querySelector('title');
+let displayImagePath = 'img/seller/noImage.png'; // default image
+let displayImagePaths = [];
 
 let cartBtn = document.querySelector('.cart-btn');
 
@@ -69,11 +70,14 @@ const setData = (data) => {
     displayPrice.innerHTML = data.price;
     displayDetail.innerHTML = data.detail;
 
-    //should be fixed
-    // let displayProductImg = document.querySelector('.product-img')
-    // displayProductImg.src = imagePath = data.image;
-    displayProductImages[0].src = activeImage =  imagePath = data.image;
-    displayProductImageslide.style.backgroundImage = `url('${data.image}')`;
+    //display image in product page
+    displayImagePaths = data.images;
+    displayImagePaths.forEach((url, index) =>{  
+        displayProductImages[index].src = activeImage =  imagePath = data.images[index];
+        displayProductImageslide.style.backgroundImage = `url('${data.images}')`;
+        let productImage = document.querySelector('.image-slider');
+        productImage.style.backgroundImage = `url('${data.images[0]}')`;
+    })
 }
 
 let displayProductId = null;
