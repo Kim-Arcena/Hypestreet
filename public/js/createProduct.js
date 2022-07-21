@@ -6,7 +6,7 @@ const createProduct = (data) => {
         <button class="btn open-btn" onclick="location.href = '/products/${data.id}'"><i class="fas fa-folder-open"></i></button>
         <button class="btn delete-btn" onclick="deleteItem('${data.id}')"><i class="fas fa-trash"></i></button>
         <div class="product-name">${data.name}</div>
-        <img src="${data.image}" class="product-image" alt="">              
+        <img src="${data.images[0]}" class="product-image" alt="">              
     </div>
     `;
 }

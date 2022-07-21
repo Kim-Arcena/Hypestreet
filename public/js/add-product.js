@@ -53,6 +53,9 @@ uploadInputs.forEach((fileupload, index) => {
                 })
             })
         }
+        else{
+            showAlert('Upload Image Only');
+        }
     })    
 })
 
@@ -67,8 +70,21 @@ let price = document.querySelector('.price');
 let detail = document.querySelector('.des');
 let tags = document.querySelector('.tags');
 
-addProductBtn.addEventListener('click', () => {
+let sizes = [];
 
+const storeSizes = () =>{
+    sizes = [];
+    let sizeCheckBox = document.querySelectorAll('.size-checkbox');
+    sizeCheckBox.forEach(item =>{
+        if(item.checked){
+            sizes.push(item.value);
+        }
+    })
+}
+
+addProductBtn.addEventListener('click', () => {
+    storeSizes();
+    // console.log(sizes)
     // verification
     if(productName.innerHTML == productName.getAttribute('data-placeholder')){
         showFormError('should enter product name');
@@ -101,8 +117,10 @@ const productData = () => {
         shortDes: shortDes.innerText,
         price: price.innerText,
         detail: detail.innerText,
+        images: imagePaths,
+        sizes: sizes,
         tags: tagsArr,
-        image: imagePath,
+        // image: imagePath,
         email: JSON.parse(sessionStorage.user).email,
         draft: false
     }
@@ -146,8 +164,15 @@ const setFormData = (data) => {
     detail.innerHTML = data.detail;
     tags.innerHTML = data.tags;
 
-    let productImg = document.querySelector('.product-img')
-    productImg.src = imagePath = data.image;
+    // let productImg = document.querySelector('.product-img')
+    // productImg.src = imagePath = data.image;
+    imagePaths = data.images;
+    imagePaths.forEach((url, index) =>{
+        let label = document.querySelector(`label[for = ${uploadInputs[index].id} ]`);
+        label.style.backgroundImage = `url(${url})`;
+        let productImage = document.querySelector('.product-img');
+        productImage.src = url;
+    })
 }
 
 let productId = null;

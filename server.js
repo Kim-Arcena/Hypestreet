@@ -221,7 +221,7 @@ app.get('/add-product/:id', (req, res) => {
 
 
 app.post('/add-product', (req, res) => {
-    let { name, shortDes, detail, price, image, tags, email, draft, id } = req.body;
+    let { name, shortDes, detail, price, images, sizes, tags, email, draft, id } = req.body;
 
     if(!draft){
         if(!name.length){
@@ -235,6 +235,13 @@ app.post('/add-product', (req, res) => {
         } else if(!tags.length){
             res.json({'alert' : 'enter tags'});
         }
+        else if(!images.length){
+            res.json({'alert' : 'upload atleast one image'});
+        }
+        else if(!sizes.length){
+            res.json({'alert' : 'enter size'});
+        }
+        
     }
 
     // add-product
