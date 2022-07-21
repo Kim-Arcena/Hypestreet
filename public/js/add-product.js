@@ -173,6 +173,16 @@ const setFormData = (data) => {
         let productImage = document.querySelector('.product-img');
         productImage.src = url;
     })
+
+    //setup size
+    sizes = data.sizes;
+    let sizesCheckbox = document.querySelectorAll('.size-checkbox');
+    sizesCheckbox.forEach(item =>{
+        if(sizes.includes(item.value)){
+            item.setAttribute('checked', '');
+        }
+    })
+
 }
 
 let productId = null;
