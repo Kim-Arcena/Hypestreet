@@ -53,7 +53,7 @@ let actionBtn = userPopupIcon.querySelector('a');
 let user = JSON.parse(sessionStorage.user || null);
 
 if(user != null){
-    text.innerHTML = `Welcome ${user.name}`;
+    text.innerHTML = `Welcome <b>${user.name}</b>`;
     actionBtn.innerHTML = 'Logout';
     actionBtn.addEventListener('click', () => logout());
 }
