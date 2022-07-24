@@ -1,6 +1,6 @@
 // responsive nav bar
 let menu = document.querySelector('#menu-bar');
-let navbar = document.querySelector('.navbar');
+let navbar = document.querySelector('nav');
 let slides = document.querySelectorAll('.slider-container');
 let index = 0;
 let header = document.querySelector('header');
