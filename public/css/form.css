@@ -44,6 +44,16 @@
     color: var(--main-yellow) ;
 }
 
+.search-icon input{
+    margin: 0 !important;
+    box-shadow: none !important;
+    background-color: white;
+}
+
+.search-icon input::placeholder{
+    color: var(--dark-gray) !important;
+}
+
 .input-container{
     width: 100%;
     position: relative;
