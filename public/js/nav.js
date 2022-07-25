@@ -50,10 +50,10 @@ userIcon.addEventListener('click', ()=> userPopupIcon.classList.toggle('active')
 
 let text = userPopupIcon.querySelector('p');
 let actionBtn = userPopupIcon.querySelector('a');
-let user = JSON.parse(sessionStorage.user || null);
+let displayUser = JSON.parse(sessionStorage.user || null);
 
-if(user != null){
-    text.innerHTML = `Welcome <b>${user.name}</b>`;
+if(displayUser != null){
+    text.innerHTML = `Welcome <b>${displayUser.name}</b>`;
     actionBtn.innerHTML = 'Logout';
     actionBtn.addEventListener('click', () => logout());
 }
