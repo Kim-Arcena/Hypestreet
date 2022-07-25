@@ -305,13 +305,17 @@ app.get('/products/:id', (req, res) => {
     res.sendFile("product-des.html", { root: "public" });
 })
 
+app.get('/product-list/:key', (req, res) => {
+    res.sendFile("product-list.html", { root: "public" });
+})
+
 
 app.get('/404', (req, res) => {
     res.sendFile("404.html", { root: "public" })
 })
 
 app.use((req, res) => {
-    res.redirect('index.html')
+    res.redirect('/404')
 })
 
 

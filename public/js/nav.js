@@ -31,7 +31,7 @@ const createNavbar = () => {
         </li>   
         </div>
         <li class="search-icon">
-            <input type="search" placeholder="Search">
+            <input class="search" type="search" placeholder="Search">
             <label class="icon">
             <span class="fas fa-search"></span>
             </label>
@@ -68,3 +68,13 @@ const logout = () => {
     sessionStorage.clear();
     location.reload();
 }
+
+//search box
+let searchBtn = document.querySelector('.icon');
+let searchBox = document.querySelector('.search');
+
+searchBtn.addEventListener('click', () =>{
+    if(!searchBox.value.length){
+        location.href = '/product-list/${searchBox.value}';
+    }
+})
