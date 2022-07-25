@@ -78,6 +78,14 @@ const setData = (data) => {
         let productImage = document.querySelector('.image-slider');
         productImage.style.backgroundImage = `url('${data.images[0]}')`;
     })
+
+    sizeBtns.forEach(item =>{
+        if(!data.sizes.includes(item.innerHTML)){
+            item.style.opacity = '0.2';
+            item.style.pointerEvents = 'none';
+        }
+    })
+
 }
 
 let displayProductId = null;
