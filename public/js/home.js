@@ -15,11 +15,7 @@ window.onscroll = () =>{
   navbar.classList.remove('active');
 }
 
-
-
-
 //slider animation js
-
 
 function next(){
     slides[index].classList.remove('active');

@@ -61,7 +61,11 @@ const displayFetchProductData = () => {
     .then(data => {
         setData(data)
     })
-    .catch(err => console.log(err))
+    .catch(err => {
+        console.log(err);
+        alert('no product found');
+        location.replace('/404');
+    })
 }
 
 const setData = (data) => {
