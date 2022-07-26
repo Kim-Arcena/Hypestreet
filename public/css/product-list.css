@@ -1,6 +1,6 @@
 .listing-product-section{
     position: relative;
-    padding: 50px 10vw;
+    padding: 20px 8vw;
     background: var(--darker-gray);
 }
 
@@ -37,13 +37,15 @@
 
 .listing-container{
     display: flex;
+    
+    justify-content: center;   
+}
+.listing-container-parent{
+    display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
     gap: 1rem;
     margin: 250px 0 0;
-    justify-content: space-between;
-    position: relative;
-    
+    justify-content: flex-start;
 }
 
 .listing-container .listing-card{
