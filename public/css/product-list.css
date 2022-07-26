@@ -6,7 +6,7 @@
 
 .listing-title-main{
     position: absolute;
-    font-size: 300px;
+    font-size: 130px;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
     color: var(--light-gray);
@@ -20,12 +20,12 @@
     z-index: 0;
     font-size: 80px;
     font-weight: 700;
-    margin-bottom: 10px;
     text-transform: uppercase;
     color: var(--white);
-    margin:17rem 0 5rem 17rem;
+    margin:7rem 0 0rem 17rem;
     font-family: 'Mulish', sans-serif;
 }
+
 .listing-title-sec span{
     font-size: 80px;
     font-weight: bold;
@@ -38,8 +38,9 @@
 .listing-container{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     gap: 1rem;
-    margin: 40rem 0 5rem 0;
+    margin: 250px 0 0;
     justify-content: space-between;
     position: relative;
     
@@ -51,13 +52,14 @@
     position: relative;
     overflow: hidden;
     background: var(--dark-gray);
-    height: 50rem;
-    width: 40rem;
+    height: 500px;
+    width: 350px;
     box-shadow: 13px 13px 20px var(--shadow-gray);
     margin: 2rem;
 }
 
 .listing-container .listing-card .product-info{
+    position: relative;
     margin-top: 3rem;
     padding: 4rem 5rem;
     display: flex;
@@ -66,10 +68,10 @@
 }
 
 .listing-container .listing-card img{
-    height: 20rem;
+    height: 180px;
     transform: rotate(-35deg);
     filter: drop-shadow(0px 0px 5px var(--light-gray));
-    margin: 5rem 10rem 0 0;
+    margin: 5rem 12rem 0 0;
 }
 
 .listing-name{
