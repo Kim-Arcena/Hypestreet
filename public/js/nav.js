@@ -1,4 +1,6 @@
 //sticky navbar
+let header = document.querySelector('header');
+
 window.addEventListener('scroll', () => {
     if(window.scrollY > 270){
         header.classList.add('bg');
@@ -6,6 +8,23 @@ window.addEventListener('scroll', () => {
         header.classList.remove('bg');
     }
 });
+
+//responsive
+// responsive nav bar
+let menu = document.querySelector('#menu-bar');
+let navbar = document.querySelector('nav');
+
+menu.onclick = () =>{
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('active');
+  }
+  
+  window.onscroll = () =>{
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('active');
+}
+
+
 
 const createNavbar = () => {
     let navbar = document.createElement('navbar');
@@ -39,22 +58,6 @@ const createNavbar = () => {
     </ul>
     `   
 }
-
-//responsive
-// responsive nav bar
-let menu = document.querySelector('#menu-bar');
-let navbar = document.querySelector('nav');
-
-menu.onclick = () =>{
-    menu.classList.toggle('fa-times');
-    navbar.classList.toggle('active');
-  }
-  
-  window.onscroll = () =>{
-    menu.classList.remove('fa-times');
-    navbar.classList.remove('active');
-}
-
 
 createNavbar();
 

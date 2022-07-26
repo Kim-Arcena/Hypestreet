@@ -60,7 +60,7 @@ const displayFetchProductData = () => {
     }).then(res => res.json())
     .then(data => {
         setData(data);
-        getProducts(data.tag[0])
+        getProducts(data.tag[0]).then(res => creataProductCards(res, 'similar products', '.best-selling-product-section'))
 
     })
     .catch(err => {
