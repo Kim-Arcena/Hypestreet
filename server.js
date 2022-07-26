@@ -259,14 +259,18 @@ app.post('/add-product', (req, res) => {
 })
 
 app.post('/get-products', (req, res) => {
-    let { email, id } = req.body
+    let { email, id, tag } = req.body
     
     let products = collection(db, "products");
     let docRef;
 
     if(id){
         docRef = getDoc(doc(products, id));
-    } else{
+    }
+    else if(tag){
+        docRef = getDocs(query(products, where("tags", "array-contains", tag)))
+    }
+    else{
         docRef = getDocs(query(products, where("email", "==", email)))
     }
 

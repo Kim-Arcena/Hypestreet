@@ -59,7 +59,9 @@ const displayFetchProductData = () => {
         body: JSON.stringify({id: displayProductId})
     }).then(res => res.json())
     .then(data => {
-        setData(data)
+        setData(data);
+        getProducts(data.tag[0])
+
     })
     .catch(err => {
         console.log(err);
