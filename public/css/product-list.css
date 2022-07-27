@@ -37,7 +37,6 @@
 
 .listing-container{
     display: flex;
-    
     justify-content: center;   
 }
 .listing-container-parent{
@@ -48,7 +47,7 @@
     justify-content: flex-start;
 }
 
-.listing-container .listing-card{
+.listing-card{
     border-radius: 2rem;
     text-align: center;
     position: relative;
@@ -60,7 +59,7 @@
     margin: 2rem;
 }
 
-.listing-container .listing-card .product-info{
+.product-info{
     position: relative;
     margin-top: 3rem;
     padding: 4rem 5rem;
@@ -69,7 +68,7 @@
     align-items: center;
 }
 
-.listing-container .listing-card img{
+.listing-card img{
     height: 180px;
     transform: rotate(-35deg);
     filter: drop-shadow(0px 0px 5px var(--light-gray));

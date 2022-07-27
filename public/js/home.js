@@ -33,3 +33,31 @@ const getProducts = (tag) => {
       location.replace('/404');
   })
 }
+
+const creataProductCards = (data, title, ele) =>{
+    let container = document.querySelector(ele);
+    container.innerHTML += `
+    <h1 class="section-title">${title}</h1>
+    <div class="listing-container">
+        ${createCards(data)}
+    </div>   
+    `;
+}
+
+const createCards = data => {
+    let cards = '';
+
+    data.forEach(item =>{
+        cards += `
+        <div class="listing-card" onclick="location.href = '/products/${item.id}'">
+            <div class="listing-name">${item.name}<br><span>${item.tags[0]}</span></div>
+            <img src="${item.images[0]}" class="product-image" alt="">              
+            <div class="product-info">
+                <div class="price">$<span>${item.price}.00</span></div>
+                <button class="buy-now-button">Buy Now</button>
+            </div>
+        </div>
+        `;
+    })
+    return cards;
+}

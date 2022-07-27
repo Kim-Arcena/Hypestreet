@@ -155,7 +155,7 @@
 /* Product Description Section */
 .detail-des, .review-section{
     width: 100%;
-    padding: 20px 5vw 0;
+    padding: 20px 10vw;
 }
 
 .des{
@@ -167,13 +167,13 @@
     text-align: justify;
     padding: 5rem 10rem;
 }
-.detail-des .section-title{
+/* .detail-des .section-title{
     margin-left: 46.5%;
-}
+} */
 
 /* Add Review Section */
 .add-review-section{
-    padding: 10rem 15rem;
+    padding: 60px 10vw;
 
 }
 
@@ -232,3 +232,8 @@
     margin-top: 2.5rem;
     cursor: pointer;
 }
+
+.best-selling-product-section{
+    position: relative;
+}
+

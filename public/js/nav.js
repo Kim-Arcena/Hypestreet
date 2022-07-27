@@ -1,11 +1,11 @@
 //sticky navbar
-let header = document.querySelector('header');
+let headers = document.querySelector('header');
 
 window.addEventListener('scroll', () => {
     if(window.scrollY > 270){
-        header.classList.add('bg');
+        headers.classList.add('bg');
     }else{
-        header.classList.remove('bg');
+        headers.classList.remove('bg');
     }
 });
 
