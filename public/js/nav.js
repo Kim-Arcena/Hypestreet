@@ -94,6 +94,6 @@ let searchBox = document.querySelector('.search');
 
 searchBtn.addEventListener('click', () => {
     if(searchBox.value.length){
-        location.href = `/search/${searchBox.value}`;
+        location.href = `/product-list/${searchBox.value}`;
     }
 })

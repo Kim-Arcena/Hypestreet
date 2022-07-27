@@ -35,7 +35,7 @@ const getProducts = (tag) => {
 }
 
 
-productId = null;
+displayProductId = null;
 
 const createProductCards = (data, title, ele) =>{
     let container = document.querySelector(ele);
@@ -51,7 +51,7 @@ const createCards = data => {
     let cards = '';
 
     data.forEach(item =>{
-        if(item.id != productId){
+       
             cards += `
             <div class="listing-card" onclick="location.href = '/products/${item.id}'">
                 <div class="listing-name">${item.name}<br><span>${item.tags[0]}</span></div>
@@ -62,7 +62,8 @@ const createCards = data => {
                 </div>
             </div>
         `
-        }
+    
+        console.log(item.id);
     })
     return cards;
 }
