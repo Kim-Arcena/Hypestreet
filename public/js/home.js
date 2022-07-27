@@ -37,7 +37,7 @@ const getProducts = (tag) => {
 
 productId = null;
 
-const creataProductCards = (data, title, ele) =>{
+const createProductCards = (data, title, ele) =>{
     let container = document.querySelector(ele);
     container.innerHTML += `
     <h1 class="section-title">${title}</h1>
