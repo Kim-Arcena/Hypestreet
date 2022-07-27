@@ -34,6 +34,9 @@ const getProducts = (tag) => {
   })
 }
 
+
+productId = null;
+
 const creataProductCards = (data, title, ele) =>{
     let container = document.querySelector(ele);
     container.innerHTML += `
@@ -48,7 +51,7 @@ const createCards = data => {
     let cards = '';
 
     data.forEach(item =>{
-        if(item.id != displayProductId){
+        if(item.id != productId){
             cards += `
             <div class="listing-card" onclick="location.href = '/products/${item.id}'">
                 <div class="listing-name">${item.name}<br><span>${item.tags[0]}</span></div>
@@ -58,7 +61,7 @@ const createCards = data => {
                     <button class="buy-now-button">Buy Now</button>
                 </div>
             </div>
-        `;
+        `
         }
     })
     return cards;

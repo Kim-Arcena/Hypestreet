@@ -79,10 +79,10 @@ const setData = (data) => {
     //display image in product page
     displayImagePaths = data.images;
     displayImagePaths.forEach((url, index) =>{  
-        displayProductImages[index].src = activeImage =  imagePath = data.images[index];
-        displayProductImageslide.style.backgroundImage = `url('${data.images}')`;
-        let productImage = document.querySelector('.image-slider');
-        productImage.style.backgroundImage = `url('${data.images[0]}')`;
+        // displayProductImages[index].style.backgroundImage = activeImage =  imagePath = `url('${data.images[index]}')`;
+        // displayProductImageslide.style.backgroundImage = `url('${data.images}')`;
+        // let productImage = document.querySelector('.image-slider');
+        // productImage.style.backgroundImage = `url('${data.images[0]}')`;
     })
 
     sizeBtns.forEach(item =>{

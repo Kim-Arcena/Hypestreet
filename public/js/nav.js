@@ -92,8 +92,8 @@ const logout = () => {
 let searchBtn = document.querySelector('.icon');
 let searchBox = document.querySelector('.search');
 
-searchBtn.addEventListener('click', () =>{
-    if(!searchBox.value.length){
-        location.href = '/product-list/${searchBox.value}';
+searchBtn.addEventListener('click', () => {
+    if(searchBox.value.length){
+        location.href = `/search/${searchBox.value}`;
     }
 })
