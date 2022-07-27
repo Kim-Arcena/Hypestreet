@@ -42,7 +42,9 @@ const createProductCards = (data, title, ele) =>{
     container.innerHTML += `
     <h1 class="section-title">${title}</h1>
     <div class="listing-container">
+        <div class="listing-container-parent">
         ${createCards(data)}
+        </div>
     </div>   
     `;
 }
@@ -60,7 +62,7 @@ const createCards = data => {
                     <div class="price">$<span>${item.price}.00</span></div>
                     <button class="buy-now-button">Buy Now</button>
                 </div>
-            </div>
+            </div> 
         `
     
         console.log(item.id);

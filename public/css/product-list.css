@@ -36,15 +36,16 @@
 }
 
 .listing-container{
-    display: flex;
-    justify-content: center;   
+    display: flex;   
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 .listing-container-parent{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin: 250px 0 0;
-    justify-content: flex-start;
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 540px);
+    gap: 20px;
 }
 
 .listing-card{
