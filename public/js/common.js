@@ -13,10 +13,16 @@ const processData = (data) => {
     if(data.alert){
         showFormError(data.alert);
     }
-    else if(data.name){
+    else if(data.email){
         //store locally
         sessionStorage.user = JSON.stringify(data);             
-        location.replace('/');
+        if(location.search.includes('after')){
+            let pageId = location.search.split('=')[1];
+            location.replace(`/products/${pageId}`);
+        }
+        else{
+            location.replace('/');
+        }
     }
     else if(data.seller){
         let user = JSON.parse(sessionStorage.user);
