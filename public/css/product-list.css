@@ -46,6 +46,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(auto-fit, 540px);
     gap: 20px;
+    padding: 100px;
 }
 
 .listing-card{
