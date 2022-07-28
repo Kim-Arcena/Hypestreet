@@ -44,7 +44,7 @@
     margin-top: 150px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 540px);
+    grid-template-rows: repeat(auto-fit, 540px);
     gap: 20px;
 }
 

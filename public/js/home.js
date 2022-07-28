@@ -43,14 +43,17 @@ const createProductCards = (data, title, ele) =>{
     <h1 class="section-title">${title}</h1>
     <div class="listing-container">
         <div class="listing-container-parent">
-        ${createCards(data)}
+        ${createCards(data, ele)}
         </div>
     </div>   
     `;
 }
 
-const createCards = data => {
+const createCards = (data, ele) => {
     let cards = '';
+    if(ele === '.best-selling-product-section'){
+        data = data.slice(0,4);
+    }    
 
     data.forEach(item =>{
        
@@ -64,8 +67,6 @@ const createCards = data => {
                 </div>
             </div> 
         `
-    
-        console.log(item.id);
     })
     return cards;
 }
