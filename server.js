@@ -315,11 +315,19 @@ app.get('/product-list/:key', (req, res) => {
 
 //review
 app.post('/add-review', (req, res) => {
-    let { headline, review, rate, email, procuct} = req.body;
+    let { headline, review, rate, email, product} = req.body;
 
     console.log(req.body);
     res.json('review');
-    
+    if(headline.length || review.length || rate == 0 || email == null || !productId){
+        res.json({'alert' : 'Please fill in all fields'});
+    }
+    else if(headline.length > 50){
+        res.json({'alert' : 'Headline must be less than 50 characters'});
+    }
+    else if(review.length > 300){
+        res.json({'alert' : 'Review must be less than 300 characters'});
+    }
 })
 
 app.get('/404', (req, res) => {
