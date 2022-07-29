@@ -54,3 +54,25 @@ addReviewBtn.addEventListener('click', () => {
         }
     }
 })
+
+//create dynamic form submission
+const getReviews = () => {
+    if (displayUser == null){
+        displayUser = {
+            email: undefined
+        };
+    }
+
+    sendData('/get-reviews', {
+        email: displayUser.email, 
+        product: displayProductId
+    })
+    .then(res => res.json()) 
+    .then(data => {   
+        if(data.length){
+            console.log(data);
+        }
+    })
+}
+
+getReviews();

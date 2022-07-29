@@ -2,7 +2,7 @@ import express from "express";
 import bcrypt from "bcrypt";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore, doc, collection, setDoc, getDoc, updateDoc, getDocs, query, where, deleteDoc } from "firebase/firestore";
+import { getFirestore, doc, collection, setDoc, getDoc, updateDoc, getDocs, query, where, deleteDoc, limit } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -340,6 +340,18 @@ app.post('/add-review', (req, res) => {
         res.json({'alert': 'some err occured'})
     });
 })
+
+app.post('/get-reviews', (req, res) => {
+    let { product, email } = req.body;
+
+    let reviews = collection(db, "reviews");
+    getDocs(query(reviews, where("product", "==", product)), limit(4))
+    .then(reviews => {
+        console.log(reviews);
+        res.json('shit');
+    })
+})
+
 
 app.get('/404', (req, res) => {
     res.sendFile("404.html", { root: "public" })
