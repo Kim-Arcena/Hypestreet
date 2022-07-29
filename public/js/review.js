@@ -63,12 +63,16 @@ const getReviews = () => {
         };
     }
 
-    sendData('/get-reviews', {
-        email: displayUser.email, 
-        product: displayProductId
+    fetch('/get-reviews', {
+        method: 'post',
+        headers: new Headers({'Content-Type': 'application/json'}),
+        body: JSON.stringify({
+            email: displayUser.email,
+            product: displayProductId
+        })
     })
-    .then(res => res.json()) 
-    .then(data => {   
+    .then(res => res.json())
+    .then(data => {
         if(data.length){
             console.log(data);
         }

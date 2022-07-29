@@ -346,9 +346,28 @@ app.post('/get-reviews', (req, res) => {
 
     let reviews = collection(db, "reviews");
     getDocs(query(reviews, where("product", "==", product)), limit(4))
-    .then(reviews => {
-        console.log(reviews);
-        res.json('shit');
+    .then(review => {
+        let reviewArr = [];
+        
+        if (review.empty){
+            return res.json('no reviews');
+        }
+
+        let userEmail = false;
+
+        review.forEach((item, index) => {
+            let reviewEmail = item.data().email;
+            if (reviewEmail == email){
+                userEmail = true;
+            }
+            reviewArr.push(item.data());
+        })
+
+        if(!userEmail){
+            getDoc(doc(reviews, `review-${email}-${product}`))
+            .then(data => reviewArr.push(data.data()))
+        }
+        return res.json(reviewArr);
     })
 })
 
