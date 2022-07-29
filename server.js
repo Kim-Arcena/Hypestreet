@@ -318,16 +318,27 @@ app.post('/add-review', (req, res) => {
     let { headline, review, rate, email, product} = req.body;
 
     console.log(req.body);
-    res.json('review');
-    if(headline.length || review.length || rate == 0 || email == null || !productId){
-        res.json({'alert' : 'Please fill in all fields'});
+    if(!headline.length || !review.length || rate == 0 || email == null || !product){
+        return res.json({'alert' : 'Please fill in all fields'});
     }
     else if(headline.length > 50){
-        res.json({'alert' : 'Headline must be less than 50 characters'});
+        return res.json({'alert' : 'Headline must be less than 50 characters'});
     }
     else if(review.length > 300){
-        res.json({'alert' : 'Review must be less than 300 characters'});
+        return res.json({'alert' : 'Review must be less than 300 characters'});
     }
+
+    //firebase
+    let reviews = collection(db, "reviews");
+    let docName = `review-${email}-${product}`;
+
+    setDoc(doc(reviews, docName), req.body)
+    .then(data => {
+        return res.json('review')
+    }).catch(err => {
+        console.log(err)
+        res.json({'alert': 'some err occured'})
+    });
 })
 
 app.get('/404', (req, res) => {

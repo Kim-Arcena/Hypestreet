@@ -48,7 +48,7 @@ addReviewBtn.addEventListener('click', () => {
                 review: reviewField.value,
                 rate: rate,
                 email: displayUser.email,
-                product: displayProductId,
+                product: displayProductId
             }
             sendData('/add-review', data);
         }

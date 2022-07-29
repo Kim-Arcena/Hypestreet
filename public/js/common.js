@@ -32,6 +32,9 @@ const processData = (data) => {
     }else if(data.product){
         location.replace('/dashboard');
     }
+    else if(data.review){
+        location.reload();
+    }
 }
 
 //show error
