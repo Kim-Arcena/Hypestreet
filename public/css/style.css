@@ -444,7 +444,8 @@ section{
     margin:50px;
     margin-bottom: 0%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 30px;
 }
 
 .review-card{
