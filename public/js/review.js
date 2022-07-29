@@ -75,8 +75,36 @@ const getReviews = () => {
     .then(data => {
         if(data.length){
             console.log(data);
+            createReviewSection(data);
         }
     })
+}
+
+const createReviewSection = (data) => {
+    let reviewSection = document.querySelector('.review-section');
+    reviewSection.innerHTML += `
+    <h1 class="section-title">Product Reviews</h1>
+    <div class="review-container">
+        ${createReviewCards(data)}
+    </div> 
+    `;
+}
+
+const createReviewCards = (data) => {
+   let cards = '';
+   
+    for (let i = 0; i < 4; i++){
+        if(data[i]){
+            cards += `
+            <div class="review-card">
+                <div class="user-dp" data-rating="${data[i].rate}"><img src="../img/review/tyler.png" alt=""></div>
+                <h2 class="review-title">${data[i].headline}</h2>
+                <p class="review">${data[i].review}</p>
+            </div>
+            `;
+        }
+    }
+    return cards;
 }
 
 getReviews();
