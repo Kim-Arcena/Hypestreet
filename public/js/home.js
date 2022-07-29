@@ -69,3 +69,25 @@ const createCards = (data, ele) => {
     })
     return cards;
 }
+
+//cart funtion
+const addProductToCart = (product) => {
+    let cart = JSON.parse(localStorage.getItem('cart'));
+
+    if(cart === null){
+        cart = [];
+    }
+
+    product = {
+        item: 1,
+        displayProductName: product.name,
+        displayPrice: product.price,
+        displayImagePath: product.images[0],
+        displayShortDes: product.shortDes,
+        size: size || null
+    }
+
+    cart.push(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    return 'added to cart';
+}

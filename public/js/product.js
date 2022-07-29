@@ -16,12 +16,14 @@ displayProductImages.forEach((item, index) =>{
 //size toggle
 const sizeBtns = document.querySelectorAll(".size-radio-btn");
 let checkBtn = 0;
+let size;
 
 sizeBtns.forEach((item, index) =>{
   item.addEventListener('click',() =>{
     sizeBtns[checkBtn].classList.remove('check')
     item.classList.add('check');
     checkBtn = index;
+    size = item.innerHTML;
   })  
 })
 
@@ -73,6 +75,10 @@ const setData = (data) => {
             item.style.opacity = '0.2';
             item.style.pointerEvents = 'none';
         }
+    })
+
+    cartBtn.addEventListener('click',() =>{
+        cartBtn.innerHTML = addProductToCart(data);
     })
 
 }
