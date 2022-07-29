@@ -27,7 +27,7 @@ let loader = document.querySelector('.loader');
 let addReviewBtn = document.querySelector('.add-review-button');
 
 addReviewBtn.addEventListener('click', () => {
-    if(displayUser == null){
+    if(displayUser.email == undefined){
         location.href = `/login?after_page=${displayProductId}`;
         console.log('login first');
     }
