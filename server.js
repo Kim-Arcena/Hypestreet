@@ -313,6 +313,14 @@ app.get('/product-list/:key', (req, res) => {
     res.sendFile("product-list.html", { root: "public" });
 })
 
+//review
+app.post('/add-review', (req, res) => {
+    let { headline, review, rate, email, procuct} = req.body;
+
+    console.log(req.body);
+    res.json('review');
+    
+})
 
 app.get('/404', (req, res) => {
     res.sendFile("404.html", { root: "public" })
