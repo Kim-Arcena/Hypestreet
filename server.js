@@ -350,7 +350,7 @@ app.post('/get-reviews', (req, res) => {
         let reviewArr = [];
         
         if (review.empty){
-            return res.json('no reviews');
+            return res.json('empty');
         }
 
         let userEmail = false;

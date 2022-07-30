@@ -74,8 +74,9 @@ const getReviews = () => {
     .then(res => res.json())
     .then(data => {
         if(data.length){
-            console.log(data);
-            createReviewSection(data);
+            if(data != 'empty'){
+                createReviewSection(data);
+            }            
         }
     })
 }
