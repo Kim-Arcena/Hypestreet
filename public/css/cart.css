@@ -86,3 +86,47 @@
     text-transform: capitalize;
     margin-top: 10px;
 }
+
+.item-counter{
+    width: 90px;
+    height: 30px;
+    display: flex;
+    margin-right: 20px;
+}
+
+.counter-btn, .item-count{
+    width: 30px;
+    height: 30px;
+}
+
+.counter-btn{
+    background: var(--dark-gray);
+    border: 1px solid var(--main-yellow);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.item-count{
+    text-align: center;
+    line-height: 30px;
+}
+
+.sm-price{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.sm-delete-btn{
+    position: absolute;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    top: 5px;
+    left: 5px;
+}
+.sm-delete-btn i{
+    color: var(--main-yellow);
+    font-size: 22px;
+}
