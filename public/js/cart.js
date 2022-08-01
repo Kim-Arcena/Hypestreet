@@ -67,6 +67,8 @@ const setupCartEvents = () => {
                 totalBill -= cost;
                 updateBill();
                 price[i].innerHTML = `$${cost * item.innerHTML}`;
+                product[i].item = item.innerHTML;
+                localStorage.setItem('cart', JSON.stringify(product));
             }
         })
         counterPlus[i].addEventListener('click', () => {
@@ -74,6 +76,8 @@ const setupCartEvents = () => {
             totalBill += cost;
             updateBill();
             price[i].innerHTML = `$${cost * item.innerHTML}`;
+            product[i].item = item.innerHTML;
+            localStorage.setItem('cart', JSON.stringify(product));
         })
     })
 }
