@@ -1,5 +1,4 @@
 //create product in cart
-
 const createSmallCarts = (data) => {
     return `
     <div class="sm-product">
@@ -21,6 +20,9 @@ const createSmallCarts = (data) => {
     `;
 }
 
+let totalBill = 0;
+
+
 const setCartProducts = () => {
     const cartContainer = document.querySelector('.cart-container');
     let cart = JSON.parse(localStorage.getItem('cart'));
@@ -33,11 +35,19 @@ const setCartProducts = () => {
     else{
         for(let i = 0; i< cart.length; i++){
             cartContainer.innerHTML += createSmallCarts(cart[i]);
+            totalBill += Number(cart[i].displayPrice * cart[i].item);
+            updateBill();
         }
     }
 
     setupCartEvents();
 }
+
+const updateBill = () => {
+    let billPrice = document.querySelector('.bill');
+    billPrice.innerHTML = `$${totalBill}`;
+}
+
 
 const setupCartEvents = () => {
     const counterMinus = document.querySelectorAll('.cart-container .decrement');
