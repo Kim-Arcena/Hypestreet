@@ -20,7 +20,7 @@
 
 .cart-container{
     width: 100%;
-    padding: 20px;
+    padding: 20px 50px;
     border-radius: 25px;
     border: 1px solid var(--main-yellow);
     box-shadow: 13px 13px 20px var(--shadow-gray);
@@ -144,20 +144,31 @@
     border: 1px solid var(--main-yellow);
     padding: 20px;
     background-color: var(--dark-gray);
-    align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 .text{
     text-transform: capitalize;
-    font-size: 18px;
-    text-align: center;
+    font-size: 25px;
+    color: var(--main-yellow);
+
 }
 
 .checkout-btn{
-    display: inline;
+    display: inline-block;
     padding: 10px;
     border: 1px solid var(--darker-yellow);
+    border-radius: 25px;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 200px;
+}
+
+.bill{
+    font-size: 30px;
+    align-items: center;
+    margin-top: 10px;
 }
