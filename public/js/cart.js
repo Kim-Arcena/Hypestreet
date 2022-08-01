@@ -62,13 +62,18 @@ const setupCartEvents = () => {
         let cost = Number(price[i].getAttribute('data-price'));
     
         counterMinus[i].addEventListener('click', () => {
-            if(item.innerHTML > 1){
+            if(item.innerHTML > 0){
                 item.innerHTML--;
                 totalBill -= cost;
                 updateBill();
                 price[i].innerHTML = `$${cost * item.innerHTML}`;
                 product[i].item = item.innerHTML;
                 localStorage.setItem('cart', JSON.stringify(product));
+            }
+            if(item.innerHTML == 0){
+                product = product.filter((data, index) =>  index !== i );
+                localStorage.setItem('cart', JSON.stringify(product));
+                location.reload();
             }
         })
         counterPlus[i].addEventListener('click', () => {
@@ -78,6 +83,13 @@ const setupCartEvents = () => {
             price[i].innerHTML = `$${cost * item.innerHTML}`;
             product[i].item = item.innerHTML;
             localStorage.setItem('cart', JSON.stringify(product));
+        })
+    })
+    deleteBtn.forEach((item, i) => {
+        item.addEventListener('click', () => {
+            product = product.filter((data, index) =>  index !== i );
+            localStorage.setItem('cart', JSON.stringify(product));
+            location.reload();
         })
     })
 }
