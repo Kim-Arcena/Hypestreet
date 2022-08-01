@@ -60,39 +60,41 @@ const createNavbar = () => {
 
 createNavbar();
 
-// //user icon pop up
-// let userIcon = document.querySelector('.user');
-// let userPopupIcon = document.querySelector('.user-icon-popup');
+//user icon pop up
+let userIcon = document.querySelector('.user');
+let userPopupIcon = document.querySelector('.user-icon-popup');
 
-// userIcon.addEventListener('click', ()=> userPopupIcon.classList.toggle('active'));
+userIcon.addEventListener('click', ()=> userPopupIcon.classList.toggle('active'));
 
-// let text = userPopupIcon.querySelector('p');
-// let actionBtn = userPopupIcon.querySelector('a');
-// let displayUser = JSON.parse(sessionStorage.user || null);
+let text = userPopupIcon.querySelector('p');
+let actionBtn = userPopupIcon.querySelector('a');
+let displayUser = JSON.parse(sessionStorage.user || null);
 
-// if(displayUser != null){
-//     text.innerHTML = `Welcome <b>${displayUser.name}</b>`;
-//     actionBtn.innerHTML = 'Logout';
-//     actionBtn.addEventListener('click', () => logout());
-// }
-// else{ 
-//     actionBtn.innerHTML = 'Login to your account';
-//     actionBtn.innerHTML = 'login';
-//     actionBtn.addEventListener('click', () => location.href = '/login');
+if(displayUser != null){
+    text.innerHTML = `Welcome <b>${displayUser.name}</b>`;
+    actionBtn.innerHTML = 'Logout';
+    actionBtn.addEventListener('click', () => logout());
+}
+else{ 
+    actionBtn.innerHTML = 'Login to your account';
+    actionBtn.innerHTML = 'login';
+    actionBtn.addEventListener('click', () => location.href = '/login');
     
-// }
+}
 
-// const logout = () => {
-//     sessionStorage.clear();
-//     location.reload();
-// }
+const logout = () => {
+    sessionStorage.clear();
+    location.reload();
+}
 
-// //search box
-// let searchBtn = document.querySelector('.icon');
-// let searchBox = document.querySelector('.search');
+//search box
+let searchBtn = document.querySelector('.icon');
+let searchBox = document.querySelector('.search');
 
-// searchBtn.addEventListener('click', () => {
-//     if(searchBox.value.length){
-//         location.href = `/product-list/${searchBox.value}`;
-//     }
-// })
+searchBtn.addEventListener('click', () => {
+    if(searchBox.value.length){
+        location.href = `/product-list/${searchBox.value}`;
+    }
+})
+
+
