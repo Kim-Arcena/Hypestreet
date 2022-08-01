@@ -44,6 +44,7 @@ const setCartProducts = () => {
 }
 
 const updateBill = () => {
+    updateNavCartCounter();
     let billPrice = document.querySelector('.bill');
     billPrice.innerHTML = `$${totalBill}`;
 }

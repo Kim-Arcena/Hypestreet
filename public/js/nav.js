@@ -97,4 +97,16 @@ searchBtn.addEventListener('click', () => {
     }
 })
 
+const updateNavCartCounter = () => {
+    let cartCount = document.querySelector('.cart-item-count');
+    let cartItem = JSON.parse(localStorage.getItem('cart'));
 
+    if(cartItem != null){
+        cartCount.innerHTML = `0${cartItem.length}`;
+    }
+    else{
+        cartCount.innerHTML = '00';
+    }
+}
+
+updateNavCartCounter();

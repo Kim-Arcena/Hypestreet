@@ -72,6 +72,7 @@ const createCards = (data, ele) => {
 
 //cart funtion
 const addProductToCart = (product) => {
+    updateNavCartCounter();
     let cart = JSON.parse(localStorage.getItem('cart'));
 
     if(cart === null){
