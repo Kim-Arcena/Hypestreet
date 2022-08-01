@@ -4,6 +4,7 @@
     padding: 20px 10vw;
     display: flex;
     justify-content: space-between;
+    gap: 50px;
 }
 
 .cart-product-list{
@@ -129,4 +130,34 @@
 .sm-delete-btn i{
     color: var(--main-yellow);
     font-size: 22px;
+}
+
+
+.checkout-section{
+    width: 40%;
+}
+
+.checkout-box{
+    width: 100%;
+    height: 200px;
+    border-radius: 25px;
+    border: 1px solid var(--main-yellow);
+    padding: 20px;
+    background-color: var(--dark-gray);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text{
+    text-transform: capitalize;
+    font-size: 18px;
+    text-align: center;
+}
+
+.checkout-btn{
+    display: inline;
+    padding: 10px;
+    border: 1px solid var(--darker-yellow);
 }
