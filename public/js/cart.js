@@ -64,10 +64,14 @@ const setupCartEvents = () => {
         counterMinus[i].addEventListener('click', () => {
             if(item.innerHTML > 1){
                 item.innerHTML--;
+                totalBill -= cost;
+                updateBill();
             }
         })
         counterPlus[i].addEventListener('click', () => {
             item.innerHTML++;
+            totalBill += cost;
+            updateBill();
         })
     })
 }
