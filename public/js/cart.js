@@ -29,7 +29,7 @@ const setCartProducts = () => {
 
     console.log(cart);
 
-    if (cart == null) {
+    if (cart == null || cart.length == 0) {
         cartContainer.innerHTML = `<img src="img/home/empty-cart.svg" class="empty-img" alt="">`;
     }
     else{
