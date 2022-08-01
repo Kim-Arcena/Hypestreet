@@ -26,6 +26,7 @@
     box-shadow: 13px 13px 20px var(--shadow-gray);
     background-color: var(--dark-gray);
     display: flex;   
+    flex-direction: column;
 }
 
 .empty-img{
@@ -80,10 +81,9 @@
     margin-bottom: 10px;
 }
 
-.sm-des{
+.sm-size{
     font-size: 15px;
-    opacity: 0.5;
-    line-height: 25px;
+    line-height: 15px;
     text-transform: capitalize;
     margin-top: 10px;
 }

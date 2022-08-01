@@ -82,7 +82,7 @@ const addProductToCart = (product) => {
         item: 1,
         displayProductName: product.name,
         displayPrice: product.price,
-        displayImagePath: product.images[0],
+        displayImagePath: product.images[1],
         displayShortDes: product.shortDes,
         size: size || null
     }
