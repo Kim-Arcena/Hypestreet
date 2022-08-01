@@ -66,12 +66,14 @@ const setupCartEvents = () => {
                 item.innerHTML--;
                 totalBill -= cost;
                 updateBill();
+                price[i].innerHTML = `$${cost * item.innerHTML}`;
             }
         })
         counterPlus[i].addEventListener('click', () => {
             item.innerHTML++;
             totalBill += cost;
             updateBill();
+            price[i].innerHTML = `$${cost * item.innerHTML}`;
         })
     })
 }
