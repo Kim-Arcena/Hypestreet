@@ -152,10 +152,10 @@
     text-transform: capitalize;
     font-size: 25px;
     color: var(--main-yellow);
-
+    opacity: 1!important;
 }
 
-.checkout-btn{
+.checkout-btn, .place-order-btn{
     display: inline-block;
     padding: 10px;
     border: 1px solid var(--darker-yellow);
@@ -165,6 +165,7 @@
     cursor: pointer;
     text-transform: uppercase;
     width: 200px;
+    background-color: var(--dark-gray);
 }
 
 .bill{
