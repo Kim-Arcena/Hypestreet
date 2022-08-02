@@ -375,6 +375,10 @@ app.get('/cart', (req, res) => {
     res.sendFile("cart.html", { root: "public" });
 })
 
+app.get('/checkout', (req, res) => {
+    res.sendFile("checkout.html", { root: "public" });
+})
+
 
 app.get('/404', (req, res) => {
     res.sendFile("404.html", { root: "public" })
