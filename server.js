@@ -6,6 +6,9 @@ import { getFirestore, doc, collection, setDoc, getDoc, updateDoc, getDocs, quer
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
+import stripe from "stripe";
+
+
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -379,6 +382,34 @@ app.get('/checkout', (req, res) => {
     res.sendFile("checkout.html", { root: "public" });
 })
 
+let stripeGateway = stripe(process.env.stripe_key);
+
+let DOMAIN = process.env.DOMAIN;
+
+app.post('/stripe-checkout', async (req, res) => {
+    const session = await stripeGateway.checkout.sessions.create({
+        payment_method_types: ["card"],
+        mode: "payment",
+        success_url: `${DOMAIN}/success`,
+        cancel_url: `${DOMAIN}/checkout`,
+        line_items: req.body.items.map(item => {
+            return {
+               price_data: {
+                   currency: "usd",
+                   product_data: {
+                       name: item.displayProductName,
+                       description: item.displayShortDes,
+                       images: [item.displayImagePath[1]],
+                   },
+                   unit_amount: item.displayPrice * 100
+               },
+               quantity: item.item 
+            }
+        })
+    })
+
+    res.json(session.url)
+})
 
 app.get('/404', (req, res) => {
     res.sendFile("404.html", { root: "public" })

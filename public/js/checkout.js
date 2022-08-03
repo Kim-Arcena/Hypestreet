@@ -7,7 +7,21 @@ window.onload = () => {
 const placeOrderBtn = document.querySelector('.place-order-btn');
 
 placeOrderBtn.addEventListener('click', () => {
-    getAddress();
+    let address = getAddress();
+    console.log(address);
+
+    fetch('/stripe-checkout', {
+        method: 'post',
+        headers: new Headers({'Content-Type': 'application/json'}),
+        body: JSON.stringify({
+            items: JSON.parse(localStorage.getItem('cart')),
+            address: address,
+            email: JSON.parse(sessionStorage.user).email 
+        })
+    }).then(res => res.json())
+    .then(url => {
+        console.log(url);
+    })
 })
 
 const getAddress = () => {
@@ -20,5 +34,8 @@ const getAddress = () => {
 
     if(!address. length || !street. length || !city. length || !state. length || !zipcode. length || !landmark. length){
         return showFormError('Please fill all the fields');
+    }
+    else{
+        return{address, street, city, state, zipcode, landmark};
     }
 }
