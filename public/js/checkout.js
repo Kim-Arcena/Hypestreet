@@ -20,7 +20,10 @@ placeOrderBtn.addEventListener('click', () => {
         })
     }).then(res => res.json())
     .then(url => {
-        console.log(url);
+        location.href = url;
+    })
+    .catch(err => {
+        console.log(err);
     })
 })
 
