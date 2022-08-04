@@ -7,6 +7,9 @@ window.onload = () => {
         localStorage.setItem('cart', JSON.stringify(items));
         showFormError('Payment Successful');
     }
+    if(location.search.includes('payment_fail=true')){
+        showFormError('Payment Cancelled');
+    }
 }
 
 const placeOrderBtn = document.querySelector('.place-order-btn');
