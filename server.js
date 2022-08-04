@@ -419,11 +419,22 @@ app.get('/success', async (req, res) => {
     try{
         const session = await stripeGateway.checkout.sessions.retrieve(session_id);
 
-        console.log(session.customer_details.email);
+        // console.log(session.customer_details.email);
+        let date = new Date();
+        
+        let orders_collection = collection(db, "orders");
+        let docName = `${session.customer_details.email}-order-${date.getTime()}`;
+
+        setDoc(doc(orders_collection, docName), JSON.parse(order))
+        .then(data => {
+            res.redirect('/checkout?payment=done')
+        })
+
 
     }
     catch (err){
         console.log(err);
+        res.redirect('/404')
     }
 })
 
