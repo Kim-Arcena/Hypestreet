@@ -27,7 +27,7 @@ const setCartProducts = () => {
     const cartContainer = document.querySelector('.cart-container');
     let cart = JSON.parse(localStorage.getItem('cart'));
 
-    console.log(cart);
+    // console.log(cart);
 
     if (cart == null || cart.length == 0) {
         cartContainer.innerHTML = `<img src="img/home/empty-cart.svg" class="empty-img" alt="">`;

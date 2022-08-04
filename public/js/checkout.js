@@ -16,23 +16,24 @@ const placeOrderBtn = document.querySelector('.place-order-btn');
 
 placeOrderBtn.addEventListener('click', () => {
     let address = getAddress();
-    console.log(address);
 
-    fetch('/stripe-checkout', {
-        method: 'post',
-        headers: new Headers({'Content-Type': 'application/json'}),
-        body: JSON.stringify({
-            items: JSON.parse(localStorage.getItem('cart')),
-            address: address,
-            email: JSON.parse(sessionStorage.user).email 
+    if(address != undefined){
+        fetch('/stripe-checkout', {
+            method: 'post',
+            headers: new Headers({'Content-Type': 'application/json'}),
+            body: JSON.stringify({
+                items: JSON.parse(localStorage.getItem('cart')),
+                address: address,
+                email: JSON.parse(sessionStorage.user).email 
+            })
+        }).then(res => res.json())
+        .then(url => {
+            location.href = url;
         })
-    }).then(res => res.json())
-    .then(url => {
-        location.href = url;
-    })
-    .catch(err => {
-        console.log(err);
-    })
+        .catch(err => {
+            console.log(err);
+        })   
+    }
 })
 
 const getAddress = () => {
