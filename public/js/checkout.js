@@ -2,6 +2,11 @@ window.onload = () => {
     if(!sessionStorage.user){
         location.replace('/login');
     }
+    if(location.search.includes('payment=done')){
+        let items = [];
+        localStorage.setItem('cart', JSON.stringify(items));
+        showFormError('Payment Successful');
+    }
 }
 
 const placeOrderBtn = document.querySelector('.place-order-btn');
