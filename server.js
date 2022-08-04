@@ -6,7 +6,7 @@ import { getFirestore, doc, collection, setDoc, getDoc, updateDoc, getDocs, quer
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-import stripe from "stripe";
+import stripe from 'stripe';
 
 
 // Your web app's Firebase configuration
@@ -382,16 +382,18 @@ app.get('/checkout', (req, res) => {
     res.sendFile("checkout.html", { root: "public" });
 })
 
+// stripe payment
 let stripeGateway = stripe(process.env.stripe_key);
 
 let DOMAIN = process.env.DOMAIN;
+
 
 app.post('/stripe-checkout', async (req, res) => {
     const session = await stripeGateway.checkout.sessions.create({
         payment_method_types: ["card"],
         mode: "payment",
-        success_url: `${DOMAIN}/success`,
-        cancel_url: `${DOMAIN}/checkout`,
+        success_url: `${DOMAIN}/success?session_id={CHECKOUT_SESSION_ID}&order=${JSON.stringify(req.body)}`,
+        cancel_url: `${DOMAIN}/checkout?payment_fail=true`,
         line_items: req.body.items.map(item => {
             return {
                price_data: {
@@ -409,6 +411,20 @@ app.post('/stripe-checkout', async (req, res) => {
     })
 
     res.json(session.url)
+})
+
+app.get('/success', async (req, res) => {
+    let { order, session_id } = req.query;
+
+    try{
+        const session = await stripeGateway.checkout.sessions.retrieve(session_id);
+
+        console.log(session.customer_details.email);
+
+    }
+    catch (err){
+        console.log(err);
+    }
 })
 
 app.get('/404', (req, res) => {
