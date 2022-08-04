@@ -7,7 +7,7 @@ const createSmallCarts = (data) => {
         </div>
         <div class="sm-text">
             <p class="sm-product-name">${data.displayProductName}</p>
-            <p class="sm-size">Size: ${data.size}</p>
+            <p class="sm-size">Size: ${data.displaySize}</p>
         </div>
         <div class="item-counter">
             <button class="counter-btn decrement">-</button>

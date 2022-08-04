@@ -85,7 +85,7 @@ const addProductToCart = (product) => {
         displayPrice: product.price,
         displayImagePath: product.images[1],
         displayShortDes: product.shortDes,
-        size: size || null
+        displaySize: size || null
     }
 
     cart.push(product);
