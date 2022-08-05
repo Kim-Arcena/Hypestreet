@@ -1,12 +1,8 @@
 window.onload = () => {
     if(sessionStorage.user){
         user = JSON.parse(sessionStorage.user);
-        if (user.seller) {
-            location.replace('/dashboard')
-        }
         if(user.email){
             location.replace('/');
-            console.log(user.seller)
         }
     }
 }
