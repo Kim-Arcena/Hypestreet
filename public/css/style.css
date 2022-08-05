@@ -64,8 +64,11 @@ nav ul{
     align-items: center;
     justify-content: center;
 }
-nav ul li.logo{
+nav ul .logo{
     flex: 1;
+}
+
+nav ul .logo a{
     text-transform: uppercase;
     font-family: 'Jura', sans-serif;
     font-weight: bold;

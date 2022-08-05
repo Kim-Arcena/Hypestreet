@@ -29,32 +29,32 @@ const createNavbar = () => {
     let navbar = document.querySelector('.navbar');
 
     navbar.innerHTML += `
-    <ul>
-        <li class="logo">Hypestreet</li>
-        <li class="btn"><span class="fas fa-bars"></span></li>
-        <div class="items">
-        <li><a href="#home">home</a></li>
-        <li><a href="#products">products</a></li>
-        <li><a href="#about">about</a></li>
-        <li class="cart" onclick="location.href = '/cart'">
-            <a href="#" class="fas fa-shopping-cart"></a>
-            <span class="cart-item-count">00</span>
-        </li>
-        <li class="user">
-            <a class="fas fa-user"></a>
-            <div class="user-icon-popup">
-                <p>Login to your account</p>
-                <a>Login</a>
+        <ul>
+            <li class="logo"><a href="/">HYPSTRT.ILO</a></li>
+            <li class="btn"><span class="fas fa-bars"></span></li>
+            <div class="items">
+            <li><a href="/">home</a></li>
+            <li><a href="/product-list/jordans">products</a></li>
+            <li><a href="/about">about</a></li>
+            <li class="cart" onclick="location.href = '/cart'">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <span class="cart-item-count">00</span>
+            </li>
+            <li class="user">
+                <a class="fas fa-user"></a>
+                <div class="user-icon-popup">
+                    <p>Login to your account</p>
+                    <a>Login</a>
+                </div>
+            </li>   
             </div>
-        </li>   
-        </div>
-        <li class="search-icon">
-            <input class="search" type="search" placeholder="Search">
-            <label class="icon">
-            <span class="fas fa-search"></span>
-            </label>
-        </li>
-    </ul>
+            <li class="search-icon">
+                <input class="search" type="search" placeholder="Search">
+                <label class="icon">
+                <span class="fas fa-search"></span>
+                </label>
+            </li>
+        </ul>
     `   
 }
 
