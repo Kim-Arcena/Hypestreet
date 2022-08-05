@@ -20,6 +20,9 @@ const processData = (data) => {
             let pageId = location.search.split('=')[1];
             location.replace(`/products/${pageId}`);
         }
+        if(location.search.includes('checkout')){
+            location.replace('/checkout');
+        }
         else{
             location.replace('/');
         }

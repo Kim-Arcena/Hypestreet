@@ -1,6 +1,7 @@
 window.onload = () => {
     if(!sessionStorage.user){
-        location.replace('/login');
+        location.replace('/login?checkout');
+
     }
     if(location.search.includes('payment=done')){
         let items = [];
