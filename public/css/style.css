@@ -76,13 +76,13 @@ nav ul .logo a{
     color: var(--main-yellow);
     font-weight: 700;
 }
-nav ul div.items{
+.items{
     padding: 0 25px;
     display: inline-flex;
 }
 nav ul div.items a{
     text-transform: uppercase;
-    color: var(--main-yellow);
+    color: var(--white);
     text-decoration: none;
     font-size: 17px;
     padding: 0 20px;
@@ -123,20 +123,25 @@ nav ul .search-icon .icon span{
     color: white;
     font-size: 18px;
 }
-nav ul li.btn{
+nav ul li.nav-btn{
     font-size: 29px;
     flex: 1;
     padding: 0 40px;
     display: none;
 }
-nav ul li.btn span{
+nav ul li.nav-btn span{
     height: 42px;
     width: 42px;
     text-align: center;
     line-height: 42px;
     border-radius: 5px;
     cursor: pointer;
+    background: var(--shadow-gray);
 }
+nav ul li.nav-btn span.show:before{
+    content: '\f00d';
+}
+
 
 .cart-item-count{
     position: relative;
@@ -173,13 +178,6 @@ nav ul li.btn span{
     color: black;
 }
 
-#menu-bar{
-    font-size: 2.5rem;
-    padding: .5rem 1.5rem;
-    color:var(--main-yellow);
-    cursor: pointer;
-    display: none;
-}
 .bg{
     background-color: var(--dark-gray);
 }
@@ -662,42 +660,25 @@ footer p{
 
 
 /* Responsive */
-@media (max-width:926px){
+@media (max-width:1074px){
 
-    #menu-bar{
-        display: block;
+    .nav ul li.nav-btn span{
+        display: none;
         color: var(--main-yellow);
     }
-    
-    header{
-        padding: 1rem 5%;
-        background: var(--dark-gray);
-    }
-    header .navbar{
-        position: absolute;
-        top:100%; left:-120%;
-        width:100%;
-        background:var(--dark-gray);  
+    nav{
+        padding: 10px 40px 10px 0px;
     }
     
-    header .logo{
-        display: block;
-        margin-left: 35%;
+    nav ul li.logo{
+        display: none;
     }
-    header .navbar.active{
-        left:0;
-    }
-  
-    header .navbar a{
-        display: block; 
-        font-size: 2rem;
-        padding:1.5rem;
-        margin:1.5rem;
-        text-align: center;
+    nav ul div.items{
+        flex: 4;
     }
   
     .home .slide-container .slide .image .text{
-        width:60%;
+        width:10%;
     }
   
     .home #prev,
@@ -736,8 +717,34 @@ footer p{
         padding-left: 0;
     }
 
-    
-  
+}
+
+@media (max-width:800px){
+    nav ul li.nav-btn{
+        display: block;
+    }
+    nav{
+        z-index: 1;
+        padding: 9px 40px 9px 0;
+    }
+    .items{
+        z-index: -1;
+        position: fixed;
+        top:-300px;
+        width: 120%;
+        display: inline-block;
+        background: var(--dark-gray);
+        padding: 0;
+        transition: top 0.5s;
+    }
+    .items.show{
+        top:60px;
+    }
+    nav ul div.items li{
+        text-align: center;
+        line-height: 30px;
+        margin: 30px;
+    }
 }
 
   @media (max-width:400px){

@@ -9,44 +9,28 @@ window.addEventListener('scroll', () => {
     }
 });
 
-//responsive
-// responsive nav bar
-let menu = document.querySelector('#menu-bar');
-let navbar = document.querySelector('nav');
-
-menu.onclick = () =>{
-    menu.classList.toggle('fa-times');
-    navbar.classList.toggle('active');
-  }
-  
-  window.onscroll = () =>{
-    menu.classList.remove('fa-times');
-    navbar.classList.remove('active');
-}
-
-
 const createNavbar = () => {
     let navbar = document.querySelector('.navbar');
 
     navbar.innerHTML += `
         <ul>
             <li class="logo"><a href="/">HYPSTRT.ILO</a></li>
-            <li class="btn"><span class="fas fa-bars"></span></li>
+            <li class="nav-btn"><span class="fas fa-bars"></span></li>
             <div class="items">
-            <li><a href="/">home</a></li>
-            <li><a href="/product-list/all">products</a></li>
-            <li><a href="/about">about</a></li>
-            <li class="cart" onclick="location.href = '/cart'">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <span class="cart-item-count">00</span>
-            </li>
-            <li class="user">
-                <a class="fas fa-user"></a>
-                <div class="user-icon-popup">
-                    <p>Login to your account</p>
-                    <a>Login</a>
-                </div>
-            </li>   
+                <li><a href="/">home</a></li>
+                <li><a href="/product-list/all">products</a></li>
+                <li><a href="/about">about</a></li>
+                <li class="cart" onclick="location.href = '/cart'">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <span class="cart-item-count">00</span>
+                </li>
+                <li class="user">
+                    <a class="fas fa-user"></a>
+                    <div class="user-icon-popup">
+                        <p>Login to your account</p>
+                        <a>Login</a>
+                    </div>
+                </li>   
             </div>
             <li class="search-icon">
                 <input class="search" type="search" placeholder="Search">
@@ -59,6 +43,25 @@ const createNavbar = () => {
 }
 
 createNavbar();
+
+
+// responsive
+// responsive nav bar
+let navbar = document.querySelector('nav');
+let navSpan = document.querySelector('.nav-btn span');
+let items = document.querySelector('.items');
+let menu = document.querySelector('.nav-btn');
+
+menu.onclick = () =>{
+    items.classList.toggle('show');
+    navSpan.classList.toggle('show');
+  }
+  
+  window.onscroll = () =>{
+    // menu.classList.remove('fa-times');
+    // navbar.classList.remove('active');
+}
+
 
 //user icon pop up
 let userIcon = document.querySelector('.user');
