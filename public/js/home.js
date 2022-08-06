@@ -25,12 +25,13 @@ const getProducts = (tag) => {
       body: JSON.stringify({tag: tag})
   }).then(res => res.json())
   .then(data => {
+      console.log(tag);
       return data
   })
   .catch(err => {
       console.log(err);
-      alert('no product found');
-      location.replace('/404');
+    //   alert('no product found');
+    //   location.replace('/404');
   })
 }
 
@@ -38,6 +39,7 @@ const getProducts = (tag) => {
 displayProductId = null;
 
 const createProductCards = (data, title, ele) =>{
+    console.log(data);
     let container = document.querySelector(ele);
     container.innerHTML += `
     <h1 class="section-title">${title}</h1>

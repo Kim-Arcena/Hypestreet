@@ -271,7 +271,7 @@ app.post('/get-products', (req, res) => {
         docRef = getDoc(doc(products, id));
     }
     else if(tag){
-        docRef = getDocs(query(products, where("tags", "array-contains", tag)))
+        docRef = getDocs(query(products, where("tags", "array-contains", tag)));
     }
     else{
         docRef = getDocs(query(products, where("email", "==", email)))
@@ -279,7 +279,7 @@ app.post('/get-products', (req, res) => {
 
     docRef.then(products => {
         if(products.empty){
-            return res.json('no products');
+            return res.json('no productsfsdsd');
         }
         let productArr = [];
         
