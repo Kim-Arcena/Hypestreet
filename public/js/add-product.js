@@ -109,7 +109,7 @@ addProductBtn.addEventListener('click', () => {
 })
 
 const productData = () => {
-    let tagsArr = tags.innerText.split(",");
+    let tagsArr = tags.innerText.split(/[ ,]+/);
     tagsArr.forEach((item, i) => tagsArr[i].trim().toLowerCase());
 
     return {
