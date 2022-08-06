@@ -111,6 +111,7 @@ addProductBtn.addEventListener('click', () => {
 const productData = () => {
     let tagsArr = tags.innerText.split(/[ ,]+/);
     tagsArr.forEach((item, i) => tagsArr[i].trim().toLowerCase());
+    tagsArr.push("all")
 
     return {
         name: productName.innerText,

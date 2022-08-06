@@ -34,7 +34,7 @@ const createNavbar = () => {
             <li class="btn"><span class="fas fa-bars"></span></li>
             <div class="items">
             <li><a href="/">home</a></li>
-            <li><a href="/product-list/jordans">products</a></li>
+            <li><a href="/product-list/all">products</a></li>
             <li><a href="/about">about</a></li>
             <li class="cart" onclick="location.href = '/cart'">
                 <a href="#" class="fas fa-shopping-cart"></a>
