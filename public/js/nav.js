@@ -28,7 +28,7 @@ const createNavbar = () => {
                     <a class="fas fa-user"></a>
                     <div class="user-icon-popup">
                         <p>Login to your account</p>
-                        <a>Login</a>
+                        <a class="log-btn">Login</a>
                     </div>
                 </li>   
             </div>

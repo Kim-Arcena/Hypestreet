@@ -142,6 +142,10 @@ nav ul li.nav-btn span.show:before{
     content: '\f00d';
 }
 
+.log-btn{
+    color: var(--main-yellow)!important;
+}
+
 
 .cart-item-count{
     position: relative;
@@ -152,7 +156,7 @@ nav ul li.nav-btn span.show:before{
     position: absolute;
     background: var(--white);
     width: 120px;
-    right: 16%;
+    right: 300px;
     top: 88%;
     border-radius: 1rem;
     z-index: 5;
@@ -676,6 +680,10 @@ footer p{
     nav ul div.items{
         flex: 4;
     }
+
+    .user-icon-popup{
+        left: 375px;
+    }
   
     .home .slide-container .slide .image .text{
         width:10%;
@@ -744,6 +752,9 @@ footer p{
         text-align: center;
         line-height: 30px;
         margin: 30px;
+    }
+    .user-icon-popup{
+        left: 51%;
     }
 }
 
