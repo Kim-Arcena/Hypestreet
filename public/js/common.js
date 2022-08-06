@@ -23,6 +23,9 @@ const processData = (data) => {
         if(location.search.includes('checkout')){
             location.replace('/checkout');
         }
+        if(data.seller){
+            location.replace('/dashboard');
+        }
         else{
             location.replace('/');
         }
@@ -31,7 +34,7 @@ const processData = (data) => {
         let user = JSON.parse(sessionStorage.user);
         user.seller = true;
         sessionStorage.user = JSON.stringify(user);
-        location.replace('/dashboard.html');
+        location.replace('/dashboard');
     }else if(data.product){
         location.replace('/dashboard');
     }
