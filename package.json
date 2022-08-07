@@ -23,7 +23,10 @@
     "dotenv": "^16.0.1",
     "express.js": "^1.0.0",
     "firebase": "^9.8.2",
-    "nodemon": "^2.0.16",
+    "nodemon": "^2.0.19",
     "stripe": "^10.0.0"
-  }
+  },
+  "overrides": {
+    "got": "^12.3.1"
+  }  
 }
