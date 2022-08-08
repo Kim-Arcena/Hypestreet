@@ -1,7 +1,13 @@
 .listing-product-section{
     position: relative;
     padding: 20px 8vw;
-    background: var(--darker-gray);
+}
+
+.listing-title{
+    margin-bottom: 200px;
+    position: relative;
+    padding: 10px;
+    background-color: var(--main-yellow);
 }
 
 .listing-title-main{
@@ -36,17 +42,15 @@
 }
 
 .listing-container{
-    display: flex;   
-    justify-content: space-around;
+    display: flex;  
+    justify-content: center; 
     flex-wrap: wrap;
 }
 .listing-container-parent{
-    margin-top: 150px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(auto-fit, 540px);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     gap: 20px;
-    padding: 100px;
 }
 
 .listing-card{
@@ -58,7 +62,7 @@
     height: 500px;
     width: 350px;
     box-shadow: 13px 13px 20px var(--shadow-gray);
-    margin: 2rem;
+    margin: 15px;
 }
 
 .product-info{

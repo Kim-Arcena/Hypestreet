@@ -40,15 +40,32 @@ displayProductId = null;
 
 const createProductCards = (data, title, ele) =>{
     console.log(data);
-    let container = document.querySelector(ele);
-    container.innerHTML += `
-    <h1 class="section-title">${title}</h1>
-    <div class="listing-container">
-        <div class="listing-container-parent">
-        ${createCards(data, ele)}
+    if(ele === '.best-selling-product-section'){
+        let container = document.querySelector(ele);
+        container.innerHTML += `
+        <h1 class="section-title">${title}</h1>
+        <div class="listing-container">
+            <div class="listing-container-parent"> 
+            ${createCards(data, ele)}
+            </div>
+        </div> 
+        `;
+    }
+    if(ele === '.listing-product-section'){
+        let container = document.querySelector(ele);
+        container.innerHTML += `
+        <div class="listing-title">
+            <h1 class="listing-title-main">collection</h1>
+            <h1 class="listing-title-sec">${title} <span>Shit</span></h1>
+        </div>   
+        <div class="listing-container">
+            <div class="listing-container-parent"> 
+            ${createCards(data, ele)}
+            </div>
         </div>
-    </div>   
-    `;
+        `;
+
+    }
 }
 
 const createCards = (data, ele) => {
