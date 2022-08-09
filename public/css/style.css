@@ -738,6 +738,10 @@ footer p{
         margin-right: 0;
         margin-bottom: 40px;
     }
+
+    footer .footer-container .sec.about-us  {
+        width: 100%;
+    }
     footer .container .sec.about-us,
     .quick-links,.contact{
         width: 100%;
