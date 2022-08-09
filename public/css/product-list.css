@@ -41,28 +41,26 @@
     font-family: 'Mulish', sans-serif;
 }
 
-.listing-container{
+/* .listing-container{
     display: flex;  
     justify-content: center; 
     flex-wrap: wrap;
-}
+} */
 .listing-container-parent{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, max-content));
+    grid-gap: 30px;
+    justify-content: center;
+    padding: initial;
 }
 
 .listing-card{
+    list-style-type: none;
     border-radius: 2rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
     background: var(--dark-gray);
     height: 500px;
     width: 350px;
     box-shadow: 13px 13px 20px var(--shadow-gray);
-    margin: 15px;
 }
 
 .product-info{

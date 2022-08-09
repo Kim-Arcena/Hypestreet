@@ -678,6 +678,10 @@ footer p{
     }
     nav{
         padding: 10px 40px 10px 0px;
+        background-color: var(--dark-gray);
+    }
+    .trans{
+        background-color: var(--dark-gray)
     }
     
     nav ul li.logo{
@@ -768,6 +772,10 @@ footer p{
 
     html{
       font-size: 50%;
+    }
+
+    nav ul{
+        flex-wrap: nowrap;
     }
   
     .home .slide-container .slide .image{
