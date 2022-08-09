@@ -38,15 +38,15 @@ const getProducts = (tag) => {
 
 displayProductId = null;
 
-const createProductCards = (data, title, ele) =>{
-    console.log(data);
+const createProductCards = (data, tag, ele) =>{
+    console.log(tag);
     if(ele === '.best-selling-product-section'){
         let container = document.querySelector(ele);
         container.innerHTML += `
-        <h1 class="section-title">${title}</h1>
+        <h1 class="section-title">Similar Products</h1>
         <div class="listing-container">
             <div class="listing-container-parent"> 
-            ${createCards(data, ele)}
+            ${createCards(data, tag, ele)}
             </div>
         </div> 
         `;
@@ -56,11 +56,11 @@ const createProductCards = (data, title, ele) =>{
         container.innerHTML += `
         <div class="listing-title">
             <h1 class="listing-title-main">collection</h1>
-            <h1 class="listing-title-sec">${title} <span>Shit</span></h1>
+            <h1 class="listing-title-sec">${tag} <span>Shit</span></h1>
         </div>   
         <div class="listing-container">
             <div class="listing-container-parent"> 
-            ${createCards(data, ele)}
+            ${createCards(data, tag, ele)}
             </div>
         </div>
         `;
@@ -68,23 +68,29 @@ const createProductCards = (data, title, ele) =>{
     }
 }
 
-const createCards = (data, ele) => {
+const createCards = (data, tag, ele) => {
+    let dataArr = [];
     let cards = '';
     if(ele === '.best-selling-product-section'){
-        data = data.slice(0,4);
+       data.forEach(product => {
+            dataArr = data.filter(product => product.tags[0] === tag);
+            data = dataArr.sort(() => .5 - Math.random()).slice(0, 5);
+       })
     }    
 
     data.forEach(item =>{
-        cards += `
-        <div class="listing-card" onclick="location.href = '/products/${item.id}'">
-            <div class="listing-name">${item.name}<br><span>${item.tags[0]}</span></div>
-            <img src="${item.images[0]}" class="product-image" alt="">              
-            <div class="product-info">
-                <div class="price">$<span>${item.price}.00</span></div>
-                <button class="buy-now-button">Buy Now</button>
-            </div>
-        </div> 
+        if(item.id !== displayProductId){
+            cards += `
+            <div class="listing-card" onclick="location.href = '/products/${item.id}'">
+                <div class="listing-name">${item.name}<br><span>${item.tags[0]}</span></div>
+                <img src="${item.images[0]}" class="product-image" alt="">              
+                <div class="product-info">
+                    <div class="price">$<span>${item.price}.00</span></div>
+                    <button class="buy-now-button">Buy Now</button>
+                </div>
+            </div> 
         `
+        }
     })
     return cards;
 }
