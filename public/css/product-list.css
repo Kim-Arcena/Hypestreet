@@ -41,11 +41,6 @@
     font-family: 'Mulish', sans-serif;
 }
 
-/* .listing-container{
-    display: flex;  
-    justify-content: center; 
-    flex-wrap: wrap;
-} */
 .listing-container-parent{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, max-content));
