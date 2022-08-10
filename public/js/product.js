@@ -1,6 +1,6 @@
 //image slider
 const displayProductImages = document.querySelectorAll(".product-images img");
-const displayProductImageslide = document.querySelector(".product-image");
+const displayProductImageslide = document.querySelector(".product-image-main");
 
 let activeImageSlide = 0;
 
@@ -29,7 +29,7 @@ sizeBtns.forEach((item, index) =>{
 
 let displayProductName = document.querySelector('.product-title');
 let displayShortDes = document.querySelector('.product-des');
-let displayPrice = document.querySelector('.price');
+let displayPrice = document.querySelector('.price span');
 let displayDetail = document.querySelector('.des');
 let displayTitle = document.querySelector('title');
 let displayImagePath = 'img/seller/noImage.png'; // default image
@@ -65,8 +65,7 @@ const setData = (data) => {
     displayImagePaths.forEach((url, index) =>{  
         displayProductImages[index].src = activeImage =  imagePath = data.images[index];
         // displayProductImageslide.style.backgroundImage = data.images;
-        let productImage = document.querySelector('.product-image');
-        productImage.src = activeImage =  imagePath = data.images[0];
+        displayProductImageslide.src = activeImage =  imagePath = data.images[0];
     })
 
     sizeBtns.forEach(item =>{
