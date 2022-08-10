@@ -1,6 +1,6 @@
 //image slider
 const displayProductImages = document.querySelectorAll(".product-images img");
-const displayProductImageslide = document.querySelector(".image-slider");
+const displayProductImageslide = document.querySelector(".product-image");
 
 let activeImageSlide = 0;
 
@@ -8,7 +8,7 @@ displayProductImages.forEach((item, index) =>{
     item.addEventListener('click',() =>{
         displayProductImages[activeImageSlide].classList.remove('active');
         item.classList.add('active');
-        displayProductImageslide.style.backgroundImage = `url('${item.src}')`;
+        displayProductImageslide.src = item.src;
         activeImageSlide = index;
     })
 })
@@ -64,9 +64,9 @@ const setData = (data) => {
     displayImagePaths = data.images;
     displayImagePaths.forEach((url, index) =>{  
         displayProductImages[index].src = activeImage =  imagePath = data.images[index];
-        displayProductImageslide.style.backgroundImage = `url('${data.images}')`;
-        let productImage = document.querySelector('.image-slider');
-        productImage.style.backgroundImage = `url('${data.images[0]}')`;
+        // displayProductImageslide.style.backgroundImage = data.images;
+        let productImage = document.querySelector('.product-image');
+        productImage.src = activeImage =  imagePath = data.images[0];
     })
 
     sizeBtns.forEach(item =>{

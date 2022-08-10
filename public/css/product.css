@@ -21,8 +21,8 @@
     display: flex;
     gap: 1rem;
     margin-top: 2.5rem;
-    padding: 10rem;
-    border-radius: 5rem;
+    padding: 70px;
+    border-radius: 2rem;
     background-color: var(--container-gray);
     box-shadow: 7px 7px 15px var(--shadow-gray);
     justify-content: space-between;
@@ -30,29 +30,25 @@
 
 .image-slider{
     width: 45%;
-    height: 500px;
     position: relative;
-    /* background-image: url('../img/AJ1-High/AJ1\ HIGH\ RHOHR.png'); */
-    background-size: contain;
-    background-repeat:no-repeat ;
-    background-position: 0px 40px;
 }
 
+.product-image{
+    height: 400px;
+    width: 100%;
+    object-fit: contain;
+}
 .product-images{
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-    display: grid;
+    position: relative;
     grid-template-columns: repeat(3, 1fr);
     height: 100px;
     grid-gap: 10px;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .product-images img{
-    width: 100%;
+    width: 100px;
     height: 100px;
     object-fit: contain;
     background-repeat: no-repeat;
