@@ -1,13 +1,4 @@
 /* product detail */
-/*
-
-
-
-.spec-product-image{
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-}*/
 
 .product-details{
     width: 100%;
@@ -19,21 +10,29 @@
 .spec-product-container{
     width: 100%;
     display: flex;
-    gap: 1rem;
+    gap: 50px;
     margin-top: 2.5rem;
     padding: 70px;
     border-radius: 2rem;
-    background-color: var(--container-gray);
-    box-shadow: 7px 7px 15px var(--shadow-gray);
+    background: linear-gradient(145deg, #131419, #101115);
+    box-shadow:  8px 8px 8px #0c0d0f,
+                -8px -8px 8px #121216;
     justify-content: space-between;
 }
 
 .image-slider{
-    width: 45%;
+    width: 50%;
     position: relative;
+    background: url(../img/home/tactile_noise.png);
+    border-radius: 2rem;
+    box-shadow: inset 8px 8px 8px #0c0d0f,
+                inset -8px -8px 8px #0e0e11;
+    /* box-shadow: inset 7px 7px 15px #111114,
+    inset -7px -7px 15px #121317; */
 }
 
 .product-image-main{
+    padding: 50px;
     height: 406px;
     width: 100%;
     object-fit: contain;
@@ -44,6 +43,7 @@
     grid-gap: 10px;
     display: flex;
     justify-content: center;
+    margin-bottom: 15px;
 }
 
 .product-images img{
@@ -265,6 +265,7 @@
 
     .product-image-main{
         height: 350px;   
+        padding: 20px;
     }
 
     .product-detail{
@@ -295,6 +296,7 @@
     .product-image-main{
         width: 100%;
         height: 200px;
+        padding: 20px;
     }
     .product-detail{
         width: 100%;
@@ -308,10 +310,14 @@
 
     .image-slider{
         width: 100%;
-        padding: 20px;
+        padding: 10px;
     }
 
     .product-des{
         margin-top: 10px;
+    }
+    
+    .product-image-main{
+        padding: 10px;
     }
 }

@@ -52,10 +52,11 @@
 .listing-card{
     list-style-type: none;
     border-radius: 2rem;
-    background: var(--dark-gray);
     height: 500px;
     width: 350px;
-    box-shadow: 13px 13px 20px var(--shadow-gray);
+    background: linear-gradient(145deg, #101115, #131419);
+    box-shadow:  8px 8px 8px #0c0d0f,
+                -8px -8px 8px #121216;
 }
 
 .product-info{
@@ -75,15 +76,15 @@
 }
 
 .listing-name{
-    font-size: 2rem;
+    height: 75px;
+    font-size: 17px;
     font-weight: bold;
     text-transform: uppercase;
-    margin: 3rem 0 0 4rem;
-    font-size: 2rem;
+    margin: auto;
     color: var(--main-yellow);
     font-weight: bold;
-    float: left;
     text-align: justify;
+    margin: 20px 30px;
 }
 .listing-name span{
     color: var(--white);
