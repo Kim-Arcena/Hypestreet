@@ -834,4 +834,10 @@ footer p{
         font-size: 15px;
         padding: 5px;
     }
+    .copyright-text{
+        padding: 0;
+    }
+    .copyright-text p, .copyright-text span{
+        font-size: 8px;
+    }
 }

@@ -18,7 +18,7 @@ body{
     margin-top: 2.5rem;
     padding: 70px;
     border-radius: 2rem;
-    background: linear-gradient(145deg, #13141a, #101116);
+    background: linear-gradient(145deg, #12131a, #0f1016);
     box-shadow:  7px 7px 14px #07080a,
                 -7px -7px 14px #121218;
     justify-content: space-between;
@@ -308,6 +308,12 @@ body{
     }
     .product-des{
         margin-top: 15px;
+    }
+    .size-radio-btn{
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 15px;
     }
 }
 
