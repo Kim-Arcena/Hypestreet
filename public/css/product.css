@@ -158,8 +158,8 @@ body{
     cursor: pointer;
     width: 200px;
     background: linear-gradient(145deg, #13141a, #101116);
-    box-shadow:  5px 5px 5px #060608,
-                -5px -5px 5px #0c0d11;
+    box-shadow:  5px 5px 10px #07080a,
+                -5px -5px 10px #111115;
 }
 
 .btn-container{
