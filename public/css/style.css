@@ -44,22 +44,25 @@ section{
     background-color: var(--darker-gray);
 }
 /* Navbar */
+
+.trans{
+    background: transparent;
+    box-shadow: none;
+}
+
 header{
     position: fixed;
     top:0; left:0; right:0;
     z-index: 1000;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
-    background-color: var(--dark-gray);
+    box-shadow:  6px 6px 12px #0a0a0c,
+             -6px -6px 12px #1a1c22;
+    background: linear-gradient(145deg, #131419, #101115);
 }
 
-.trans{
-    background-color: transparent;
-}
 
 nav{
     margin-right: 0;
     padding: 10px 70px 10px 100px;
-    /* background-color: var(--dark-gray); */
 }
 nav ul{
     display: flex;
@@ -187,7 +190,9 @@ nav ul li.nav-btn span.show:before{
 }
 
 .bg{
-    background-color: var(--dark-gray);
+    background: linear-gradient(145deg, #131419, #101115);
+    box-shadow:  6px 6px 12px #0a0a0c,
+                -6px -6px 12px #1a1c22;
 }
 /* Slider Section*/
 section{

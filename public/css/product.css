@@ -14,7 +14,7 @@
     margin-top: 2.5rem;
     padding: 70px;
     border-radius: 2rem;
-    background: linear-gradient(145deg, #131419, #101115);
+    background: linear-gradient(145deg, #101115, #131419);
     box-shadow:  8px 8px 8px #0c0d0f,
                 -8px -8px 8px #121216;
     justify-content: space-between;
@@ -142,9 +142,7 @@
 }
 
 .product-btn{
-    border: 1px solid var(--main-yellow);
     outline: none;
-    background-color: var(--dark-gray);
     border-radius: 1.5rem;
     padding: 1.5rem 2rem;
     color: var(--main-yellow);
@@ -153,8 +151,10 @@
     text-transform: uppercase;
     margin: 10px 0;
     cursor: pointer;
-    box-shadow: 3px 3px 10px var(--shadow-gray);
     width: 200px;
+    background: linear-gradient(145deg, #13141a, #101116);
+    box-shadow:  5px 5px 5px #060608,
+                -5px -5px 5px #0c0d11;
 }
 
 .btn-container{
