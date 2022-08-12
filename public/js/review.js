@@ -89,6 +89,7 @@ const createReviewSection = (data) => {
         ${createReviewCards(data)}
     </div> 
     `;
+    console.log(data);
 }
 
 const createReviewCards = (data) => {

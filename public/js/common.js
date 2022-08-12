@@ -16,17 +16,18 @@ const processData = (data) => {
     else if(data.email){
         //store locally
         sessionStorage.user = JSON.stringify(data);             
-        if(location.search.includes('after')){
+        if(location.search.includes('after_page')){
             let pageId = location.search.split('=')[1];
             location.replace(`/products/${pageId}`);
         }
-        if(location.search.includes('checkout')){
+        else if(location.search.includes('checkout')){
             location.replace('/checkout');
         }
-        if(data.seller){
+        else if(data.seller){
             location.replace('/dashboard');
         }
         else{
+            alert('login first');
             location.replace('/');
         }
     }
