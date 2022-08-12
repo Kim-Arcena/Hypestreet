@@ -110,10 +110,16 @@ const addProductToCart = (product) => {
         displayPrice: product.price,
         displayImagePath: product.images[1],
         displayShortDes: product.shortDes,
-        displaySize: size || null
+        displaySize: size
     }
 
-    cart.push(product);
-    localStorage.setItem('cart', JSON.stringify(cart));
-    return 'added to cart';
+    if(typeof product.displaySize == 'undefined'){
+        showFormError('Please select a size');
+        return 'add to cart';
+    }
+    else{
+        cart.push(product);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        return 'added to cart';
+    }
 }
