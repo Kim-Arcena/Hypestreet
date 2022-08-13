@@ -5,36 +5,46 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-image: url('../img/home/repeated-square-dark.png'); */
+    background: url(../img/home/tactile_noise.png);
 }
 
 .form-container{
-    width: 60%;
-    min-width: 300px;
+    width: 65%;
     height: 80vh;
     overflow: hidden;
-    background-color: var(--dark-gray);
     z-index: 2;
     display: flex;
     border-radius: 2rem;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-}
-
-.form-img{
-    width: 50%;
-    overflow: hidden;
-    height: 100%;
-    object-fit: cover;
+    background: linear-gradient(145deg, #12131a, #0f1016);
+    box-shadow:  5px 5px 14px #07080a,
+                -5px -5px 14px #121218;
+    position: relative;
 }
 
 .form{
     width: 50%;
+    min-width: 500px;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 5rem;
+}
+
+.form-img-containter{
+    width: 50%;
+    height: 100%;
+    direction: rtl;
+    overflow: hidden;
+    position: relative;
+    border-radius: 2rem;
+    border: 15px solid #111219;
+}
+.form-img{
+    width: 600px;
+    height: 100%;
+    object-fit: cover;
 }
 
 .form-heading{
