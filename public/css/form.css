@@ -39,17 +39,17 @@
     position: relative;
     border-radius: 2rem;
     /* background-color: darkblue; */
-    /* direction: rtl; */
+    direction: rtl;
 }
 .form-img{
-    width: 700px;
+    width: 611px;
     height: 100%;
     object-fit: cover;
     /* border-top: 5px solid #001eff; */
     position: absolute;
     top: 0;
-    left: -600px;
-    right: 0;
+    left: 0;
+    right: 600px;
     pointer-events: none;
 
 }

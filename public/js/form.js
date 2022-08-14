@@ -16,15 +16,16 @@ window.addEventListener('mouseup', () => {
 container.addEventListener('mousemove', (e) => {
     if(!isPressedDown) return;
     e.preventDefault();
-    console.log(e.offsetX - cursorXSpace)
-    leftVal = e.offsetX - cursorXSpace;
-    if(leftVal > 0){
-        leftVal = 0;
+    
+    rightVal = (e.offsetX - cursorXSpace) * -1;
+    if(rightVal < 0){
+        rightVal = 0;
     }
-    if(leftVal < -600){
-        leftVal = -600;
+    if(rightVal > 580){
+        rightVal = 580;
     }
-    cards.style.left = `${leftVal}px`;
+
+    cards.style.right = `${rightVal}px`;
 })
 
 window.onload = () => {
