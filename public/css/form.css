@@ -35,16 +35,23 @@
 .form-img-containter{
     width: 50%;
     height: 100%;
-    direction: rtl;
     overflow: hidden;
     position: relative;
     border-radius: 2rem;
-    border: 15px solid #111219;
+    /* background-color: darkblue; */
+    /* direction: rtl; */
 }
 .form-img{
-    width: 600px;
+    width: 700px;
     height: 100%;
     object-fit: cover;
+    /* border-top: 5px solid #001eff; */
+    position: absolute;
+    top: 0;
+    left: -600px;
+    right: 0;
+    pointer-events: none;
+
 }
 
 .form-heading{

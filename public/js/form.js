@@ -1,3 +1,32 @@
+const container = document.querySelector('.form-img-containter');
+const cards = document.querySelector('.form-img');
+
+let isPressedDown = false;
+let cursorXSpace;
+
+container.addEventListener('mousedown', (e) => {
+    isPressedDown = true;
+    cursorXSpace = e.offsetX  - cards.offsetLeft;
+})
+
+window.addEventListener('mouseup', () => {
+    isPressedDown = false;
+})
+
+container.addEventListener('mousemove', (e) => {
+    if(!isPressedDown) return;
+    e.preventDefault();
+    console.log(e.offsetX - cursorXSpace)
+    leftVal = e.offsetX - cursorXSpace;
+    if(leftVal > 0){
+        leftVal = 0;
+    }
+    if(leftVal < -600){
+        leftVal = -600;
+    }
+    cards.style.left = `${leftVal}px`;
+})
+
 window.onload = () => {
     if(sessionStorage.user){
         user = JSON.parse(sessionStorage.user);
