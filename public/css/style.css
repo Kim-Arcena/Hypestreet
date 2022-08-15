@@ -753,12 +753,24 @@ footer p{
     }
     footer .footer-container{
         flex-direction: column;
+        gap: 20px;
     }
     footer .footer-container .sec{
         margin-right: 0;
         margin-bottom: 0px;
     }
-
+    footer .footer-container h2 {
+        font-size: 20px;
+    }
+    .sci{
+        margin-top: 10px;
+    }
+    .quick-links ul li a{
+        margin-bottom: 0;
+    }
+    .contact .info li{
+        margin-bottom: 5px;
+    }
     footer .footer-container .sec.about-us  {
         width: 100%;
     }
@@ -853,6 +865,15 @@ footer p{
         height: auto;
         position: relative;
     }
+    footer .footer-container h2 {
+        font-size: 15px;
+    }
+    footer p, .quick-links ul li a, .contact .info li span, .contact .info li a{
+        font-size: 12px;
+    }
+    .contact .info li span, .contact .info li a{
+        margin-left: 5px;
+    }
 }
 
 @media (max-width:420px){
@@ -921,5 +942,14 @@ footer p{
     }
     .service-section .box-container{
         margin: 25px;
+    }
+    footer .footer-container h2 {
+        font-size: 13px;
+    }
+    footer p, .quick-links ul li a, .contact .info li span, .contact .info li a{
+        font-size: 10px;
+    }
+    .contact .info li span, .contact .info li a{
+        margin-left: 3px;
     }
 }
