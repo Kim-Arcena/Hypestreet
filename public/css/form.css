@@ -14,11 +14,8 @@
     overflow: hidden;
     z-index: 2;
     display: flex;
-    border-radius: 2rem;
-    background: linear-gradient(145deg, #12131a, #0f1016);
-    box-shadow:  5px 5px 14px #07080a,
-                -5px -5px 14px #121218;
     position: relative;
+    padding: 10px;
 }
 
 .form{
@@ -30,6 +27,11 @@
     justify-content: center;
     align-items: center;
     padding: 5rem;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #0e0e14, #101118);
+    box-shadow:  5px 5px 10px #060609,
+             -5px -5px 10px #181a23;
+    
 }
 
 .form-img-containter{
@@ -37,23 +39,37 @@
     height: 100%;
     overflow: hidden;
     position: relative;
-    border-radius: 2rem;
     /* background-color: darkblue; */
     direction: rtl;
 }
 .form-img{
-    width: 611px;
+    width: 100%;
     height: 100%;
-    object-fit: cover;
+
     /* border-top: 5px solid #001eff; */
+    background: url(../img/home/tactile_noise.png);
+    box-shadow: inset 6px 6px 15px #060609,
+                inset -6px -6px 15px #181823;
     position: absolute;
     top: 0;
     left: 0;
-    right: 600px;
+    right: 80%;
     pointer-events: none;
+    border-radius: 2rem;
 
 }
-
+.form-img-containter p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: #07080a;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    pointer-events: none;
+}
 .form-heading{
     font-size: 3.5rem;
     margin-bottom: 5rem;

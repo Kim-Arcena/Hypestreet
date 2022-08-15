@@ -46,7 +46,6 @@ body{
 
 section{
     padding:2rem 9%;
-    /* background-color: var(--dark-gray); */
 }
 /* Navbar */
 
@@ -219,7 +218,7 @@ section{
 }
 .home .slider-container .slide .content{
     flex: 1 1 40rem;
-    margin: 25px 0px 75px 100px; 
+    margin: 40px 0px 75px 100px; 
     animation: slideContent 0.5s linear .5s backwards;
 }
 @keyframes slideContent{
@@ -268,7 +267,7 @@ section{
     }
 }
 .home .slider-container .slide span{
-    font-size: 5rem;
+    font-size: 45px;
     color: #fff;
     font-weight: bold;  
 }
@@ -287,7 +286,7 @@ section{
 
 .btn{
     display: inline-block;
-    margin-top: 1rem;
+    margin-top: 15px;
     border-radius: 1.5rem;
     border: 2px solid #E1AF2D;
     font-weight: bolder;
@@ -342,11 +341,11 @@ section{
 .service-section .box-container{
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 30px;
     background: var(--dark-gray);
     border-radius: 1.5rem;
-    padding: 5rem;
-    margin: 25px 70px 50px;
+    padding: 30px;
+    margin: 25px 70px;
 }
 .service-section .box-container .box{
     text-align: center;
@@ -395,7 +394,9 @@ section{
 
 .product-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, max-content));
+    /* grid-template-columns: repeat(auto-fit, minmax(350px, max-content)); */
+    grid-template-columns: repeat( 4, 1fr);
+    /* grid-template-columns: repeat(auto-fit, minmax(4, 1fr)); */
     grid-gap: 30px;
     justify-content: center;
     align-items: center;
@@ -406,8 +407,9 @@ section{
     text-align: center;
     position: relative;
     overflow: hidden;
-    height: 500px;
-    width: 350px;
+    /* height: 430px;
+    width: 300px; */
+    aspect-ratio: 3.5/5;
     background: linear-gradient(145deg, #0f1017, #131419);
     box-shadow:  8px 8px 8px #090a0c,
                 -8px -8px 8px #13131b;
@@ -423,10 +425,10 @@ section{
 
 .product-container .product-name{
     text-transform: uppercase;
-    font-size: 5rem;
     font-weight: bold;
-    font-size: 2.5rem;
-    color: var(--white);
+    font-size: 20px;
+    font-family: 'Jura', sans-serif;
+    color: var(--main-yellow);
     font-weight: bold;
     margin: 0;
     padding: 2.5rem;
@@ -453,26 +455,27 @@ section{
 }
 
 .review{
-    font-size: 1.5rem;
+    font-size: 15px;
     color: var(--white);
-    padding: 1rem 0;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .review-container{
-    margin:50px;
-    margin-bottom: 0%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat( 4, 1fr);
+    grid-gap: 35px;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 100px;
+    align-items: center;
 }
 
 .review-card{
-    width: 300px;
     height: auto; 
     flex-direction: column;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .user-dp{
@@ -717,14 +720,27 @@ footer p{
         grid-template-columns: repeat(auto-fit, minmax(200px, max-content));
         grid-gap: 20px;
     }
+    .home .slider-container .slide span{
+        font-size: 35px;
+    }
+    .product-container .product-name{
+        font-size: 18px;
+    }
 
+    .review-container{
+        grid-template-columns: repeat( 2, 1fr);
+        justify-content: center;
+        grid-gap: 15px;
+    }
     .review-card{
-        width: 200px;
-        height: auto;
         flex-direction: column;
         align-items: center;
         display: flex;
+        justify-content: center;
         padding: 0;
+    }
+    .review{
+        padding: 10px 50px; ;
     }
 
     .user-dp{
@@ -763,6 +779,19 @@ footer p{
         margin:auto;
         width: 80%;
     }
+    .home .slider-container .slide .content p {
+        font-size: 15px;
+    }
+    .product-container .product-card {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 3.5 / 5;
+    }
+    .product-container{
+        display: grid;
+        grid-template-columns: repeat( 2, 1fr);
+        grid-gap: 20px;
+    }
 }
 
 @media (max-width:800px){
@@ -798,6 +827,32 @@ footer p{
     .user-icon-popup{
         left: 51%;
     }
+    .home .slider-container .slide .content{
+        margin: 40px 20px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+    }
+    .home .slider-container .slide .content p {
+        font-size: 15px;
+    }
+    .product-container .product-name{
+        font-size: 15px;
+        padding: 2rem;
+    }
+    .review{
+        padding: 10px 40px; 
+        font-size: 12px;
+    }
+    .review-title{
+        font-size: 15px;
+    }
+    .user-dp{
+        width: 120px;
+        height: auto;
+        position: relative;
+    }
 }
 
 @media (max-width:420px){
@@ -813,7 +868,19 @@ footer p{
     .home .slide-container .slide .image{
       padding-bottom: 6rem;
     }
-  
+    .home .slider-container .slide .content p {
+        font-size: 12px;
+    }
+    .home .slider-container .slide {
+        min-height: auto;
+        gap: 10px;
+    }
+    .home .slider-container .slide span{
+        font-size: 25px;
+    }
+    .home .slider-container .slide .content{
+        align-items: flex-start;
+    }
     .heading{
       font-size: 3rem;
     }
@@ -828,14 +895,31 @@ footer p{
         grid-template-columns: repeat(auto-fit, minmax(100px, max-content));
         grid-gap: 10px;
     }
-    .product-name{
-        font-size: 15px;
-        padding: 5px;
+    .product-container .product-name{
+        font-size: 10px;
+        padding: 2rem;
     }
+
+    .review{
+        padding: 10px 20px; 
+        font-size: 9px;
+    }
+    .review-title{
+        font-size: 10px;
+    }
+    .user-dp{
+        width: 100px;
+        height: auto;
+        position: relative;
+    }
+
     .copyright-text{
         padding: 0;
     }
     .copyright-text p, .copyright-text span{
         font-size: 8px;
+    }
+    .service-section .box-container{
+        margin: 25px;
     }
 }
