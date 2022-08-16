@@ -45,6 +45,7 @@ body{
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
+    z-index: 3;
 }
 
 .product-images img{
@@ -57,10 +58,11 @@ body{
     padding: 10px;
     background: var(--darker-gray);
     border-radius: 15px;
+    opacity: 0.4;
 }
 
 .product-images img.active{
-    opacity: 0.4;
+    opacity: 1;
     border: 2px solid var(--main-yellow);
 }
 
@@ -179,10 +181,8 @@ body{
     text-indent: 2%;
     text-align: justify;
     padding: 5rem 0;
+    text-transform: none;
 }
-/* .detail-des .section-title{
-    margin-left: 46.5%;
-} */
 
 /* Add Review Section */
 .add-review-section{

@@ -413,17 +413,20 @@ section{
     background: linear-gradient(145deg, #0f1017, #131419);
     box-shadow:  8px 8px 8px #090a0c,
                 -8px -8px 8px #13131b;
+    display: flex;
+    justify-content: center;
 }
 
 .product-container .product-card img{
     height: 36%;
     transform: rotate(-35deg);
-    margin: 20% 10% 5% 0;
-    position: relative;
-    object-fit: contain;
+    filter: drop-shadow( 10px 20px 8px #090a0c);
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
 }
 
-.product-container .product-name{
+.product-name{
     text-transform: uppercase;
     font-weight: bold;
     font-size: 20px;
@@ -432,6 +435,7 @@ section{
     font-weight: bold;
     margin: 0;
     padding: 2.5rem;
+    position: absolute;
 }
   
 .parallax-window {
