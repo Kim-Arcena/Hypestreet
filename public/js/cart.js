@@ -3,6 +3,7 @@ const createSmallCarts = (data) => {
     return `
     <div class="sm-product">
         <div class="sm-image-container">
+            <buttonm class="sm-delete-btn"><i class="fa fa-times-circle-o" aria-hidden="true"></i></button>
             <img src="${data.displayImagePath}" class="sm-product-img" alt="">
         </div>
         <div class="sm-text">
@@ -15,7 +16,6 @@ const createSmallCarts = (data) => {
             <button class="counter-btn increment">+</button>
         </div>
         <p class="sm-price" data-price="${data.displayPrice}">$${data.displayPrice * data.item}</p>    
-        <buttonm class="sm-delete-btn"><i class="fa fa-times-circle-o" aria-hidden="true"></i></button>
     </div>
     `;
 }

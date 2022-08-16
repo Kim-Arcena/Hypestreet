@@ -1,3 +1,8 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
 .cart-section{
     position: relative;
     margin-top: 120px;
@@ -5,6 +10,7 @@
     display: flex;
     justify-content: space-between;
     gap: 50px;
+    height: 100%;
 }
 
 .cart-product-list{
@@ -27,6 +33,7 @@
     background-color: var(--dark-gray);
     display: flex;   
     flex-direction: column;
+    gap: 20px;
 }
 
 .empty-img{
@@ -37,13 +44,12 @@
 
 .sm-product{
     width: 100%;
-    height: 150px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
     position: relative;
-    margin-bottom: 10px;
+    gap: 20px;
 }
 
 .cart-container .sm-product:last-child{
@@ -53,7 +59,8 @@
 
 .sm-image-container{
     max-width: 150px;
-    height: 150px;
+    min-width: 100px;
+    aspect-ratio: 1/1;
     display: inline-block;
     border: 1px solid var(--main-yellow);
     border-radius: 25px;
@@ -72,11 +79,11 @@
 }
 
 .sm-text{
-    width: 50%;
+    min-width: 170px;
 }
 
 .sm-product-name{
-    font-size: 20px;
+    font-size: 15px;
     text-transform: capitalize;
     margin-bottom: 10px;
 }
@@ -89,10 +96,10 @@
 }
 
 .item-counter{
-    width: 90px;
+    width: 120px;
     height: 30px;
     display: flex;
-    margin-right: 20px;
+    justify-content: space-between;
 }
 
 .counter-btn, .item-count{
@@ -110,28 +117,22 @@
 .item-count{
     text-align: center;
     line-height: 30px;
+    width: 50px;
 }
 
 .sm-price{
     font-size: 18px;
     font-weight: bold;
+    width: 150px;
+    direction: rtl;
 }
-
-.sm-delete-btn{
-    position: absolute;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    height: 30px;
-    width: 30px;
-    top: 5px;
-    left: 5px;
-}
-.sm-delete-btn i{
+.sm-image-container .sm-delete-btn i{
+    position: relative;
     color: var(--main-yellow);
-    font-size: 22px;
+    font-size: 20px;
+    top: -10px;
+    left: 8px;
 }
-
 
 .checkout-section{
     width: 40%;
@@ -166,10 +167,48 @@
     text-transform: uppercase;
     width: 200px;
     background-color: var(--dark-gray);
+    font-size: 15px;
 }
 
 .bill{
     font-size: 30px;
     align-items: center;
     margin-top: 10px;
+}
+
+@media (max-width:1074px){
+    html{
+        font-size: 60%;
+    }
+    .cart-section-heading, .text{
+        font-size: 20px;
+    }
+    .bill{
+        font-size: 23px;
+    }
+    .checkout-btn, .place-order-btn{
+        font-size: 12px
+    }
+    .cart-container{
+        padding: 20px 30px;
+    }
+    .sm-product{
+        gap: 10px;
+    }
+    .item-counter{
+        width: 100px;
+    }
+    .counter-btn, .item-count{
+        width: 20px;
+        height: 20px;
+    }
+    .sm-product-name, .sm-price{
+        font-size: 15px;
+    }
+    .sm-size{
+        font-size: 12px;
+    }
+    .sm-image-container{
+        max-width: 120px;
+    }    
 }
