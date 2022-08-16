@@ -11,7 +11,7 @@
     --lighter-yellow: #eac462;
     --darker-yellow:#a8801c;
     --dark-gray:#111218;
-    --darker-gray: #121317;
+    --darker-gray: #161820;
     --shadow-gray: #131417;
     --light-gray: #2F3031;
     --error-red: #f72a2a;
@@ -850,8 +850,8 @@ footer p{
         font-size: 15px;
     }
     .product-container .product-name{
-        font-size: 15px;
-        padding: 2rem;
+        font-size: 13px;
+        padding: 10px;
     }
     .review{
         padding: 10px 40px; 

@@ -30,8 +30,6 @@ body{
     border-radius: 2rem;
     box-shadow: inset 8px 8px 8px #0c0d0f,
                 inset -8px -8px 8px #0e0e11;
-    /* box-shadow: inset 7px 7px 15px #111114,
-    inset -7px -7px 15px #121317; */
 }
 
 .product-image-main{
@@ -258,7 +256,8 @@ body{
 
 @media (max-width:1074px){
     .spec-product-container{
-        padding: 55px;
+        padding: 30px;
+        gap: 20px;
     }
 
     .product-images img{
@@ -270,8 +269,11 @@ body{
         height: 350px;   
         padding: 20px;
     }
-
+    .image-slider{
+        width: 60%;
+    }
     .product-detail{
+        width: 40%;
         font-size: 10%;
     }
 
@@ -288,6 +290,9 @@ body{
     
     .product-sub-heading, .product-des, .product-btn{
         font-size: 15px;
+    }
+    .product-btn{
+        padding: 12px;
     }
 }
 

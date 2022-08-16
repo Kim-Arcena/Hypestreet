@@ -18,11 +18,17 @@
 .title{
     text-align: center;
     font-size: 4rem;
-    margin-top: 4%;
+    margin-top: 100px;
     font-weight: bold;
     line-height: 5rem;
-    background: var(--darker-gray);
     color: var(--white);
+}
+
+.sizes{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
+    grid-gap: 10px;
+    margin: 10px 0;
 }
 
 .error{
@@ -67,9 +73,8 @@
 .image-upload-container{
     background: var(--darker-gray);
     width: 60%;
-    height: 100%;
+    aspect-ratio: 1/1;
     position: relative;
-    height: 600px;
     border: 1px solid white;
 }
 
@@ -77,8 +82,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     background: rgb(0, 0, 0, 0.2);
     cursor: pointer;
     display: flex;
@@ -96,9 +99,10 @@
 }
 
 .size-checkbox{
+    display: inline-block;
     -webkit-appearance: none;
-    width: 100px;
-    height:40px;
+    width: 50px;
+    height:50px;
     border-radius: 5px;
     border: 1px solid white;
     position: relative;
@@ -122,7 +126,6 @@
 
 .product-detail{
     width: 60%;
-    max-width: 60%;
 }
 
 .disable{
@@ -162,10 +165,6 @@
     margin: 20px 0;
     text-transform: lowercase;
 }
-
-.upload-image-sec{
-    height: 150px;
-}
 .upload-catalouge{
     width: 100%;
     margin: 20px 0;
@@ -176,7 +175,7 @@
 }
 .upload-image{
     width: 100%;
-    height: 100px;
+    aspect-ratio: 1/1;
     cursor: pointer;
     border: 1px solid white;
     padding: 10%;
@@ -198,4 +197,42 @@
 
 .product-btn{
     margin: 2rem;
+}
+@media (max-width:1074px){
+    .image-upload-container{
+        width: 60%;
+    }
+    .product-detail{
+        width: 40%;
+    }
+    .upload-catalouge{
+        grid-template-columns: repeat(3, 1fr);
+        margin: 20px 0;
+    }
+    .size-checkbox{
+        width: 45px;
+        height:45px;
+    }
+}
+
+
+@media (max-width:800px){
+    .image-upload-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .product-detail{
+        width: 100%;
+    }
+    .product-title{
+        margin-top: 15px;
+    }
+    .size-checkbox{
+        width: 40px;
+        height:40px;
+    }
+    .product-title, .price{
+        font-size: 15px;
+    }
 }

@@ -19,7 +19,7 @@ body{
     font-size: 130px;
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
-    color: #161820;
+    color: var(--darker-gray);
     margin-bottom: 10px;
     text-transform: uppercase;
     margin: 40px 0;
