@@ -109,9 +109,13 @@ addProductBtn.addEventListener('click', () => {
 })
 
 const productData = () => {
-    let tagsArr = tags.innerText.split(/[ ,]+/);
+    let tagsArr = tags.innerText.split(',');
+    const all = 'all';
+    if(!tagsArr.includes(all)||(!tagsArr.includes(productName.innerText.toLowerCase()))){
+        tagsArr.push(all);
+        tagsArr.push(productName.innerText);
+    }
     tagsArr.forEach((item, i) => tagsArr[i].trim().toLowerCase());
-    tagsArr.push("all")
 
     return {
         name: productName.innerText,

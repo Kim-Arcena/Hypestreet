@@ -82,8 +82,14 @@ body{
     transform: rotate(-35deg);
     filter: drop-shadow( 10px 20px 8px #090a0c);
     object-fit: contain;
+    animation: shoe 0.3s linear ;
 }
 
+@keyframes shoe{
+    0%{
+        transform: rotate(0deg) scale(0.5);
+    } 
+ }
 .listing-name{
     height: 75px;
     font-size: 17px;

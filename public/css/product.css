@@ -17,40 +17,50 @@ body{
     margin-top: 2.5rem;
     padding: 70px;
     border-radius: 2rem;
-    background: linear-gradient(145deg, #12131a, #0f1016);
+    /* background: linear-gradient(145deg, #12131a, #0f1016); */
     box-shadow:  7px 7px 14px #07080a,
                 -7px -7px 14px #121218;
     justify-content: space-between;
 }
 
 .image-slider{
-    width: 50%;
+    aspect-ratio: 1/1;
+    /* max-width: 50%; */
     position: relative;
     background: url(../img/home/tactile_noise.png);
     border-radius: 2rem;
     box-shadow: inset 8px 8px 8px #0c0d0f,
                 inset -8px -8px 8px #0e0e11;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 
 .product-image-main{
-    padding: 50px;
-    height: 406px;
+    width: 100%;
+    display: none;
     width: 100%;
     object-fit: contain;
-}
-.product-images{
     position: relative;
+    display: block;
+}
+ 
+.product-images{
+    position: absolute;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     display: flex;
     justify-content: center;
-    margin-bottom: 15px;
     z-index: 3;
+    bottom: 5%;
 }
 
 .product-images img{
     aspect-ratio : 1 / 1;
-    width: 100px;
+    width: 80px;
     object-fit: contain;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -261,8 +271,7 @@ body{
     }
 
     .product-images img{
-        aspect-ratio : 1 / 1;
-        width: calc(100% / 3.5);
+        width: 75px;
     }
 
     .product-image-main{
@@ -299,11 +308,14 @@ body{
 @media (max-width:800px){
     .spec-product-container{
         display: inline;
-        padding: 35px;
+        padding: 25px;
     }
     .image-slider{
         width: 100%;
         padding: 40px;
+    }
+    .product-images img{
+        width: 70px;
     }
     .product-image-main{
         width: 100%;
@@ -356,7 +368,9 @@ body{
     .product-des{
         margin-top: 10px;
     }
-    
+    .product-images img{
+        width: 50px;
+    }
     .product-image-main{
         padding: 10px;
     }
