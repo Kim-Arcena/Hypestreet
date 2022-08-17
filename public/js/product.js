@@ -1,7 +1,8 @@
 //image slider
 const displayProductImages = document.querySelectorAll(".product-images img");
 const displayProductImageslide = document.querySelector(".product-image-main");
-const ZOOM = 300; 
+const displayProductCont = document.querySelector(".image-slider");
+const ZOOM = 200; 
 let activeImageSlide = 0;
 
 displayProductImages.forEach((item, index) =>{
@@ -13,45 +14,47 @@ displayProductImages.forEach((item, index) =>{
     })
 })
 
-// displayProductImageslide.addEventListener('mouseenter',() =>{
-//     displayProductImageslide.style.transform = `scale(${ZOOM / 100})`;
-// })
+displayProductCont.addEventListener('mouseenter',() =>{
+    displayProductImageslide.style.width = ZOOM + '%';
+})
 
-// displayProductImageslide.addEventListener('mouseleave',() =>{
-//     displayProductImageslide.style.transform = `scale(${1})`;
-// })
+displayProductCont.addEventListener('mouseleave',() =>{
+    displayProductImageslide.style.width = '100%';
+    displayProductImageslide.style.top = '0';
+    displayProductImageslide.style.left = '0';
+})
 
-// displayProductImageslide.addEventListener('mousemove',(mouseEvent) =>{
-//     let obj = displayProductImageslide;
-//     let obj_left = 0;
-//     let obj_top = 0;
-//     let xpos;
-//     let ypos;
+displayProductCont.addEventListener('mousemove',(mouseEvent) =>{
+    let obj = displayProductImageslide;
+    let obj_left = 0;
+    let obj_top = 0;
+    let xpos;
+    let ypos;
 
-//     while (obj.offsetParent) {
-//         obj_left += obj.offsetLeft;
-//         obj_top += obj.offsetTop;
-//         obj = obj.offsetParent;
-//     }
+    while (obj.offsetParent) {
+        obj_left += obj.offsetLeft;
+        obj_top += obj.offsetTop;
+        obj = obj.offsetParent;
+    }
 
-//     if(mouseEvent){
-//         xpos = mouseEvent.pageX;
-//         ypos = mouseEvent.pageY;
-//     }
-//     else{
-//         xpos = window.event.x + document.body.scrollLeft -  2;
-//         ypos = window.event.y + document.body.scrollTop - 2;
-//     }
-//     xpos -= obj_left;
-//     ypos -= obj_top;
+    if(mouseEvent){
+        xpos = mouseEvent.pageX;
+        ypos = mouseEvent.pageY;
+    }
+    else{
+        xpos = window.event.x + document.body.scrollLeft -  2;
+        ypos = window.event.y + document.body.scrollTop - 2;
+    }
+    xpos -= obj_left;
+    ypos -= obj_top;
 
-//     const imgWidth = displayProductImageslide.clientWidth;
-//     const imgHeight = displayProductImageslide.clientHeight;
+    const imgWidth = displayProductImageslide.clientWidth;
+    const imgHeight = displayProductImageslide.clientHeight;
+    const top = displayProductImageslide.style.top;
+    displayProductImageslide.style.top = -(((imgHeight - displayProductCont.clientHeight) * ypos) / displayProductImageslide.clientHeight) + 'px';
+    displayProductImageslide.style.left = -(((imgWidth - displayProductCont.clientWidth) * xpos) / displayProductImageslide.clientWidth) + 'px';
+});
 
-//     displayProductImageslide.style.top = -(((imgHeight - this.canvasHeight)*ypos)/this.clientHeight) + 'px';
-//     displayProductImageslide.style.left = -(((imgWidth - this.canvasWidth)*xpos)/this.clientWidth) + 'px';
-//     console.log(displayProductImageslide.style.top);
-// })
 
 
 //size toggle
