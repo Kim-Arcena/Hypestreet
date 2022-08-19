@@ -309,6 +309,9 @@
         margin-top: 30px;
         padding: 20px;
     }
+    .cart-section-heading, .text{
+        font-size: 12px;
+    }
     .cart-container{
         padding: 10px;
     }

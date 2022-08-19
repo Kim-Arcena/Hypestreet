@@ -60,7 +60,7 @@ header{
     z-index: 1000;
     box-shadow:  6px 6px 12px #0a0a0c,
              -6px -6px 12px #1a1c22;
-    background: linear-gradient(145deg, #131419, #101115);
+    background: #111218;
 }
 
 
@@ -91,6 +91,40 @@ nav ul .logo a{
     padding: 0 25px;
     display: inline-flex;
 }
+nav ul div.items li ul{
+    position: absolute;
+    display: block;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #111218;
+    box-shadow:  6px 6px 12px #0a0a0c;
+    display: none;
+}
+nav ul div.items li:hover>ul{
+    display: block;
+}
+nav ul div.items li ul a{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px;
+}
+
+nav ul div.items li ul li{
+    width: 150px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+
+.types{
+    top: -2px;
+    left: 150px;
+}
+.fa-caret-down{
+    padding-left: 5px;
+}
+
 nav ul div.items a{
     text-transform: uppercase;
     color: var(--white);
@@ -194,7 +228,7 @@ nav ul li.nav-btn span.show:before{
 }
 
 .bg{
-    background: linear-gradient(145deg, #131419, #101115);
+    background: #111218;
     box-shadow:  6px 6px 12px #0a0a0c,
                 -6px -6px 12px #1a1c22;
 }
@@ -704,7 +738,6 @@ footer p{
     nav ul div.items{
         flex: 4;
     }
-
     .user-icon-popup{
         left: 375px;
     }
@@ -825,7 +858,7 @@ footer p{
     .items{
         z-index: -1;
         position: fixed;
-        top:-300px;
+        top:-2000px;
         width: 120%;
         display: inline-block;
         background: var(--dark-gray);
@@ -839,6 +872,31 @@ footer p{
         text-align: center;
         line-height: 30px;
         margin: 30px;
+    }
+
+    nav ul div.items li ul{
+        display: block;
+        position: static;
+        margin-left: 40%;
+        display: none;
+        background: var(--dark-gray);
+        border: 0;
+        box-shadow: none;
+    }
+    nav ul div.items li ul li a{
+        display: block;
+        text-align: center;
+        line-height: 30px;
+        margin: 0;
+    }
+    /* nav ul div.items li:hover>ul{
+        display: block;
+    } */
+    nav ul div.items li ul a {
+        padding: 0;
+    }
+    .types{    
+        color: var(--main-yellow);
     }
     .user-icon-popup{
         left: 51%;
