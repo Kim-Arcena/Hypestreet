@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;500&family=Mulish:wght@700&family=Raleway:wght@900&display=swap');
+@import url('http://fonts.cdnfonts.com/css/monument-extended');
 
 :root{
     --white: #ffffff;
@@ -473,7 +474,7 @@ section{
 }
   
 .parallax {
-    background: url('../img/parallax/hero.jpg') no-repeat 50% 50%;
+    background: url('../img/parallax/hero.png') no-repeat 50% 50%;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -486,22 +487,44 @@ section{
     margin-top: 20px;
 }
 .row{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 30px;
-    margin: 25px 70px;
+    overflow: hidden;
+    margin: 20px 200px;
+    height:600px;
 }
 
+.txt h1{
+    font-size: 60px;
+    font-family: 'Monument Extended', sans-serif;
+    color: var(--main-yellow);
+}
 .row img{
-    width: 400px;
-    height: 500px;
+    width: 500px;
+    border-radius: 1rem;
+    position: relative;
+    display: flex;
+}
+.right{
+    position: relative;
+    display: flex;
+    float: right;
+}
+.left{
+    position: relative;
+    display: flex;
 }
 
-.itwo, .ifive{
-    top: 20px;
-    margin-left: 1000px;
+.third{
+    border-radius: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: auto;
 }
-.text-1 {
+.text-1{
+    z-index: 1;
+}
+
+ .text-1 {
     top: 160px;
     left: -90px;
 }
@@ -512,30 +535,16 @@ section{
     left: 280px;
 }
 
-.three {
-    z-index: 2;
-    top: -720px;
-    width: 120%;
-}
-
-.four {
-    margin-top: -400px;
-}
 
 .text-3 {
-    z-index: 1;
-    top: -140px;
-    left: -180px;
+    top: 160px;
+    left: -90px;
 }
 
 .text-4 {
     z-index: 1;
     top: 300px;
     left: 300px;
-}
-
-.six {
-    top: -750px;
 }
 
 
