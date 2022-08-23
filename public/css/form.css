@@ -225,3 +225,12 @@ input:focus::placeholder, textarea:focus::placeholder{
     width: 10%;
     display: none;
 }
+
+.checkout-form{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    margin: auto;
+}

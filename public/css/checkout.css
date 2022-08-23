@@ -23,3 +23,61 @@ body{
 .cart-section{
     margin-top: 0;
 }
+
+.checkout-input{
+    padding-left: 20px;
+}
+
+@media (max-width:1074px){
+    .heading{
+        font-size: 25px;
+    }
+    input{
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width:1074px){
+    .heading{
+        font-size: 25px;
+    }
+    input{
+        font-size: 15px;
+        margin: 8px 0;
+    }
+    .checkout-input{
+        padding-left: 15px;
+    }
+    .three-input-container{
+        gap: 8px;
+    }
+}
+
+@media (max-width:800px){
+    .heading{
+        font-size: 20px;
+    }
+    input{
+        font-size: 12px;
+        margin: 5px 0;
+    }
+    .checkout-input{
+        padding-left: 12px;
+    }
+    .three-input-container{
+        gap: 5px;
+    }
+}
+
+@media (max-width:420px){
+    .heading{
+        font-size: 18px;
+    }
+    input{
+        font-size: 10px;
+    }
+    .checkout-input{
+        padding-left: 10px;
+    }
+}

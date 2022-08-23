@@ -156,8 +156,8 @@
 
 .text{
     text-transform: capitalize;
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: 25px;
+    line-height: 25px;
     opacity: 0.5;
 }
 
@@ -214,6 +214,9 @@
         width: 45px;
         height:45px;
     }
+    .text{
+        font-size: 20px;
+    }
 }
 
 
@@ -234,6 +237,9 @@
         height:40px;
     }
     .product-title, .price{
+        font-size: 15px;
+    }
+    .text{
         font-size: 15px;
     }
 }
