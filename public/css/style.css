@@ -474,7 +474,7 @@ section{
 }
   
 .parallax {
-    background: url('../img/parallax/hero1.png') no-repeat 50% 50%;
+    background: url('../img/parallax/5.jpg') no-repeat 50% 50%;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -487,9 +487,11 @@ section{
     margin-top: 20px;
 }
 .row{
-    overflow: hidden;
-    margin: 20px 200px;
+    overflow:hidden;
+    margin: 20px 150px;
     height:600px;
+    /* border: 1px solid red; */
+    padding: 0px;
 }
 
 .txt h1{
@@ -524,29 +526,16 @@ section{
     z-index: 1;
 }
 
- .text-1 {
-    top: 160px;
-    left: -90px;
+.text-1,.text-3{
+    top: 200px;
+    left: -190px;
 }
 
-.text-2 {
+.text-2, .text-4 {
     z-index: 1;
-    top: 280px;
-    left: 280px;
+    top: 210px;
+    left: 220px;
 }
-
-
-.text-3 {
-    top: 160px;
-    left: -90px;
-}
-
-.text-4 {
-    z-index: 1;
-    top: 300px;
-    left: 300px;
-}
-
 
 /* Review Section */
 .review-section{
@@ -911,6 +900,30 @@ footer p{
         grid-template-columns: repeat( 2, 1fr);
         grid-gap: 20px;
     }
+    .row{
+        margin: 20px 90px;
+        height: 450px;
+    }
+    .row img{
+        width: 300px;
+        border-radius: 1rem;
+        position: relative;
+        display: flex;
+    }
+
+    .txt h1{
+        font-size: 30px;
+    }
+    .text-1,.text-3{
+        top: 150px;
+        left: -60px;
+    }
+    
+    .text-2, .text-4 {
+        z-index: 1;
+        top: 150px;
+        left: 60px;
+    }
 }
 
 @media (max-width:800px){
@@ -1006,6 +1019,33 @@ footer p{
     .contact .info li span, .contact .info li a{
         margin-left: 5px;
     }
+    .row{
+        margin: 15px 30px;
+        height: 350px;
+    }
+    .row img{
+        width: 250px;
+        position: relative;
+        display: flex;
+    }
+
+    .txt h1{
+        font-size: 22px;
+    }
+    .text-1{
+        top: 100px;
+        left: -40px;
+    }
+    .text-3{
+        top: 100px;
+        left: -95px;
+    }
+    
+    .text-2, .text-4 {
+        z-index: 1;
+        top: 100px;
+        left: 90px;
+    }
 }
 
 @media (max-width:420px){
@@ -1065,7 +1105,29 @@ footer p{
         height: auto;
         position: relative;
     }
+    .row{
+        margin: 10px 20px;
+        height: auto;
+    }
+    .row img{
+        width: 200px;
+        position: relative;
+        display: flex;
+    }
 
+    .txt h1{
+        font-size: 18px;
+    }
+    .text-1, .text-3{
+        top: 80px;
+        left: -25px;
+    }
+    
+    .text-2, .text-4 {
+        z-index: 1;
+        top: 80px;
+        left: 30px;
+    }
     .copyright-text{
         padding: 0;
     }
