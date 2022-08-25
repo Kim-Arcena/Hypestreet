@@ -1,5 +1,6 @@
 const container = document.querySelector('.form-img-containter');
 const cards = document.querySelector('.form-img');
+const rCards = document.querySelector('.form-img right-form-img');
 
 let isPressedDown = false;
 let cursorXSpace;
@@ -17,16 +18,34 @@ container.addEventListener('mousemove', (e) => {
     if(!isPressedDown) return;
     e.preventDefault();
     
-    rightVal = (e.offsetX - cursorXSpace) * -1;
-    if(rightVal < 0){
-        rightVal = 0;
+    if(window.location.pathname === '/signup.html'){
+        rightVal = (e.offsetX - cursorXSpace) * -1;
+        if(rightVal < -390){
+            rightVal = -390;
+        }
+        if(rightVal > 0){
+            rightVal = 0;
+        }
     }
-    if(rightVal > 580){
-        rightVal = 580;
+    else{
+        rightVal = (e.offsetX - cursorXSpace) * -1;
+        if(rightVal < 0){
+            rightVal = 0;
+        }
+        if(rightVal > 390){
+            rightVal = 390;
+        }
     }
+
 
     cards.style.right = `${rightVal}px`;
 })
+
+container.addEventListener('click', () => {
+    console.log(window.location.pathname);
+})
+
+
 
 window.onload = () => {
     if(sessionStorage.user){
