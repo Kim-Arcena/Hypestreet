@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/b3442dd444.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/product.css">
+        <link rel="stylesheet" href="../css/add-product.css">
+        <title>Add Product</title>
+    </head>
+    <body>
+        <!-- Start of header -->
+        <header>
+            <nav class="navbar"></nav>
+        </header>     
+        <!-- End of header -->
+        <img src="../img/login/shoes.gif" class="loader" alt="">
+        <h1 class="title">Add Product</h1>
+        <span class="error">
+            <p>Error shits</p>
+        </span>
+        <!-- Start of product-detail -->
+        <section class="product-details">
+            <div class="spec-product-container">
+                <!-- upload image -->
+                <div class="image-upload-container">
+                    <!-- <input type="file" id="upload-image" accept="image/png, image/png" hidden>
+                    <label for="upload-image" class="upload-overlay">Upload Image</label> -->
+                    <img  class="product-img">
+                </div>
+            <div class="product-detail">
+                <h1 class="product-title" contenteditable="true" data-placeholder="product name">Jordan 1 Retro High Travis Scott</h1>
+                <p class="product-des" contenteditable="true" data-placeholder="short description">Every product is unique, just like you. If you're looking for a product that fits the mold of your life, the Travis Scott x Air Jordan 1 Retro High OG Mocha is for you. </p>
+                <p class="price" contenteditable="true" data-placeholder="price without $"></p>
+                <div class="upload-image-sec">
+                    <div class="upload-catalouge">
+                        <input type="file" class="fileupload" accept="image/png, image/png" id="first-file-upload-btn" hidden>
+                        <label for="first-file-upload-btn" class="upload-image"></label>
+                        <input type="file" class="fileupload" accept="image/png, image/png" id="second-file-upload-btn" hidden>
+                        <label for="second-file-upload-btn" class="upload-image"></label>
+                        <input type="file" class="fileupload" accept="image/png, image/png" id="third-file-upload-btn" hidden>
+                        <label for="third-file-upload-btn" class="upload-image"></label>
+                    </div>
+                </div>
+                <div class="select-sizes">
+                    <p class="text">sizes available</p>
+                    <div class="sizes">
+                        <input type="checkbox" class="size-checkbox" id="36" value="36">
+                        <input type="checkbox" class="size-checkbox" id="37" value="37">
+                        <input type="checkbox" class="size-checkbox" id="38" value="38">
+                        <input type="checkbox" class="size-checkbox" id="39" value="39">
+                        <input type="checkbox" class="size-checkbox" id="40" value="40">
+                        <input type="checkbox" class="size-checkbox" id="41" value="41">
+                        <input type="checkbox" class="size-checkbox" id="42" value="42">
+                        <input type="checkbox" class="size-checkbox" id="43" value="43">
+                        <input type="checkbox" class="size-checkbox" id="44" value="44">
+                        <input type="checkbox" class="size-checkbox" id="45" value="45">
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- End of product-detail -->
+        
+        <!-- Start of product-description -->
+        <section class="detail-des">
+            <h1 class="section-title">Details</h1>
+            <p class="des" contenteditable="true" data-placeholder="Details, you can add images"></p>
+        </section>
+
+        <section class="tag-section">
+            <h1 class="section-title">tags</h1>
+            <p class="text">Enter some tags related to the products, this will help in searching the product. Give comma separated tags.</p>
+            <p class="tags" contenteditable="true" data-placeholder="Tags">Tags</p>
+        </section>
+
+        <div class="btn-wrapper">
+            <button class="product-btn add-product-btn">Add Product</button>
+            <button class="product-btn draft-btn">Save Draft</button>
+        </div>
+
+
+        <div class="copyright-text">
+            <p>Created by <span> Kimberly Arceña </span> | All rights reserved.</p>
+        </div>
+
+        <script src="../js/nav.js"></script>
+        <script src="../js/home.js"></script>
+        <script src="../js/product.js"></script>
+        <script src="../js/add-product.js"></script>
+        <script src="../js/common.js"></script>
+    </body>
+</html>

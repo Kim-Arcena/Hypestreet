@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/b3442dd444.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/cart.css">
+        <link rel="stylesheet" href="css/form.css">
+        <link rel="stylesheet" href="css/add-product.css">
+        <link rel="stylesheet" href="css/checkout.css">
+        <title>Checkout</title>
+    </head>
+    <body>
+        <!-- Start of header -->
+        <header>
+            <nav class="navbar"></nav>
+        </header>  
+
+        <div class="error">
+            <p>Some Erorr occured</p>
+        </div>
+
+        <div class="checkout-form">
+            <h1 class="heading">Checkout</h1>
+            <p class="text">delivery address</p>
+
+            <input class="checkout-input" type="text" id="address" placeholder="address">
+            <input class="checkout-input" type="text" id="street" placeholder="street">
+            <div class="three-input-container">
+                <input class="checkout-input" type="text" id="city" placeholder="city">
+                <input class="checkout-input" type="text" id="state" placeholder="state">
+                <input class="checkout-input" type="text" id="zipcode" placeholder="zipcode">
+            </div>
+            <input class="checkout-input" type="text" id="landmark" placeholder="landmark">
+
+        </div>
+
+        <div class="cart-section">
+            <div class="cart-product-list">
+                <p class="cart-section-heading">Your cart</p>
+                <div class="cart-container">
+                </div>
+            </div>
+
+            <div class="checkout-section">
+                <div class="checkout-box">
+                    <p class="text">Your total bill</p>
+                    <h1 class="bill">$00</h1>
+                    <button class="place-order-btn">Place Order</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/home.js"></script>
+        <script src="js/nav.js"></script>
+        <script src="js/cart.js"></script>
+        <script src="js/common.js"></script>
+        <script src="js/checkout.js"></script>
+        <script src="js/jquery-3.1.1.min.js"></script>
+    </body>
+</html>

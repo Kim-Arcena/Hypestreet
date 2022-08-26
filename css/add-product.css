@@ -1,0 +1,245 @@
+.body{
+    width: 100%;
+    padding: 5% 5vw;
+    display: flex;
+    gap: 10rem;
+}
+
+.loader{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    z-index: 5;
+    display: none;
+}
+
+.title{
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 100px;
+    font-weight: bold;
+    line-height: 5rem;
+    color: var(--white);
+}
+
+.sizes{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
+    grid-gap: 10px;
+    margin: 10px 0;
+}
+
+.error{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    min-height: 100px;
+    background: var(--white);
+    border-radius: 2rem;
+    padding: 2rem;
+    transition: 0.5s;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    z-index: 9;
+    text-align: center;
+    text-transform:uppercase;
+    color: var(--error-red);
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    border: 1px solid var(--error-red);
+    font-weight: bold;
+    opacity: 0;
+}
+
+.error.show{
+    opacity: 1;
+}
+
+.product-img{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-upload-container{
+    background: var(--darker-gray);
+    width: 60%;
+    aspect-ratio: 1/1;
+    position: relative;
+    border: 1px solid white;
+}
+
+.upload-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: var(--white);
+    font-size: 2.5rem;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.upload-overlay:hover{
+    opacity: 1;
+}
+
+.size-checkbox{
+    display: inline-block;
+    -webkit-appearance: none;
+    width: 50px;
+    height:50px;
+    border-radius: 5px;
+    border: 1px solid white;
+    position: relative;
+    cursor: pointer;
+    margin: 1rem 0.2rem;
+}
+
+.size-checkbox::after{
+    content: attr(value);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+}
+
+.size-checkbox:checked{
+    border: 1px solid var(--main-yellow);
+}
+
+
+.product-detail{
+    width: 60%;
+}
+
+.disable{
+    pointer-events: none;
+    filter: grayscale(1);
+}
+
+*[contenteditable="true"]{
+    outline: none;
+    border: 1px solid var(--white);
+    padding: 1rem;
+}
+
+*[contenteditable="true"]:hover{
+    border: 1px solid var(--main-yellow);
+}
+
+.des{
+    height: 500px;
+    overflow: scroll;
+    white-space: pre-wrap;
+    text-transform: none;
+}
+
+.tag-section{
+    padding: 30px 5vw;
+}
+
+.text{
+    text-transform: capitalize;
+    font-size: 25px;
+    line-height: 25px;
+    opacity: 0.5;
+}
+
+.tags{
+    height: 150px;
+    margin: 20px 0;
+    text-transform: lowercase;
+}
+.upload-catalouge{
+    width: 100%;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    text-align: center;
+}
+.upload-image{
+    width: 100%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    border: 1px solid white;
+    padding: 10%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.upload-image:hover{
+    background: var(--shadow-gray);
+    background-repeat: no-repeat;
+    background-size: contain;   
+    background-position: center;
+}
+
+.btn-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.product-btn{
+    margin: 2rem;
+}
+@media (max-width:1074px){
+    .image-upload-container{
+        width: 60%;
+    }
+    .product-detail{
+        width: 40%;
+    }
+    .upload-catalouge{
+        grid-template-columns: repeat(3, 1fr);
+        margin: 20px 0;
+    }
+    .size-checkbox{
+        width: 45px;
+        height:45px;
+    }
+    .text{
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width:800px){
+    .image-upload-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .product-detail{
+        width: 100%;
+    }
+    .product-title{
+        margin-top: 15px;
+    }
+    .size-checkbox{
+        width: 40px;
+        height:40px;
+    }
+    .product-title, .price{
+        font-size: 15px;
+    }
+    .text{
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,316 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.listing-product-section{
+    position: relative;
+    padding: 20px 8vw;
+}
+
+.listing-title{
+    margin-bottom: 200px;
+    position: relative;
+    padding: 10px;
+}
+
+.listing-title-main{
+    position: absolute;
+    font-size: 130px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    color: var(--darker-gray);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    margin: 40px 0;
+}
+
+.listing-title-sec{
+    position: absolute;
+    z-index: 0;
+    font-size: 80px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--white);
+    margin: 65px 0 0rem 200px;
+    font-family: 'Mulish', sans-serif;
+}
+
+.listing-title-sec span{
+    font-size: 80px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: var(--main-yellow);
+    font-family: 'Mulish', sans-serif;
+}
+
+.listing-container-parent{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, max-content));
+    grid-gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.listing-card{
+    position: relative;
+    list-style-type: none;
+    overflow: hidden;
+    border-radius: 2rem;
+    height: 500px;
+    width: 350px;
+    background: linear-gradient(145deg, #0f1017, #131419);
+    box-shadow:  8px 8px 8px #090a0c,
+                -8px -8px 8px #13131b;
+}
+
+.listing-card .product-info{
+    width: 100%;
+    position: absolute;
+    margin: 40px 0;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+}
+
+.listing-card img{
+    height: 200px;
+    width: 300px;
+    transform: rotate(-35deg);
+    filter: drop-shadow( 10px 20px 8px #090a0c);
+    object-fit: contain;
+    animation: shoe 0.3s linear ;
+}
+
+@keyframes shoe{
+    0%{
+        transform: rotate(0deg) scale(0.5);
+    } 
+ }
+.listing-name{
+    height: 75px;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: auto;
+    color: var(--main-yellow);
+    font-weight: bold;
+    text-align: justify;
+    margin: 20px 30px;
+}
+.listing-name span{
+    color: var(--white);
+    margin-left: 0px;
+}
+
+.product-info span{
+    font-size: 2rem;
+    color: var(--white);
+    font-weight: bold;
+}
+.price{
+    font-size: 2rem;
+    color: var(--main-yellow);
+    font-weight: bold;    
+    display: inline-block;
+}
+
+.buy-now-button{
+    border: 1px solid var(--main-yellow);
+    outline: none;
+    background-color: var(--dark-gray);
+    border-radius: 5rem;
+    padding: 1rem 2rem;
+    color: var(--main-yellow);
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+@media (max-width:1074px){
+    html{
+        font-size: 60%;
+    }
+    .listing-title{
+        margin-bottom: 150px;
+        display: flex;
+        justify-content: center;
+    }
+    .listing-title-main{
+        font-size:100px;
+    }
+    .listing-title-sec{
+        font-size: 61px;
+        margin: 58px 0 0 0;
+    }
+    .listing-title-sec span{
+        font-size: 61px;
+    }
+    .listing-container-parent{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
+
+    .listing-card{
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 3 / 4.5;
+    }
+
+    .listing-name{
+        font-size: 13px;
+        margin: auto;
+        padding: 20px;
+        height: 90px;
+    }
+
+    .listing-card img {
+        height: 35%;
+        width: 85%;
+        margin:10px 40px 0 0;
+    }
+
+    .listing-card .product-info{
+        margin: 0;
+        padding: 20px;
+    }
+    .price, .price span, .buy-now-button{
+        font-size: 13px;
+    }
+    .buy-now-button{
+        padding: 5px 10px;
+    }
+    
+}
+
+@media (max-width:800px){
+    html{
+        font-size: 50%;
+    }
+    .listing-title{
+        margin-bottom: 120px;
+    }
+    .listing-title-main{
+        font-size:80px;
+        margin-bottom: 0;
+    }
+    .listing-title-sec{
+        font-size: 48px;
+        margin: 55px 0 0 0;
+    }
+    .listing-title-sec span{
+        font-size: 48px; 
+    }
+    .listing-container-parent{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(170px, max-content));
+        grid-gap: 15px;
+    }
+    .listing-name{
+        font-size: 11px;
+        margin: auto;
+        padding: 15px;
+        height: 70px;
+    }
+    .listing-card .product-info{
+        padding: 20px 15px;
+    }
+
+    .listing-name span, .price, .price span, .buy-now-button{
+        font-size: 11px;
+    }
+    .buy-now-button{
+        padding: 3px 6px;
+    }
+
+    .listing-card img {
+        height: 35%;
+        width: 85%;
+        margin:5px 40px 0 0;
+    }
+}
+
+@media (max-width:663px){
+    html{
+        font-size: 40%;
+    }
+    .listing-title{
+        margin-bottom: 110px;
+    }
+    .listing-title-main{
+        font-size:70px;
+        margin-bottom: 0;
+    }
+    .listing-title-sec{
+        font-size: 45px;
+        margin: 50px 0 0 0;
+    }
+    .listing-title-sec span{
+        font-size: 45px; 
+    }
+    .listing-container-parent{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(190px, max-content));
+        grid-gap: 25px;
+    }
+    .listing-name{
+        font-size: 11px;
+        margin: auto;
+        padding: 15px;
+        height: 70px;
+    }
+    .listing-card .product-info{
+        padding: 20px;
+    }
+}
+
+@media (max-width:520px){
+    html{
+        font-size: 30%;
+    }
+    .listing-title{
+        margin-bottom: 120px;
+    }
+    .listing-title-main{
+        font-size:50px;
+        margin-bottom: 0;
+    }
+    .listing-title-sec{
+        font-size: 35px;
+        margin: 45px 0 0 0;
+    }
+    .listing-title-sec span{
+        font-size: 35px; 
+    }
+    .listing-container-parent{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(130px, max-content));
+        grid-gap: 15px;
+    }
+    .listing-name{
+        font-size: 8px;
+        margin: auto;
+        padding: 12px;
+        height: 60px;
+    }
+    .listing-card .product-info{
+        padding: 12px;
+    }
+    .listing-name span, .price, .price span, .buy-now-button{
+        font-size: 8px;
+    }
+    .buy-now-button{
+        padding: 4px;
+    }
+
+    .listing-card img {
+        height: 35%;
+        width: 85%;
+        margin:5px 40px 0 0;
+    }
+}
