@@ -39,7 +39,6 @@ const getProducts = (tag) => {
 displayProductId = null;
 
 const createProductCards = (data, tag, ele) =>{
-    console.log(tag);
     if(ele === '.best-selling-product-section'){
         let container = document.querySelector(ele);
         container.innerHTML += `
@@ -64,8 +63,21 @@ const createProductCards = (data, tag, ele) =>{
             </div>
         </div>
         `;
-
     }
+    if(ele === '.top-product-section'){
+        let container = document.querySelector(ele);
+        container.innerHTML += `
+        <h1 class="section-title">Similar Products</h1>
+        <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+        <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+        <div class="listing-container">
+            <div class="top-listing-container-parent"> 
+            ${createCards(data, tag, ele)}
+            </div>
+        </div> 
+        `;
+    }
+
 }
 
 const createCards = (data, tag, ele) => {
@@ -77,7 +89,7 @@ const createCards = (data, tag, ele) => {
             data = dataArr.sort(() => .5 - Math.random()).slice(0, 5);
        })
     }    
-
+    
     data.forEach(item =>{
         if(item.id !== displayProductId){
             cards += `
@@ -90,10 +102,13 @@ const createCards = (data, tag, ele) => {
                 </div>
             </div> 
         `
+        console.log(item.id);
         }
     })
     return cards;
 }
+
+getProducts("nike").then(res => createProductCards(res, "nike", '.top-product-section'));
 
 //cart funtion
 const addProductToCart = (product) => {

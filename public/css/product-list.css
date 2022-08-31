@@ -57,7 +57,6 @@ body{
     display: none;
     position: relative;
     list-style-type: none;
-    overflow: hidden;
     border-radius: 2rem;
     height: 500px;
     width: 350px;
@@ -152,6 +151,7 @@ body{
     color: var(--main-yellow);
     margin-bottom: 30px;
     padding: 10px;
+    cursor: pointer;
 }
 
 @media (max-width:1074px){
