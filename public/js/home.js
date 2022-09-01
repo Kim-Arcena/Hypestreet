@@ -52,6 +52,7 @@ const createProductCards = (data, tag, ele) =>{
             </div>
         </div>
         `;
+        console.log(data);
     }
     if(ele === '.top-product-section' || ele === '.best-selling-product-section'){
         let container = document.querySelector(ele);
@@ -65,7 +66,6 @@ const createProductCards = (data, tag, ele) =>{
             </div>
         </div> 
         `;
-        console.log(data);
     }
 
     const productContainers = [...document.querySelectorAll('.top-listing-container-parent')];

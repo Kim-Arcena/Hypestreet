@@ -64,7 +64,7 @@ body{
     box-shadow:  8px 8px 8px #090a0c,
                 -8px -8px 8px #13131b;
 }
-.listing-card:nth-child(n+1):nth-child(-n+6){
+.listing-card:nth-child(n+1):nth-child(-n+12){
     display: block;
 }
 
