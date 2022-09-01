@@ -500,12 +500,17 @@ section{
     align-items: center;
     cursor: pointer;
     z-index: 8;
+    opacity: 0.5;
 }
 
 .prev-btn i, .next-btn i{
     color: var(--main-yellow);
     font-size: 30px;
-    opacity: 0.2;
+}
+
+.prev-btn i:hover, .next-btn i:hover{
+    transition: 0.2s;
+    font-size: 50px;
 }
 
 .prev-btn{
@@ -515,7 +520,7 @@ section{
     right: 0;
 }
 
-.prev-btn i:hover, .next-btn i:hover{
+.prev-btn:hover, .next-btn:hover{
     opacity: 1;
 }
 

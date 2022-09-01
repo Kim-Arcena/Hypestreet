@@ -31,8 +31,6 @@ const getProducts = (tag) => {
   })
   .catch(err => {
       console.log(err);
-    //   alert('no product found');
-    //   location.replace('/404');
   })
 }
 
@@ -74,18 +72,13 @@ const createProductCards = (data, tag, ele) =>{
 
     productContainers.forEach((item, i) => {
         let containerDimenstions = item.getBoundingClientRect();
-        let containerWidth = containerDimenstions.width;
     
         nextBtn[i].addEventListener('click', () => {
-            console.log("clicked next");
-            item.scrollLeft += containerWidth;
+            item.scrollLeft += 1000;
         })
         prevBtn[i].addEventListener('click', () => {
-            console.log("clicked prev");
-            item.scrollLeft -= containerWidth;
+            item.scrollLeft -=  1000;
         })
-        console.log(item);
-        
     })
 
 }
