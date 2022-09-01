@@ -18,6 +18,7 @@ function prev(){
     slides[index].classList.add('active');
 }
 
+
 const getProducts = (tag) => {
   return fetch('/get-products', {
       method: 'post',
@@ -35,21 +36,9 @@ const getProducts = (tag) => {
   })
 }
 
-
 displayProductId = null;
 
 const createProductCards = (data, tag, ele) =>{
-    if(ele === '.best-selling-product-section'){
-        let container = document.querySelector(ele);
-        container.innerHTML += `
-        <h1 class="section-title">Similar Products</h1>
-        <div class="listing-container">
-            <div class="listing-container-parent"> 
-            ${createCards(data, tag, ele)}
-            </div>
-        </div> 
-        `;
-    }
     if(ele === '.listing-product-section'){
         let container = document.querySelector(ele);
         container.innerHTML += `
@@ -64,19 +53,40 @@ const createProductCards = (data, tag, ele) =>{
         </div>
         `;
     }
-    if(ele === '.top-product-section'){
+    if(ele === '.top-product-section' || ele === '.best-selling-product-section'){
         let container = document.querySelector(ele);
         container.innerHTML += `
         <h1 class="section-title">Similar Products</h1>
         <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
-        <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+        <button class="next-btn"><i class="fas fa-chevron-right"></i></button> 
         <div class="listing-container">
             <div class="top-listing-container-parent"> 
             ${createCards(data, tag, ele)}
             </div>
         </div> 
         `;
+        console.log(data);
     }
+
+    const productContainers = [...document.querySelectorAll('.top-listing-container-parent')];
+    const nextBtn = [...document.querySelectorAll('.next-btn')];
+    const prevBtn = [...document.querySelectorAll('.prev-btn')];
+
+    productContainers.forEach((item, i) => {
+        let containerDimenstions = item.getBoundingClientRect();
+        let containerWidth = containerDimenstions.width;
+    
+        nextBtn[i].addEventListener('click', () => {
+            console.log("clicked next");
+            item.scrollLeft += containerWidth;
+        })
+        prevBtn[i].addEventListener('click', () => {
+            console.log("clicked prev");
+            item.scrollLeft -= containerWidth;
+        })
+        console.log(item);
+        
+    })
 
 }
 
@@ -86,7 +96,7 @@ const createCards = (data, tag, ele) => {
     if(ele === '.best-selling-product-section'){
        data.forEach(product => {
             dataArr = data.filter(product => product.tags[0] === tag);
-            data = dataArr.sort(() => .5 - Math.random()).slice(0, 5);
+            data = dataArr.sort(() => .5 - Math.random());
        })
     }    
     
@@ -102,13 +112,12 @@ const createCards = (data, tag, ele) => {
                 </div>
             </div> 
         `
-        console.log(item.id);
         }
     })
     return cards;
 }
 
-getProducts("nike").then(res => createProductCards(res, "nike", '.top-product-section'));
+
 
 //cart funtion
 const addProductToCart = (product) => {
@@ -138,3 +147,5 @@ const addProductToCart = (product) => {
         return 'added to cart';
     }
 }
+
+getProducts("all").then(res => createProductCards(res, "all", '.top-product-section'));

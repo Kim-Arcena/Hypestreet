@@ -405,10 +405,6 @@ section{
 }
 
 /* Best Selling Section */
-.best-selling-product-section{
-    position: relative;
-    padding: 60px 10vw;
-}
 .section-title{
     text-transform: uppercase;
     font-size: 3rem;
@@ -472,8 +468,9 @@ section{
     padding: 2.5rem;
     position: absolute;
 }
-.top-product-section{
+.top-product-section, .best-selling-product-section{
     position: relative;
+    padding: 20px 0;
 }
 
 .top-listing-container-parent{
@@ -481,7 +478,7 @@ section{
     display: flex;
     flex-direction: row;
     gap: 30px;
-    overflow-x: auto;
+    overflow-x: hidden;
     scroll-behavior: smooth;
     
 }
