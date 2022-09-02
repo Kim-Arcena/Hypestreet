@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "predeply": "npm run hypestreet:build",
     "deploy": "gh-pages -d public"
   },
@@ -26,6 +26,7 @@
     "express.js": "^1.0.0",
     "firebase": "^9.8.2",
     "nodemon": "^2.0.19",
+    "serve": "^14.0.1",
     "stripe": "^10.0.0"
   },
   "overrides": {
