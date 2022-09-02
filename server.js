@@ -446,10 +446,10 @@ app.use((req, res) => {
     res.redirect('/404')
 })
 
-
+var PORT = process.env.PORT || 3000;
 //localhost:3000/register
-app.listen(3000, () => {
-    console.log("Server is running on port 3000");
+app.listen(PORT, () => {
+    console.log("Server is running on port 3000 or in heroku");
 })
 
 
