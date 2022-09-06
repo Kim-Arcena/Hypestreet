@@ -1,4 +1,4 @@
-# hypestreet [![NPM version](https://badge.fury.io/js/hypestreet.svg)](0.1.0) [![Build Status](https://travis-ci.org/Kim-Arcena/hypestreet.svg?branch=main)](https://travis-ci.org/Kim-Arcena/hypestreet)
+# hypestreet [![NPM version](https://badge.fury.io/js/hypestreet.svg)](https://npmjs.org/package/hypestreet) [![Build Status](https://travis-ci.org/Kim-Arcena/hypestreet.svg?branch=master)](https://travis-ci.org/Kim-Arcena/hypestreet)
 
 > Full-stack eCommerce website with Node.js, AWS, Firebase Firestore Database, Bcrypt, and Stripe API. This website can cater to end-users(potential buyers) and a dashboard for the sellers(CRUD).
 
