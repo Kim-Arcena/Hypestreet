@@ -140,5 +140,7 @@ const addProductToCart = (product) => {
         return 'added to cart';
     }
 }
+if(window.location.pathname === '/'){
+    getProducts("all").then(res => createProductCards(res, "all", '.top-product-section'));
+}
 
-getProducts("all").then(res => createProductCards(res, "all", '.top-product-section'));
