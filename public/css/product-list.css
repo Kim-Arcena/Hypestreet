@@ -58,7 +58,6 @@ body{
     position: relative;
     list-style-type: none;
     border-radius: 2rem;
-    height: 500px;
     width: 350px;
     background: linear-gradient(145deg, #0f1017, #131419);
     box-shadow:  8px 8px 8px #090a0c,
@@ -175,14 +174,13 @@ body{
     }
     .listing-container-parent{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(240px, max-content));
         grid-gap: 20px;
     }
 
     .listing-card{
-        width: 100%;
-        height: 100%;
-        aspect-ratio: 3 / 4.5;
+        width: 250px;
+        aspect-ratio: 3.5 / 5;
     }
 
     .listing-name{
@@ -234,8 +232,14 @@ body{
         grid-template-columns: repeat(auto-fit, minmax(170px, max-content));
         grid-gap: 15px;
     }
+
+    .listing-card{
+        width: 170px;
+        aspect-ratio: 3.5 / 5;
+    }
+
     .listing-name{
-        font-size: 11px;
+        font-size: 10px;
         margin: auto;
         padding: 15px;
         height: 70px;
@@ -278,11 +282,13 @@ body{
     }
     .listing-container-parent{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(190px, max-content));
-        grid-gap: 25px;
+        grid-template-columns: repeat(auto-fit, minmax(160px, max-content));
+    }
+    .listing-card{
+        width: 160px;
     }
     .listing-name{
-        font-size: 11px;
+        font-size: 10px;
         margin: auto;
         padding: 15px;
         height: 70px;
@@ -312,8 +318,10 @@ body{
     }
     .listing-container-parent{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(130px, max-content));
-        grid-gap: 15px;
+        grid-template-columns: repeat(auto-fit, minmax(120px, max-content));
+    }
+    .listing-card{
+        width: 120px;
     }
     .listing-name{
         font-size: 8px;

@@ -485,7 +485,7 @@ section{
 
 .listing-card{
     min-width: 350px;
-    margin: 15px;
+    aspect-ratio: 3.5/5;
 }
 
 .prev-btn, .next-btn{
@@ -875,6 +875,10 @@ footer p{
     .product-container .product-name{
         font-size: 18px;
     }
+    .listing-card{
+        min-width: 240px;
+        aspect-ratio: 3.5/5;
+    }
 
     .review-container{
         grid-template-columns: repeat( 2, 1fr);
@@ -1025,9 +1029,7 @@ footer p{
         line-height: 30px;
         margin: 0;
     }
-    /* nav ul div.items li:hover>ul{
-        display: block;
-    } */
+    
     nav ul div.items li ul a {
         padding: 0;
     }
@@ -1051,6 +1053,11 @@ footer p{
         font-size: 13px;
         padding: 10px;
     }
+
+    .listing-card{
+        min-width: 170px;
+    }
+
     .review{
         padding: 10px 40px; 
         font-size: 12px;
@@ -1100,7 +1107,11 @@ footer p{
         left: 90px;
     }
 }
-
+@media (max-width:663px){
+    .listing-card{
+        min-width: 120px;
+    }
+}
 @media (max-width:420px){
 
     html{
