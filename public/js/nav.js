@@ -140,7 +140,7 @@ const updateNavCartCounter = () => {
     }
     else{
         cartCount.innerHTML = '00';
-    }
+    }   
 }
 
 updateNavCartCounter();

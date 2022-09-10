@@ -78,6 +78,8 @@ const setData = (data) => {
 
     cartBtn.addEventListener('click',() =>{
         cartBtn.innerHTML = addProductToCart(data);
+
+        setTimeout(location.reload.bind(location), 1000);
     })
 
 }

@@ -70,6 +70,7 @@ const setupCartEvents = () => {
                 price[i].innerHTML = `$${cost * item.innerHTML}`;
                 product[i].item = item.innerHTML;
                 localStorage.setItem('cart', JSON.stringify(product));
+                location.reload();
             }
             if(item.innerHTML == 0){
                 product = product.filter((data, index) =>  index !== i );
@@ -84,6 +85,7 @@ const setupCartEvents = () => {
             price[i].innerHTML = `$${cost * item.innerHTML}`;
             product[i].item = item.innerHTML;
             localStorage.setItem('cart', JSON.stringify(product));
+            location.reload();
         })
     })
     deleteBtn.forEach((item, i) => {
