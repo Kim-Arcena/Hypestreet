@@ -100,7 +100,7 @@ const createCards = (data, tag, ele) => {
                 <div class="listing-name">${item.name}<br><span>${item.tags[0]}</span></div>
                 <img src="${item.images[0]}" class="product-image" alt="">              
                 <div class="product-info">
-                    <div class="price">$<span>${item.price}.00</span></div>
+                    <div class="price-card">$<span>${item.price}.00</span></div>
                     <button class="buy-now-button">Buy Now</button>
                 </div>
             </div> 
