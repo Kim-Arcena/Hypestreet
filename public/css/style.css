@@ -858,7 +858,12 @@ footer p{
     .home #next{
         top:85%;
     }
-
+    .prev-btn i, .next-btn i {
+        font-size: 25px;
+    }
+    .prev-btn i:hover, .next-btn i:hover{
+        font-size: 30px;
+    }
     .product-container .product-card {
         width: 100%;
         height: 100%;
@@ -1049,6 +1054,12 @@ footer p{
     .home .slider-container .slide .content p {
         font-size: 15px;
     }
+    .prev-btn i, .next-btn i {
+        font-size: 20px;
+    }
+    .prev-btn i:hover, .next-btn i:hover{
+        font-size: 25px;
+    }
     .product-container .product-name{
         font-size: 13px;
         padding: 10px;
@@ -1111,6 +1122,12 @@ footer p{
     .listing-card{
         min-width: 120px;
     }
+    .prev-btn i, .next-btn i {
+        font-size: 18px;
+    }
+    .prev-btn i:hover, .next-btn i:hover{
+        font-size: 21px;
+    }
 }
 @media (max-width:420px){
 
@@ -1156,7 +1173,12 @@ footer p{
         font-size: 10px;
         padding: 2rem;
     }
-
+    .prev-btn i, .next-btn i {
+        font-size: 15px;
+    }
+    .prev-btn i:hover, .next-btn i:hover{
+        font-size: 18px;
+    }
     .review{
         padding: 10px 20px; 
         font-size: 9px;
