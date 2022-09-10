@@ -93,6 +93,7 @@ const setupCartEvents = () => {
             location.reload();
         })
     })
+    console.log(counts);
 }
 
 

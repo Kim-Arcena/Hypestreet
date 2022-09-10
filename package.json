@@ -20,14 +20,14 @@
   },
   "homepage": "https://github.com/Kim-Arcena/Hypestreet#readme",
   "dependencies": {
-    "aws-sdk": "^2.1148.0",
+    "aws-sdk": "^2.1213.0",
     "bcrypt": "^5.0.1",
-    "dotenv": "^16.0.1",
+    "dotenv": "^16.0.2",
     "express.js": "^1.0.0",
-    "firebase": "^9.8.2",
+    "firebase": "^9.9.4",
     "nodemon": "^2.0.19",
     "serve": "^14.0.1",
-    "stripe": "^10.0.0"
+    "stripe": "^10.8.0"
   },
   "overrides": {
     "got": "^12.3.1"
