@@ -124,9 +124,19 @@ searchBtn.addEventListener('click', () => {
 const updateNavCartCounter = () => {
     let cartCount = document.querySelector('.cart-item-count');
     let cartItem = JSON.parse(localStorage.getItem('cart'));
+    let totalCount = 0;
+
 
     if(cartItem != null){
-        cartCount.innerHTML = `0${cartItem.length}`;
+        for (let i = 0; i < cartItem.length; i++) {
+            // totalCount += cartItem[i].length;
+            totalCount += parseInt(cartItem[i].item);
+        }
+        if(totalCount < 10){
+            cartCount.innerHTML = `0${totalCount}`;
+        }else{
+            cartCount.innerHTML = totalCount;
+        }
     }
     else{
         cartCount.innerHTML = '00';
