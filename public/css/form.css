@@ -203,7 +203,7 @@ input:focus::placeholder, textarea:focus::placeholder{
     margin-top: 3rem;
 }
 
-.other-form-link{
+.other-form-link , .apply-seller{
     color: var(--white);
     font-size: 1.5rem;
 }
@@ -251,7 +251,7 @@ input:focus::placeholder, textarea:focus::placeholder{
     .form-section{
         padding: 50px;
     }
-    .form{
+    .form, .seller-form-container{
         min-width: 420px;
         height: 600px;
     }
@@ -288,6 +288,9 @@ input:focus::placeholder, textarea:focus::placeholder{
         min-width: 280px;
         height: 500px;
     }
+    .seller-form-container{
+        width: 300px;
+    }
     .submit-btn{
         font-size: 12px;
         padding: 5px 10px;
@@ -305,7 +308,7 @@ input:focus::placeholder, textarea:focus::placeholder{
 }
 
 @media (max-width:350px){
-    .form{
+    .form, .seller-form-container{
         width: 200px;
         height: 500px;
         padding: 20px;
