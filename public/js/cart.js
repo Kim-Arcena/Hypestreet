@@ -23,24 +23,72 @@ const createSmallCarts = (data) => {
 let totalBill = 0;
 
 
+
+const cartProductName = [];
+let uniqueList = [];
+let dupList = [];
+
 const setCartProducts = () => {
     const cartContainer = document.querySelector('.cart-container');
     let cart = JSON.parse(localStorage.getItem('cart'));
 
-    // console.log(cart);
+    
+    Array.prototype.contains = function(item){
+    let filtered_item = this.filter((i) => {
+        return i.displayProductName === item.displayProductName;
+    });
+    return !!filtered_item.length;
+    }
+    
+    function contains(list, item){
+    let filtered_item = list.filter((i) => {
+        return i.displayProductName === item.displayProductName;
+    });
 
-    if (cart == null || cart.length == 0) {
+    return !!filtered_item.length;
+    }
+    
+    function pushToUniqueList(item){
+        if(!uniqueList.contains(item)) uniqueList.push(item);
+    }
+    
+    function pushToDuplicateList(item){
+        if(!dupList.contains(item)) dupList.push(item);
+    }
+    
+    for(let i = 0; i < cart.length; i++){
+        if(uniqueList.contains(cart[i])){
+            pushToDuplicateList(cart[i]);
+        } 
+        else {
+            pushToUniqueList(cart[i]);
+        }
+    }
+    
+    console.log('Duplicate list is ', dupList);
+    
+    let totalCount = 0;
+    console.log('Unique list is ', uniqueList);
+    for(let i = 0; i < uniqueList.length; i++){
+        totalCount += (uniqueList[i].id);
+    }
+
+    if (uniqueList == null || uniqueList.length == 0) {
         cartContainer.innerHTML = `<img src="img/home/empty-cart.svg" class="empty-img" alt="">`;
     }
     else{
-        for(let i = 0; i< cart.length; i++){
-            cartContainer.innerHTML += createSmallCarts(cart[i]);
-            totalBill += Number(cart[i].displayPrice * cart[i].item);
+        for(let i = 0; i< uniqueList.length; i++){
+            cartContainer.innerHTML += createSmallCarts(uniqueList[i]);
+            totalBill += Number(uniqueList[i].displayPrice * uniqueList[i].item);
             updateBill();
+            cartProductName.push(uniqueList[i].displayProductName);
+            
         }
+        
     }
 
-    setupCartEvents();
+    
+    setupCartEvents(cart);
 }
 
 const updateBill = () => {
@@ -50,7 +98,7 @@ const updateBill = () => {
 }
 
 
-const setupCartEvents = () => {
+const setupCartEvents = (cart) => {
     const counterMinus = document.querySelectorAll('.cart-container .decrement');
     const counterPlus = document.querySelectorAll('.cart-container .increment');
     const counts = document.querySelectorAll('.cart-container .item-count');
@@ -101,3 +149,4 @@ const setupCartEvents = () => {
 
 
 setCartProducts();
+updateNavCartCounter();
