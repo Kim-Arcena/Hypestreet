@@ -149,4 +149,3 @@ const setupCartEvents = (uniqueList) => {
 
 
 setCartProducts();
-updateNavCartCounter();

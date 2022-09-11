@@ -121,16 +121,16 @@ searchBtn.addEventListener('click', () => {
     }
 })
 
-const updateNavCartCounter = () => {
+const updateNavCartCounter = (uniqueList) => {
     let cartCount = document.querySelector('.cart-item-count');
-    let cartItem = JSON.parse(localStorage.getItem('cart'));
+    // let uniqueList = JSON.parse(localStorage.getItem('cart'));
     let totalCount = 0;
 
 
-    if(cartItem != null){
-        for (let i = 0; i < cartItem.length; i++) {
-            // totalCount += cartItem[i].length;
-            totalCount += parseInt(cartItem[i].item);
+    if(uniqueList != null){
+        for (let i = 0; i < uniqueList.length; i++) {
+            // totalCount += uniqueList[i].length;
+            totalCount += parseInt(uniqueList[i].item);
         }
         if(totalCount < 10){
             cartCount.innerHTML = `0${totalCount}`;
@@ -143,4 +143,4 @@ const updateNavCartCounter = () => {
     }   
 }
 
-updateNavCartCounter();
+updateNavCartCounter(uniqueList);
