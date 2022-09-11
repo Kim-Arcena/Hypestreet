@@ -35,14 +35,14 @@ const setCartProducts = () => {
     
     Array.prototype.contains = function(item){
     let filtered_item = this.filter((i) => {
-        return i.displayProductName === item.displayProductName;
+        return (i.displayProductName === item.displayProductName) && (i.displaySize === item.displaySize);
     });
     return !!filtered_item.length;
     }
     
     function contains(list, item){
     let filtered_item = list.filter((i) => {
-        return i.displayProductName === item.displayProductName;
+        return (i.displayProductName === item.displayProductName) && (i.displaySize === item.displaySize);
     });
 
     return !!filtered_item.length;
