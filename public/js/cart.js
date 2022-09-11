@@ -88,7 +88,7 @@ const setCartProducts = () => {
     }
 
     
-    setupCartEvents(cart);
+    setupCartEvents(uniqueList);
 }
 
 const updateBill = () => {
@@ -98,14 +98,14 @@ const updateBill = () => {
 }
 
 
-const setupCartEvents = (cart) => {
+const setupCartEvents = (uniqueList) => {
     const counterMinus = document.querySelectorAll('.cart-container .decrement');
     const counterPlus = document.querySelectorAll('.cart-container .increment');
     const counts = document.querySelectorAll('.cart-container .item-count');
     const price = document.querySelectorAll('.cart-container .sm-price');
     const deleteBtn = document.querySelectorAll('.cart-container .sm-delete-btn');
 
-    let product = JSON.parse(localStorage.getItem('cart'));
+    let product = uniqueList;
 
     counts.forEach((item, i) => {
         let cost = Number(price[i].getAttribute('data-price'));
