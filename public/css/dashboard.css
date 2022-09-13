@@ -72,12 +72,16 @@ seller-products{
     align-items: center;
     display: flex;
     justify-content: center;
-    height: 40px;
     width: 40px;
+    height: 40px;
     background: var(--light-gray);
-    opacity: 0;
+    opacity: 1;
     pointer-events: none;
     transition: 0.3s;
+    margin: 0;
+}
+.btn i{
+    font-size: 18px;
 }
 
 .product-card:hover .btn{
@@ -108,12 +112,25 @@ seller-products{
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 20px;
     }
+    .btn{
+        width: 30px;
+    }
+    .btn i{
+        font-size: 15px;
+    }
 }
 @media (max-width:800px){
     .product-container{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(170px, max-content));
         grid-gap: 15px;
+    }
+    .btn{
+        width: 25px;
+        height: 25px;
+    }
+    .btn i{
+        font-size: 12px;
     }
 }
 
@@ -130,11 +147,35 @@ seller-products{
     .text{
         font-size: 15px;
     }
+    .btn{
+        width: 18px;
+    }
+    .btn i{
+        font-size: 10px;
+    }
+    .open-btn{
+        top: 50px;
+    }
+    .delete-btn{
+        top: 90px;
+    }
 }
 @media (max-width:520px){
     .product-container{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(130px, max-content));
         grid-gap: 15px;
+    }
+    .btn{
+        width: 8px;
+    }
+    .btn i{
+        font-size: 8px;
+    }
+    .open-btn{
+        top: 45px;
+    }
+    .delete-btn{
+        top: 80px;
     }
 }
