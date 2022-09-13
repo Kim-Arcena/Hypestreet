@@ -37,6 +37,7 @@ let displayImagePath = 'img/seller/noImage.png'; // default image
 let displayImagePaths = [];
 
 let cartBtn = document.querySelector('.cart-btn');
+let butBtn = document.querySelector('.buy-btn');
 
 const displayFetchProductData = () => {
     fetch('/get-products', {
@@ -80,6 +81,12 @@ const setData = (data) => {
         cartBtn.innerHTML = addProductToCart(data);
 
         setTimeout(location.reload.bind(location), 1000);
+    })
+
+    butBtn.addEventListener('click',() =>{
+        butBtn.innerHTML = addProductToCart(data);
+
+        setTimeout(location.replace('/cart'), 1000);
     })
 
 }
