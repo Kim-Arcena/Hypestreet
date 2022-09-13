@@ -103,7 +103,8 @@ const setupCartEvents = (uniqueList) => {
     const counterPlus = document.querySelectorAll('.cart-container .increment');
     const counts = document.querySelectorAll('.cart-container .item-count');
     const price = document.querySelectorAll('.cart-container .sm-price');
-    const deleteBtn = document.querySelectorAll('.cart-container .sm-delete-btn');
+    const deleteBtn = document.querySelectorAll('.fa-times-circle-o');
+    const prodImg = document.querySelectorAll('.sm-product-img');
 
     let product = uniqueList;
 
@@ -141,6 +142,12 @@ const setupCartEvents = (uniqueList) => {
             product = product.filter((data, index) =>  index !== i );
             localStorage.setItem('cart', JSON.stringify(product));
             location.reload();
+        })
+    })
+    prodImg.forEach((item, i) => {
+        item.addEventListener('click', () => {
+            // console.log(product[i]);
+            window.location.href = `products/${product[i].id}`;
         })
     })
     console.log(counts);

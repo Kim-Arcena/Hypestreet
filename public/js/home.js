@@ -127,7 +127,8 @@ const addProductToCart = (product) => {
         displayPrice: product.price,
         displayImagePath: product.images[1],
         displayShortDes: product.shortDes,
-        displaySize: size
+        displaySize: size,
+        id: product.id
     }
 
     if(typeof product.displaySize == 'undefined'){
