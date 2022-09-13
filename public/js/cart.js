@@ -148,4 +148,4 @@ const setupCartEvents = (uniqueList) => {
 
 
 
-setCartProducts();
+setCartProducts(uniqueList);

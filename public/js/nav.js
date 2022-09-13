@@ -35,7 +35,6 @@ const createNavbar = () => {
                             <li><a href="/product-list/aj1 low">Air Jordan Low</a></li>
                             <li><a href="/product-list/aj3">Air Jordan 3</a></li>
                             <li><a href="/product-list/air jordan 4">Air Jordan 4</a></li>
-
                         </ul>
                     </li>
                 </ul>
@@ -123,14 +122,14 @@ searchBtn.addEventListener('click', () => {
 
 const updateNavCartCounter = (uniqueList) => {
     let cartCount = document.querySelector('.cart-item-count');
-    // let uniqueList = JSON.parse(localStorage.getItem('cart'));
+    let cartItem = JSON.parse(localStorage.getItem('cart'));
     let totalCount = 0;
 
 
-    if(uniqueList != null){
-        for (let i = 0; i < uniqueList.length; i++) {
-            // totalCount += uniqueList[i].length;
-            totalCount += parseInt(uniqueList[i].item);
+    if(cartItem != null){
+        for (let i = 0; i < cartItem.length; i++) {
+            // totalCount += cartItem[i].length;
+            totalCount += parseInt(cartItem[i].item);
         }
         if(totalCount < 10){
             cartCount.innerHTML = `0${totalCount}`;
@@ -143,4 +142,4 @@ const updateNavCartCounter = (uniqueList) => {
     }   
 }
 
-updateNavCartCounter(uniqueList);
+updateNavCartCounter();
