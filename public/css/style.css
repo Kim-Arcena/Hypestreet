@@ -761,6 +761,7 @@ footer p{
     text-decoration: none;
     margin-bottom: 0.8rem;
     display: inline-block;
+    font-size: 1.5rem;
 }
 
 .quick-links ul li a:hover{
@@ -1258,7 +1259,6 @@ footer p{
     }
     footer p, .quick-links ul li a, .contact .info li span, .contact .info li a{
         font-size: 10px;
-        line-height: 10px;
     }
     .contact .info li span, .contact .info li a{
         margin-left: 3px;

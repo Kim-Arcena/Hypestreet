@@ -22,6 +22,7 @@
   "dependencies": {
     "aws-sdk": "^2.1213.0",
     "bcrypt": "^5.0.1",
+    "cdn-fonts": "^0.0.1",
     "dotenv": "^16.0.2",
     "express.js": "^1.0.0",
     "firebase": "^9.9.4",

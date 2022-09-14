@@ -71,16 +71,15 @@ const createProductCards = (data, tag, ele) =>{
     const prevBtn = [...document.querySelectorAll('.prev-btn')];
 
     productContainers.forEach((item, i) => {
-        let containerDimenstions = item.getBoundingClientRect();
+        let widthScroll = window.innerWidth / 2;
     
         nextBtn[i].addEventListener('click', () => {
-            item.scrollLeft += 1000;
+            item.scrollLeft += widthScroll;
         })
         prevBtn[i].addEventListener('click', () => {
-            item.scrollLeft -=  1000;
+            item.scrollLeft -=  widthScroll;
         })
     })
-
 }
 
 const createCards = (data, tag, ele) => {

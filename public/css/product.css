@@ -252,14 +252,14 @@ body{
     border: 1px solid var(--main-yellow);
     outline: none;
     background-color: var(--dark-gray);
-    border-radius: 1.5rem;
-    padding: 1.5rem 2rem;
+    border-radius: 20px;
+    padding: 15px;
     color: var(--main-yellow);
     font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
     margin-top: 2.5rem;
-    cursor: pointer;
+    cursor: pointer;    
 }
 
 
@@ -305,6 +305,14 @@ body{
     }
     .product-btn{
         padding: 12px;
+    }
+    .add-review-button{
+        padding: 12px;
+        font-size: 15px;
+        border-radius: 15px;
+    }
+    .review-headline, .review-field{
+        font-size: 15px;
     }
 }
 
@@ -359,6 +367,14 @@ body{
     .product-sub-heading, .product-des, .product-btn{
         font-size: 15px;
     }
+    .add-review-button{
+        padding: 9px;
+        font-size: 10px;
+        border-radius: 10px;
+    }
+    .review-headline, .review-field{
+        font-size: 12px;
+    }
 }
 
 @media (max-width:420px){
@@ -398,5 +414,13 @@ body{
     }
     .product-sub-heading, .product-des, .product-btn{
         font-size: 12px;
+    }
+    .add-review-button{
+        padding: 7px;
+        font-size: 8px;
+        border-radius: 8px;
+    }
+    .review-headline, .review-field{
+        font-size: 10px;
     }
 }
