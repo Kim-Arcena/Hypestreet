@@ -475,7 +475,7 @@ section{
 }
 
 .top-listing-container-parent{
-    padding: 0 10vw;
+    padding: 20px 10vw;
     display: flex;
     flex-direction: row;
     gap: 30px;
