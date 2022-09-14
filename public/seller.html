@@ -21,32 +21,38 @@
         <img src="img/login/shoes.gif" class="loader" alt="">
 
         <!-- Start of form section -->
-        <div class="seller-form">
-            <div class="seller-form-container">
-                <h1 class="form-title">Apply for a seller account</h1>
-                <div class="input-container">
-                    <i class="fa fa-user icon"></i>
-                    <input type="text" id="name" autocomplete="off" placeholder="business name">
+        <section class="form-section">
+            <div class="form-container">
+                <div class="form">
+                    <h1 class="form-title">Apply for a seller account</h1>
+                    <div class="input-container">
+                        <i class="fa fa-user icon"></i>
+                        <input type="text" id="name" autocomplete="off" placeholder="business name">
+                    </div>
+                    <div class="input-container">
+                        <i class="fa fa-envelope"></i>
+                        <textarea name="address" id="address" autocomplete="off" placeholder="business address"></textarea>
+                    </div>
+                    <div class="input-container">
+                        <i class="fa fa-map-marker"></i>
+                        <textarea name="about" id="about" autocomplete="off" placeholder="about your business"></textarea>
+                    </div>
+                    <div class="input-container">
+                        <i class="fa fa-phone"></i>
+                        <input type="number" id="number" autocomplete="off" placeholder="contact number">
+                    </div>  
+                    <span class="error">Error!</span>
+                    <button class="apply-btn">Apply</button>
+                    <a href="/signup.html" class="other-form-link">Go back to user registration.</a>
                 </div>
-                <div class="input-container">
-                    <i class="fa fa-envelope"></i>
-                    <textarea name="address" id="address" autocomplete="off" placeholder="business address"></textarea>
+                <div class="form-img-containter">
+                    <p>Slide to open</p>
+                    <img src="img/login/pexels-jonathan-cooper-box.png" class="form-img" alt="">
                 </div>
-                <div class="input-container">
-                    <i class="fa fa-map-marker"></i>
-                    <textarea name="about" id="about" autocomplete="off" placeholder="about your business"></textarea>
-                </div>
-                <div class="input-container">
-                    <i class="fa fa-phone"></i>
-                    <input type="number" id="number" autocomplete="off" placeholder="contact number">
-                </div>  
-                <span class="error">Error!</span>
-                <button class="apply-btn">Apply</button>
             </div>
-            <img src="img/login/seller.jpg" class="seller-image" alt="">
-        </div>
+        </section>
         <script src="js/nav.js"></script>
         <script src="js/common.js"></script>
-        <script src="js/seller.js"></script>
+        <script src="js/form.js"></script>
     </body>
 </html>

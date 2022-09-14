@@ -28,7 +28,6 @@
 }
 
 .form-title{
-    font-size: 3rem;
     font-weight: bold;
     text-transform: capitalize;
     color: var(--white);
@@ -43,10 +42,4 @@ textarea{
     height: 10rem;
     resize: none;
     outline: none;
-}
-
-.apply-btn{
-    width: 12rem;
-    font-size: 1.8rem;
-    text-transform: uppercase;
 }
