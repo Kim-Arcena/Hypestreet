@@ -31,8 +31,8 @@ const createNavbar = () => {
                     <li><a href="/product-list/air jordan">Air Jordan<i class="fa fa-caret-down" aria-hidden="true"></i></a>
                         <ul class="types">
                             <li><a href="/product-list/aj1 high">Air Jordan 1 High</a></li>
-                            <li><a href="/product-list/aj1 mid">Air Jordan Mid</a></li>
-                            <li><a href="/product-list/aj1 low">Air Jordan Low</a></li>
+                            <li><a href="/product-list/aj1 mid">Air Jordan 1 Mid</a></li>
+                            <li><a href="/product-list/aj1 low">Air Jordan 1 Low</a></li>
                             <li><a href="/product-list/aj3">Air Jordan 3</a></li>
                             <li><a href="/product-list/air jordan 4">Air Jordan 4</a></li>
                         </ul>
