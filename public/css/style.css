@@ -278,6 +278,7 @@ section{
     width: 90%;
     transform: rotate(-21.07deg);
     animation: shoe 0.3s linear ;
+    filter: drop-shadow( 8px 7px 10px #090a0c);
 }
 
 @keyframes shoe{

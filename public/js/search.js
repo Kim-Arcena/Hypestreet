@@ -1,4 +1,4 @@
-const searchKey = decodeURI(location.pathname.split('/').pop());
+const searchKey = decodeURI(location.pathname.split('/').pop().toLowerCase());
 let moreReleasesBtn = document.querySelector('.more-releases');
 let currentItem = 12;
 
