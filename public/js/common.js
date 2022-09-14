@@ -27,7 +27,7 @@ const processData = (data) => {
             location.replace('/dashboard');
         }
         else{
-            alert('login first');
+            // alert('login first');
             location.replace('/');
         }
     }
