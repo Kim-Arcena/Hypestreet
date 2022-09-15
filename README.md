@@ -1,4 +1,8 @@
-# hypestreet [![NPM version](https://badge.fury.io/js/hypestreet.svg)](https://npmjs.org/package/hypestreet) [![Build Status](https://travis-ci.org/Kim-Arcena/hypestreet.svg?branch=master)](https://travis-ci.org/Kim-Arcena/hypestreet)
+# hypestreet 
+
+![239486770_103148468765115_7979051820284055835_n](https://user-images.githubusercontent.com/70198061/190309748-185870b3-4ef5-4593-bf0a-131270f4846e.jpg)
+
+
 
 > Full-stack eCommerce website with Node.js, AWS, Firebase Firestore Database, Bcrypt, and Stripe API. This website can cater to end-users(potential buyers) and a dashboard for the sellers(CRUD). This website is also responsive and can work in any platform.
 
@@ -32,6 +36,34 @@ hypestreet();
 
 ## Initial Wireframe (Designed and Prototyped using Figma)
 ##### Structures from the design were follow and additional features were added including major/minor design and functionality changes.
+
+
+## Screenshots
+
+### Desktop
+
+![screencapture-localhost-3000-2022-09-15-11_36_50](https://user-images.githubusercontent.com/70198061/190308475-f9a48ec3-16c9-4b95-8663-87d4791cc3af.png)
+
+![screencapture-localhost-3000-product-list-all-2022-09-15-11_33_19](https://user-images.githubusercontent.com/70198061/190308590-50edc88f-c462-4306-9c51-eedf34c6c691.png)
+
+![screencapture-localhost-3000-products-adidas-yeezy-boost-350-v2-earth-3405-2022-09-15-11_33_01](https://user-images.githubusercontent.com/70198061/190308618-f998d536-a355-4d33-8d8f-446ac33e6280.png)
+
+![screencapture-localhost-3000-checkout-2022-09-15-11_42_06](https://user-images.githubusercontent.com/70198061/190308988-a7ba5d39-87b7-47c4-b850-4d5f03b461e7.png)
+
+![screencapture-localhost-3000-checkout-2022-09-15-11_42_06](https://user-images.githubusercontent.com/70198061/190309038-43a7af42-69df-4771-acbe-277fd3f67b95.png)
+
+
+![screencapture-checkout-stripe-c-pay-cs-test-b16WDIuzBPaDTcM9dX6cLF5Uq7U8eUyAPy5RSfgFGz48p3GfSDyGxnPX8W-2022-09-15-11_42_39](https://user-images.githubusercontent.com/70198061/190309012-ad9273ff-746e-40e5-83ef-227bea3e498f.png)
+
+
+### Mobile
+
+![mobile (2)](https://user-images.githubusercontent.com/70198061/190309869-892179c7-821c-4a3b-857c-0daefa119a63.gif)
+![mobile (3)](https://user-images.githubusercontent.com/70198061/190309916-585b009f-b145-4d82-a015-5f6771aab0a5.png)
+![mobile (2)](https://user-images.githubusercontent.com/70198061/190309931-2f2ef331-877a-408d-b01e-029ac181301b.png)
+
+
+![mobile](https://user-images.githubusercontent.com/70198061/190309904-462e2fa3-95c8-4b65-959a-1d40f872f1fd.png)
 
 
 ## License
