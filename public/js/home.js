@@ -91,6 +91,11 @@ const createCards = (data, tag, ele) => {
             data = dataArr.sort(() => .5 - Math.random());
        })
     }    
+    if(ele === '.top-product-section'){
+        data.forEach(product => {
+            data = data.sort(() => .12 - Math.random());
+        })
+    }
     
     data.forEach(item =>{
         if(item.id !== displayProductId){
@@ -141,6 +146,6 @@ const addProductToCart = (product) => {
     }
 }
 if(window.location.pathname === '/'){
-    getProducts("all").then(res => createProductCards(res, "all", '.top-product-section'));
+    getProducts("home").then(res => createProductCards(res, "all", '.top-product-section'));
 }
 
