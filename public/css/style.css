@@ -551,8 +551,9 @@ section{
 
 .txt h1{
     font-size: 60px;
-    font-family: 'Monument Extended', 'Montserrat', sans-serif,;
+    font-family: 'Monument Extended', 'Montserrat', sans-serif;
     color: var(--main-yellow);
+    font-weight: 900;
 }
 .row img{
     width: 500px;
