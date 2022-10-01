@@ -56,15 +56,18 @@ hypestreet();
 ![screencapture-checkout-stripe-c-pay-cs-test-b16WDIuzBPaDTcM9dX6cLF5Uq7U8eUyAPy5RSfgFGz48p3GfSDyGxnPX8W-2022-09-15-11_42_39](https://user-images.githubusercontent.com/70198061/190309012-ad9273ff-746e-40e5-83ef-227bea3e498f.png)
 
 
+![screencapture-hypestreet-herokuapp-dashboard-2022-10-01-23_24_13](https://user-images.githubusercontent.com/70198061/193417056-a57a747c-d5b5-4a05-b23e-bfcd8d9ffd5f.png)
+
+![screencapture-hypestreet-herokuapp-add-product-2022-10-01-23_37_20](https://user-images.githubusercontent.com/70198061/193417078-9206bdd9-7f3b-4f87-bc64-b8ca45cec16f.png)
+
+
 ### Mobile
 
-![mobile (2)](https://user-images.githubusercontent.com/70198061/190309869-892179c7-821c-4a3b-857c-0daefa119a63.gif)
-![mobile (3)](https://user-images.githubusercontent.com/70198061/190309916-585b009f-b145-4d82-a015-5f6771aab0a5.png)
-![mobile (2)](https://user-images.githubusercontent.com/70198061/190309931-2f2ef331-877a-408d-b01e-029ac181301b.png)
-
-
-![mobile](https://user-images.githubusercontent.com/70198061/190309904-462e2fa3-95c8-4b65-959a-1d40f872f1fd.png)
-
+<img src="https://user-images.githubusercontent.com/70198061/190309869-892179c7-821c-4a3b-857c-0daefa119a63.gif" width="250"/>
+<img src="https://user-images.githubusercontent.com/70198061/193417469-7cf9e279-4965-4706-a030-aa253c123e65.png" width="250"/>
+<img src="https://user-images.githubusercontent.com/70198061/190309931-2f2ef331-877a-408d-b01e-029ac181301b.png" width="250"/>
+<img src="https://user-images.githubusercontent.com/70198061/190309904-462e2fa3-95c8-4b65-959a-1d40f872f1fd.png" width="250"/>
+<img src="https://user-images.githubusercontent.com/70198061/190309916-585b009f-b145-4d82-a015-5f6771aab0a5.png" width="250"/>
 
 ## License
 
