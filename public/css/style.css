@@ -191,6 +191,7 @@ nav ul li.nav-btn span.show:before{
 
 .log-btn{
     color: var(--main-yellow)!important;
+    cursor: pointer;
 }
 
 

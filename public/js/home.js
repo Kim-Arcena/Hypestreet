@@ -42,7 +42,7 @@ const createProductCards = (data, tag, ele) =>{
         container.innerHTML += `
         <div class="listing-title">
             <h1 class="listing-title-main">collection</h1>
-            <h1 class="listing-title-sec">${tag} <span>Shit</span></h1>
+            <h1 class="listing-title-sec">${tag} <span>Shoes</span></h1>
         </div>   
         <div class="listing-container">
             <div class="listing-container-parent"> 
@@ -54,8 +54,15 @@ const createProductCards = (data, tag, ele) =>{
     }
     if(ele === '.top-product-section' || ele === '.best-selling-product-section'){
         let container = document.querySelector(ele);
+        if(ele === '.top-product-section'){
+            container.innerHTML += `
+            <h1 class="section-title">Best Selling Products</h1>`
+        }
+        if(ele === '.best-selling-product-section'){
+            container.innerHTML += `
+            <h1 class="section-title">Similar Products</h1>`
+        }
         container.innerHTML += `
-        <h1 class="section-title">Similar Products</h1>
         <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
         <button class="next-btn"><i class="fas fa-chevron-right"></i></button> 
         <div class="listing-container">
