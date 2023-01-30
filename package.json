@@ -8,9 +8,7 @@
     "node": "14.x"
   },
   "scripts": {
-    "start": "node server.js",
-    "predeply": "npm run hypestreet:build",
-    "deploy": "gh-pages -d public"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
