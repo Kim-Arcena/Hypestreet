@@ -202,10 +202,18 @@ input:focus::placeholder, textarea:focus::placeholder{
     cursor: pointer;
     margin-top: 3rem;
 }
+.submit-btn:hover, .apply-btn:hover{
+    background: var(--darker-yellow);
+    color: var(--dark-gray);
+    border: 1px solid var(--dark-gray);
+}
 
 .other-form-link , .apply-seller{
     color: var(--white);
     font-size: 1.5rem;
+}
+.other-form-link:hover, .apply-seller:hover{
+    color: var(--main-yellow);
 }
 
 .loader{

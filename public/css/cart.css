@@ -167,6 +167,10 @@
     background-color: var(--dark-gray);
     font-size: 15px;
 }
+.checkout-btn:hover, .place-order-btn:hover{
+    background-color: var(--darker-yellow);
+    color: var(--dark-gray);
+}
 
 .bill{
     font-size: 30px;

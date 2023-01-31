@@ -63,6 +63,15 @@ body{
     box-shadow:  8px 8px 8px #090a0c,
                 -8px -8px 8px #13131b;
 }
+
+.listing-card:hover{
+    box-shadow:  5px 5px 5px var(--shadow-yellow),
+                -5px -5px 5px var(--shadow-yellow);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
 .listing-card:nth-child(n+1):nth-child(-n+12){
     display: block;
 }
@@ -153,6 +162,10 @@ body{
     cursor: pointer;
 }
 
+.more-releases:hover{
+    background-color: var(--darker-yellow);
+    color: var(--dark-gray);
+}
 @media (max-width:1074px){
     html{
         font-size: 60%;
@@ -213,6 +226,14 @@ body{
         margin-bottom: 20px;
         padding: 5px;
     }
+    .listing-card:hover{
+        box-shadow:  4px 4px 4px var(--shadow-yellow),
+                    -4px -4px 4px var(--shadow-yellow);
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+    
 }
 
 @media (max-width:800px){
@@ -272,6 +293,14 @@ body{
         font-size: 10px;
         margin-bottom: 15px;
     }
+    .listing-card:hover{
+        box-shadow:  3px 3px 3px var(--shadow-yellow),
+                    -3px -3px 3px var(--shadow-yellow);
+        transform: scale(1.05);
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+    
 }
 
 @media (max-width:663px){

@@ -32,6 +32,10 @@ body{
     padding: 1rem 3rem;
     background-color: var(--dark-gray);
 }
+.add-product-btn:hover{
+    background-color: var(--darker-yellow);
+    color: var(--dark-gray);
+}
 
 seller-products{
     margin-top: 5%;

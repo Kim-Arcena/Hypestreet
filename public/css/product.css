@@ -171,9 +171,15 @@ body{
     margin: 10px 0;
     cursor: pointer;
     width: 200px;
-    background: linear-gradient(145deg, #13141a, #101116);
+    background: linear-gradient(145deg, #161821, #101116);
     box-shadow:  5px 5px 10px #07080a,
                 -5px -5px 10px #111115;
+}
+
+.product-btn:hover{
+    background: linear-gradient(145deg, #0f1016, #0d0e13);
+    box-shadow:  2px 2px 4px var(--darker-yellow),
+                -2px -2px 4px var(--darker-yellow);
 }
 
 .btn-container{
